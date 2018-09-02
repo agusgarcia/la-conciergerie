@@ -1,0 +1,900 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Media Folder\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"X-Generator: Poedit 1.8.5\n"
+
+#: class/class-media-folder.php:92
+msgid "Create Folder"
+msgstr ""
+
+#: class/class-media-folder.php:93 class/class-wp-folder-option.php:68
+msgid "Media Library"
+msgstr ""
+
+#: class/class-media-folder.php:94
+msgid "New folder name:"
+msgstr ""
+
+#: class/class-media-folder.php:95 class/class-media-folder.php:646
+msgid "New folder"
+msgstr ""
+
+#: class/class-media-folder.php:96
+msgid "A folder already exists here with the same name. Please try with another name, thanks :)"
+msgstr ""
+
+#: class/class-media-folder.php:97
+msgid "Are you sure to want to delete this folder"
+msgstr ""
+
+#: class/class-media-folder.php:98
+msgid "This folder contains other sub folders and files. Are you sure want to delete it ?"
+msgstr ""
+
+#: class/class-media-folder.php:99
+msgid "this folder contains sub-folder, delete sub-folders before"
+msgstr ""
+
+#: class/class-media-folder.php:100
+msgid "Display only my own media"
+msgstr ""
+
+#: class/class-media-folder.php:101
+msgid "Create a gallery from folder"
+msgstr ""
+
+#: class/class-media-folder.php:102
+msgid "Home"
+msgstr ""
+
+#: class/class-media-folder.php:103
+msgid "You are here"
+msgstr ""
+
+#: class/class-media-folder.php:104
+msgid "Back"
+msgstr ""
+
+#: class/class-media-folder.php:105
+msgid "Drag and Drop me hover a folder"
+msgstr ""
+
+#: class/class-media-folder.php:106
+msgid "Small View"
+msgstr ""
+
+#: class/class-media-folder.php:107 class/wpmf-orderby-media.php:15
+msgid "PDF"
+msgstr ""
+
+#: class/class-media-folder.php:108 class/wpmf-orderby-media.php:18
+msgid "Zip & archives"
+msgstr ""
+
+#: class/class-media-folder.php:109 class/wpmf-orderby-media.php:21
+msgid "Other"
+msgstr ""
+
+#: class/class-media-folder.php:110
+msgid "To replace a media and keep the link to this media working, it must be in the same format, ie. jpg > jpg, zip > zip� Thanks!"
+msgstr ""
+
+#: class/class-media-folder.php:122
+msgid "Categories imported into WP Media Folder. Enjoy!!!"
+msgstr ""
+
+#: class/class-media-folder.php:129
+msgid "You've just installed WP Media Folder, to save your time we can import your media categories into WP Media Folder"
+msgstr ""
+
+#: class/class-media-folder.php:130
+msgid "Import categories now"
+msgstr ""
+
+#: class/class-media-folder.php:130 class/class-wp-folder-option.php:748
+msgid "No thanks "
+msgstr ""
+
+#: class/class-media-folder.php:196 class/class-media-folder.php:279
+#: class/class-media-folder.php:291
+msgid "No Categories"
+msgstr ""
+
+#: class/class-wp-folder-option.php:713 class/pages/general.php:63
+msgid "Remove dimension"
+msgstr ""
+
+#: class/class-wp-folder-option.php:714 class/pages/general.php:64
+msgid "Edit dimension"
+msgstr ""
+
+#: class/class-wp-folder-option.php:715 class/pages/general.php:111
+msgid "Remove weight"
+msgstr ""
+
+#: class/class-wp-folder-option.php:716 class/pages/general.php:112
+msgid "Edit weight"
+msgstr ""
+
+#: class/class-wp-folder-option.php:717
+msgid "This value is already existing"
+msgstr ""
+
+#: class/class-wp-folder-option.php:739
+msgid "NextGEN galleries successfully imported in WP Media Folder"
+msgstr ""
+
+#: class/class-wp-folder-option.php:747
+msgid "You've just installed WP Media Folder, to save your time we can import your nextgen gallery into WP Media Folder"
+msgstr ""
+
+#: class/class-wp-folder-option.php:748 class/pages/gallery.php:81
+msgid "Sync/Import NextGEN galleries"
+msgstr ""
+
+#: class/class-wp-folder-option.php:1277
+msgid "Your user account doesn't have permission to resize images"
+msgstr ""
+
+msgid ""
+"<p>&quot;%1$s&quot; (ID %2$s) failed to resize. The error message was: %3$s</p>"
+msgstr ""
+
+#: class/class-wp-folder-option.php:1284
+#, php-format
+msgid "The originally uploaded image file cannot be found at %s"
+msgstr ""
+
+#: class/class-wp-folder-option.php:1299
+msgid "Unknown failure reason."
+msgstr ""
+
+#: class/class-wp-folder-option.php:1306
+#, php-format
+msgid "<p>&quot;%1$s&quot; (ID %2$s) was successfully resized in %3$s seconds.</p>"
+msgstr ""
+
+#: class/class-wp-folder-option.php:1316
+#, php-format
+msgid "&quot;%1$s&quot; (ID %2$s) failed to resize. The error message was: %3$s"
+msgstr ""
+
+#: class/pages/ftp_import.php:7
+msgid "Import Folder"
+msgstr ""
+
+#: class/pages/ftp_import.php:9
+msgid "Imported !"
+msgstr ""
+
+#: class/pages/ftp_import.php:11
+msgid "Import folder structure and media from your server in the standard WordPress media manager"
+msgstr ""
+
+#: class/pages/gallery.php:3
+msgid "Gallery feature"
+msgstr ""
+
+#: class/pages/gallery.php:5
+msgid "Enable the gallery feature"
+msgstr ""
+
+#: class/pages/gallery.php:8
+msgid "Enhance the WordPress default gallery system by adding themes and additional parameters in the gallery manager"
+msgstr ""
+
+#: class/pages/gallery.php:11 class/wpmf-display-gallery.php:275
+msgid "Lightbox"
+msgstr ""
+
+#: class/pages/gallery.php:13
+msgid "Enable the gallery lightbox feature"
+msgstr ""
+
+#: class/pages/gallery.php:16
+msgid "Enhance/Disable gallery lightbox"
+msgstr ""
+
+#: class/pages/gallery.php:25
+msgid "Gallery image sizes available"
+msgstr ""
+
+#: class/pages/gallery.php:30 class/wpmf-display-gallery.php:234
+#: class/wpmf-display-gallery.php:256
+msgid "Thumbnail"
+msgstr "Gallerie Bildgr&oumlßen verfügbar"
+
+#: class/pages/gallery.php:31 class/wpmf-display-gallery.php:235
+#: class/wpmf-display-gallery.php:257
+msgid "Medium"
+msgstr ""
+
+#: class/pages/gallery.php:32 class/wpmf-display-gallery.php:236
+#: class/wpmf-display-gallery.php:258
+msgid "Large"
+msgstr ""
+
+#: class/pages/gallery.php:33 class/wpmf-display-gallery.php:237
+#: class/wpmf-display-gallery.php:259
+msgid "Full Size"
+msgstr ""
+
+#: class/pages/gallery.php:45
+msgid "Select the image size you can load in galleries. Custom image size available here can be generated by 3rd party plugins"
+"Select the image size you can load in galleries. Custom image size available "
+msgstr ""
+
+#: class/pages/gallery.php:54
+msgid "Gallery themes settings"
+msgstr ""
+
+#: class/pages/gallery.php:57
+msgid "Masonry Theme"
+msgstr ""
+
+#: class/pages/gallery.php:58 class/pages/gallery.php:65
+msgid "Space between images (padding)"
+msgstr ""
+
+#: class/pages/gallery.php:60 class/pages/gallery.php:67
+msgid "px"
+msgstr ""
+
+#: class/pages/gallery.php:64
+msgid "Portfolio Theme"
+msgstr ""
+
+#: class/pages/gallery.php:70
+msgid "Determine the space between images"
+msgstr ""
+
+#: class/pages/gallery.php:83 class/pages/general.php:7
+msgid "Settings saved."
+msgstr ""
+
+#: class/pages/gallery.php:85
+msgid "Import nextGEN albums as image in folders in the media manager. You can then create new galleries from WordPress media manager"
+msgstr ""
+
+#: class/pages/general.php:4
+msgid "Import categories"
+msgstr ""
+
+#: class/pages/general.php:5
+msgid "Import WP media categories"
+msgstr ""
+
+#: class/pages/general.php:9
+msgid "Import current media and post categories as media folders"
+msgstr ""
+
+#: class/pages/general.php:14
+msgid "Media search"
+msgstr ""
+
+#: class/pages/general.php:16
+msgid "Search through all media folders"
+msgstr ""
+
+#: class/pages/general.php:18
+msgid "Search through all media or only in the current folder"
+msgstr ""
+
+#: class/pages/general.php:27
+msgid "Replace file function"
+msgstr ""
+
+#: class/pages/general.php:29
+msgid "Override file"
+msgstr ""
+
+#: class/pages/general.php:31
+msgid "Possibility to replace an existing file by another one."
+msgstr ""
+
+#: class/pages/general.php:37
+msgid "Duplicate file function"
+msgstr ""
+
+#: class/pages/general.php:39
+msgid "Duplicate file"
+msgstr ""
+
+#: class/pages/general.php:41
+msgid "Add a button to duplicate a media from the media manager"
+msgstr ""
+
+#: class/pages/general.php:36
+msgid "filter and order feature"
+msgstr ""
+
+#: class/pages/general.php:38
+msgid "Enable the filter and order feature"
+msgstr ""
+
+#: class/pages/general.php:40
+msgid "Additional filters will be added in the media views."
+msgstr ""
+
+#: class/pages/general.php:54
+msgid "List default filter size"
+msgstr ""
+
+#: class/pages/general.php:73
+msgid "Width"
+msgstr ""
+
+#: class/pages/general.php:75
+msgid "Height"
+msgstr ""
+
+#: class/pages/general.php:78
+msgid "(unit : px)"
+msgstr ""
+
+#: class/pages/general.php:82
+msgid "Add new size"
+msgstr ""
+
+#: class/pages/general.php:83 class/pages/general.php:137
+msgid "Save"
+msgstr ""
+
+#: class/pages/general.php:84 class/pages/general.php:138
+msgid "Cancel"
+msgstr ""
+
+#: class/pages/general.php:87
+msgid "Image dimension filtering available in filter. Display image with a dimension and above."
+msgstr ""
+
+#: class/pages/general.php:95
+msgid "List default filter weight"
+msgstr ""
+
+#: class/pages/general.php:121
+msgid "Min"
+msgstr ""
+
+#: class/pages/general.php:123
+msgid "Max"
+msgstr ""
+
+#: class/pages/general.php:126
+msgid "Unit :"
+msgstr ""
+
+#: class/pages/general.php:128
+msgid "kB"
+msgstr "kB"
+
+#: class/pages/general.php:129
+msgid "MB"
+msgstr ""
+
+#: class/pages/general.php:136
+msgid "Add weight"
+msgstr ""
+
+#: class/pages/general.php:141
+msgid "Select weight range which you would like to display in media library filter"
+msgstr ""
+
+#: class/pages/media_access.php:3
+msgid "Access management"
+msgstr ""
+
+#: class/pages/media_access.php:12
+msgid "Folder automatic creation"
+msgstr ""
+
+#: class/pages/media_access.php:5
+msgid "Display only media by User/User role (admins will always have access to all/own media)"
+msgstr ""
+
+#: class/pages/media_remove.php:3 class/pages/media_remove.php:5
+msgid "Remove a folder with its media"
+msgstr ""
+
+#: class/pages/media_remove.php:7
+msgid "When you remove a folder all media inside will also be removed if this option is activated. Use with caution."
+msgstr ""
+
+#: class/pages/media_rename.php:5
+msgid "Activate media rename on upload"
+msgstr ""
+
+#: class/pages/media_rename.php:9
+msgid "Pattern"
+msgstr ""
+
+#: class/pages/media_rename.php:12
+msgid "Tag avaiable: {sitename} - {foldername} - {date} - {original name}"
+msgstr ""
+
+#: class/pages/media_rename.php:13
+msgid "Note: # will be replaced by increasing numbers"
+msgstr ""
+
+#: class/pages/menus.php:3
+msgid "General"
+msgstr ""
+
+#: class/pages/menus.php:4
+msgid "Gallery"
+msgstr ""
+
+#: class/pages/menus.php:5
+msgid "Media access"
+msgstr ""
+
+#: class/pages/menus.php:6
+msgid "Single file"
+msgstr ""
+
+#: class/pages/menus.php:7
+msgid "Remove folder"
+msgstr ""
+
+#: class/pages/menus.php:8
+msgid "Media rename"
+msgstr ""
+
+#: class/pages/menus.php:10
+msgid "FTP import"
+msgstr ""
+
+#: class/pages/menus.php:11
+msgid "Sync external media"
+msgstr ""
+
+#: class/pages/menus.php:13 class/pages/regenerate_thumbnails.php:3
+msgid "Regenerate Thumbnails"
+msgstr ""
+
+#: class/pages/regenerate_thumbnails.php:4
+msgid "Regenerate all image thumbnails"
+msgstr ""
+
+#: class/pages/regenerate_thumbnails.php:5
+msgid "Stop the process"
+msgstr ""
+
+#: class/pages/saved_info.php:2
+msgid "Saved successfully"
+msgstr ""
+
+#: class/pages/single_file.php:4
+msgid "Enable single file design"
+msgstr ""
+
+#: class/pages/single_file.php:6
+msgid "Apply single file design with below parameters when insert file to post / page"
+msgstr ""
+
+#: class/pages/single_file.php:12
+msgid "Background color"
+msgstr ""
+
+#: class/pages/single_file.php:17
+msgid "Hover color"
+msgstr ""
+
+#: class/pages/single_file.php:22
+msgid "Font color"
+msgstr ""
+
+#: class/pages/single_file.php:27
+msgid "Hover font color"
+msgstr ""
+
+#: class/pages/submit_button.php:2
+msgid "Save Changes"
+msgstr ""
+
+#: class/pages/sync_media.php:3
+msgid "Sync WordPress media with server folders"
+msgstr ""
+
+#: class/pages/sync_media.php:5
+msgid "Activate the sync"
+msgstr ""
+
+#: class/pages/sync_media.php:9
+msgid "Sync delay"
+msgstr ""
+
+#: class/pages/sync_media.php:11
+msgid "minutes"
+msgstr ""
+
+#: class/pages/sync_media.php:31
+msgid "Add"
+msgstr ""
+
+#: class/pages/sync_media.php:32
+msgid "Delete selected"
+msgstr ""
+
+#: class/pages/sync_media.php:38
+msgid "Directory FTP"
+msgstr ""
+
+#: class/pages/sync_media.php:39
+msgid "Folder category"
+msgstr ""
+
+#: class/pages/wp-folder-options.php:1
+msgid "Media Folder Settings"
+msgstr ""
+
+#: class/wpmf-background-folder.php:28
+msgid "Folder cover"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:144
+msgid "Missing Attachment"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:187
+msgid "Default"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:188
+msgid "Masonry"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:189
+msgid "Portfolio"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:190
+msgid "Slider"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:196
+msgid "Gallery themes"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:208
+msgid "Columns"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:226
+msgid "Gallery image size"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:249
+msgid "Lightbox size"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:270
+msgid "Action on click"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:276
+msgid "Attachment Page"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:277
+msgid "None"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:282
+msgid "Auto insert image in folder"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:287 class/wpmf-display-own-media.php:30
+msgid "No"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:288 class/wpmf-display-own-media.php:31
+msgid "Yes"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:293
+msgid "Order by"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:298
+msgid "Custom"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:299
+msgid "Random"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:300
+msgid "Title"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:301
+msgid "Date"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:306
+msgid "Order"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:311
+msgid "Ascending"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:312
+msgid "Descending"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:323
+msgid "Link to"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:330
+msgid "Link target"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:334
+msgid "Same Window"
+msgstr ""
+
+#: class/wpmf-display-gallery.php:335
+msgid "New Window"
+msgstr ""
+
+#: class/wpmf-filter-size.php:31
+msgid "All media items"
+msgstr ""
+
+#: class/wpmf-filter-size.php:32
+msgid "Minimal size"
+msgstr ""
+
+#: class/wpmf-filter-size.php:33
+msgid "All weight"
+msgstr ""
+
+#: class/wpmf-filter-size.php:34
+msgid "Sort folder"
+msgstr ""
+
+#: class/wpmf-filter-size.php:35
+msgid "Sort media"
+msgstr ""
+
+#: class/wpmf-filter-size.php:49
+msgid "Name (Ascending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:49
+msgid "Name (Descending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:49
+msgid "ID (Ascending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:49
+msgid "ID (Descending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:50
+msgid "Date (Ascending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:51
+msgid "Date (Descending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:52
+msgid "Title (Ascending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:53
+msgid "Title (Descending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:54
+msgid "Size (Ascending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:55
+msgid "Size (Descending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:56
+msgid "File type (Ascending)"
+msgstr ""
+
+#: class/wpmf-filter-size.php:57
+msgid "File type (Descending)"
+msgstr ""
+
+#: class/wpmf-orderby-media.php:160
+msgid "Size"
+msgstr ""
+
+#: class/wpmf-orderby-media.php:161
+msgid "File type"
+msgstr ""
+
+#: class/wpmf-replace-image.php:14
+msgid "To replace a media and keep the link to this media working, it must be in the same format, ie. jpg > jpg… Thanks!"
+msgstr ""
+
+#: class/wpmf-replace-image.php:18
+msgid "Post empty"
+msgstr ""
+
+#: class/wpmf-replace-image.php:55
+msgid "No file selected"
+msgstr ""
+
+#: wp-media-folder.php:170 wp-media-folder.php:172
+msgid "WPMF Categories"
+msgstr ""
+
+#: wp-media-folder.php:171
+msgid "WPMF Category"
+msgstr ""
+
+#: wp-media-folder.php:173
+msgid "All WPMF Categories"
+msgstr ""
+
+#: wp-media-folder.php:174
+msgid "Edit WPMF Category"
+msgstr ""
+
+#: wp-media-folder.php:175
+msgid "View WPMF Category"
+msgstr ""
+
+#: wp-media-folder.php:176
+msgid "Update WPMF Category"
+msgstr ""
+
+#: wp-media-folder.php:177
+msgid "Add New WPMF Category"
+msgstr ""
+
+#: wp-media-folder.php:178
+msgid "New WPMF Category Name"
+msgstr ""
+
+#: wp-media-folder.php:179
+msgid "Parent WPMF Category"
+msgstr ""
+
+#: wp-media-folder.php:180
+msgid "Parent WPMF Category:"
+msgstr ""
+
+#: wp-media-folder.php:181
+msgid "Search WPMF Categories"
+msgstr ""
+
+#: class-replace-file.php:169
+msgid "Replace"
+msgstr ""
+
+#: media_access.php:9
+msgid "By user"
+msgstr ""
+
+#: access.php:10
+msgid "By role"
+msgstr ""
+
+#: access.php:14
+msgid "This option gives the possibility to activate a media access limitation per user or per user role"
+msgstr ""
+
+#: general.php:3
+msgid "WP Media Folder on frontend"
+msgstr ""
+
+#: general.php:5
+msgid "Activate WP Media Folder on frontend (public side)"
+msgstr ""
+
+#: general.php:8
+msgid "Useful for frontend page builders"
+msgstr ""
+
+#: general.php:14
+msgid "Number of files in folders"
+msgstr ""
+
+#: general.php:16
+msgid "Display the media number in each folder"
+msgstr ""
+
+#: general.php:18
+msgid "Add the number of media that are placed directly in each folder"
+msgstr ""
+
+#: single_file.php:35
+msgid "Lightbox on single image"
+msgstr ""
+
+#: single_file.php:37
+msgid "Enable the single image lightbox feature"
+msgstr ""
+
+#: single_file.php:39
+msgid "Add a lightbox option on each image of your WordPress content"
+msgstr ""
+
+msgid "Removed one folder"
+msgstr ""
+
+msgid "Moved some files."
+msgstr ""
+
+msgid "Moved a folder."
+msgstr ""
+
+msgid "Folder name updated"
+msgstr ""
+
+msgid "File/Folder restored with success."
+msgstr ""
+
+msgid "File replaced!"
+msgstr ""
+
+msgid "File upload on the way..."
+msgstr ""
+
+msgid "Filter applied"
+msgstr ""
+
+msgid "Filter or order media"
+msgstr ""
+
+msgid "Remove all filters"
+msgstr ""
+
+msgid "Information"
+msgstr ""
+
+msgid "Send new file and replace"
+msgstr ""
+
+msgid "Media filters removed"
+msgstr ""
+
+msgid "Hover image preview"
+msgstr ""
+
+msgid "On mouse hover on an image, a large preview is displayed"
+msgstr ""
+
+msgid "Files & Folders"
+msgstr ""
+
+msgid "Media access & design"
+msgstr ""
+
+msgid "Media removed"
+msgstr ""
+
+msgid "Folder removed"
+msgstr ""
+
+msgid "Automatically create a folder per User or per WordPress User Role"
+msgstr ""
+
+msgid "Select a folder"
+msgstr ""
+
+msgid "Please replace the media with a media that has the same format (jpg by jpg, pdf by pdf…)"
+msgstr ""

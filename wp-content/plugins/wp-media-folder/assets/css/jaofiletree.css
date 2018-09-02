@@ -1,0 +1,427 @@
+/* @override http://neu.weingut-meyerhof.de/inhalte/erweiterungen/wp-media-folder/assets/css/jaofiletree.css?ver=3.5.5 */
+
+#jao{
+    border-left: 2px solid #666;
+    padding: 10px 10px 10px 10px;
+    background: #FAFAFA;
+    min-height: 98px;
+    max-height: 400px;
+    overflow: auto;
+    float: left;
+    width: 210px;
+    margin: 10px 0 10px 10px;
+    resize: horizontal;
+}
+
+#wpmfjaoassign{
+    border-left: 2px solid #666;
+    padding: 10px 10px 10px 10px;
+    background: #FAFAFA;
+    min-height: 98px;
+    max-height: 400px;
+    overflow: auto;
+    float: left;
+    width: 95%;
+    margin: 0;
+}
+
+.media-frame-menu .media-menu #jao , .media-frame-menu .media-menu #wpmfjaoassign {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    margin: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.upload-php #jao {
+    /*width: 18%;*/
+    margin: 10px 0 10px 10px;
+}
+
+.wp-customizer #jao {
+    width: 220px;
+    margin: 10px 0 10px 10px;
+}
+
+ul.jaofiletree {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+ul.jaofiletree li {
+    list-style: none;
+    padding: 0 0 0 8px;
+    margin: 0;
+    white-space: nowrap;
+    background: #FAFAFA;
+}
+
+ul.jaofiletree li[data-parent_id="0"] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+ul.jaofiletree li ul li {
+    list-style: none;
+    margin-left: 10px;
+    white-space: nowrap;
+    background: #FAFAFA;
+}
+
+ul.jaofiletree li.drive {
+    padding-left: 15px;
+}
+
+ul.jaofiletree a {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 2px;
+}
+
+ul.jaofiletree a.title-folder , .title-wpmfaddFolder {
+    top: -2px;
+    padding: 0 0 0 5px;
+    min-width: 70%;
+    transition: all ease 0.2s;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+ul.jaofiletree a.title-root , .title-wpmfaddFolder {
+    min-width: 0;
+}
+
+ul.jaofiletree a:hover {}
+
+ul.jaofiletree li.selected > a {
+    color: #0085ba;
+}
+
+.icon-open-close {
+    height: 16px !important;
+    width: 10px !important;
+    float: left;
+}
+/*
+.jaofiletree li.directory .icon-open-close:before {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    font-family: Material-Design-Iconic-Font;
+    font-size: 17px;
+}
+
+.jaofiletree li.directory.expanded .icon-open-close:before {
+    content: '\f2f2';
+    font-size: 22px;
+}
+
+.jaofiletree li.directory.collapsed .icon-open-close:before {
+    content: '\f2f6';
+    color: #888;
+    font-size: 22px;
+}
+
+.jaofiletree li.directory.selected > .icon-open-close:before {
+    color: #0085ba;
+}
+
+.jaofiletree li.directory.collapsed .icon-open-close:hover:before {
+    content: '\f2f6';
+    color: #555;
+    font-size: 22px;
+}
+
+.jaofiletree li.directory.wait .icon-open-close:before,
+.jaofiletree li.directory.expanded.wait .icon-open-close:before,
+.jaofiletree li.directory.collapsed.wait .icon-open-close:before {
+    color: transparent;
+    background: url(../images/spinner.gif) left top no-repeat;
+    width: 20px;
+}*/
+
+.jaofiletree .zmdi-folder {
+    font-size: 18px;
+    margin-top: 0;
+    margin-left: 4px;
+    color: #888888;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.jaofiletree .wpmf-zmdi-folder-open {
+    font-size: 18px;
+    margin-top: 0;
+    margin-left: 4px;
+    color: #008EC2;
+    font-weight: 400;
+    vertical-align: middle;
+}
+
+.zmdi-long-arrow-return {
+    font-size: 60px!important;
+    margin: 10px auto;
+    color: #fafafa;
+}
+
+.wpmf_icon_createFolder{
+    font-size: 60px!important;
+    margin: 10px auto;
+    color: #fafafa;
+}
+
+.jaofiletree li.wait {}
+
+.title-folder.title-root {
+    padding: 0 !important;
+}
+
+/*.directory a.ui-hoverClass {
+    color: #1e8cbe;
+    font-weight: bold;
+}*/
+
+.attachment.wpmf_dragsmall,
+body.smallview_open .attachment.wpmf_dragsmall {
+    width: 30px !important;
+}
+
+.attachment.wpmf_dragsmall .draggableNumber {
+    display: none;
+}
+
+.wpmf-attachmentdrag {
+    width: 115px;
+    height: 115px;
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 0 10px 20px;
+    color: #464646;
+    list-style: none;
+    text-align: center;
+}
+
+.wpmf-attachmentdrag .wpmf-attachment-preview {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    box-shadow: inset 0 0 15px rgba( 0, 0, 0, 0.1), inset 0 0 0 1px rgba( 0, 0, 0, 0.05);
+    background: #eee;
+    cursor: pointer;
+}
+
+.wpmf-attachmentdrag .wpmf-attachment-preview .zmdi-folder {
+    font-size: 60px !important;
+    color: #888888;
+}
+
+.wpmf-attachmentdrag .wpmf-attachment-preview .filename {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    max-height: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    font-weight: bold;
+    background: rgba( 255, 255, 255, 0.8);
+    -webkit-box-shadow: inset 0 0 0 1px rgba( 0, 0, 0, 0.15);
+    box-shadow: inset 0 0 0 1px rgba( 0, 0, 0, 0.15);
+}
+
+.wpmf-attachmentdrag.wpmf_dragsmall {
+    height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.wpmf-attachmentdrag.wpmf_dragsmall .wpmf-attachment-preview {
+    height: 18px;
+    box-shadow: none;
+    background: transparent;
+}
+
+.wpmf-attachmentdrag.wpmf_dragsmall .wpmf-attachment-preview .zmdi-folder {
+    font-size: 15px !important;
+    margin: 0;
+    float: left;
+}
+
+.wpmf-attachmentdrag.wpmf_dragsmall .wpmf-attachment-preview .filename {
+    position: relative;
+    text-align: left;
+    background: transparent;
+    box-shadow: none;
+}
+
+.smallview_open .wpmf-attachmentdrag.wpmf_draglarge {
+    width: 70px;
+    height: 70px;
+}
+
+.smallview_open .wpmf-attachmentdrag.wpmf_draglarge .wpmf-attachment-preview {
+    width: 70px;
+    height: 70px;
+}
+
+.smallview_open .wpmf-attachmentdrag.wpmf_draglarge .wpmf-attachment-preview .zmdi-folder {
+    font-size: 40px !important;
+    margin: 10px auto;
+}
+
+.ui-draggable-dragging.wpmf_dragsmall:not(.upload-php .ui-draggable-dragging.wpmf_dragsmall) {
+    opacity: 0;
+}
+
+.ui-draggable-dragging.wpmf_draglarge:not(.upload-php .ui-draggable-dragging.wpmf_draglarge) {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+    .media-frame .wpmf-attachments-wrapper {
+        top: 220px;
+    }
+    .media-toolbar-secondary {
+        max-width: 100% !important;
+        margin-top: 20px;
+    }
+    .attachments-browser .media-toolbar,
+    .wp-filter {
+        min-height: 25px;
+    }
+    .upload-php .wpmf-arrow-toolbar,
+    .upload-php .wpmf-arrow-folder {
+        margin-top: 1px;
+    }
+    .wp-filter.wpmf-hide > * {
+        display: none;
+    }
+    .wp-filter.wpmf-show > * {
+        display: block;
+    }
+    .attachments-browser .media-toolbar.wpmf-hide > *,
+    .wp-filter.wpmf-hide > * {
+        display: none;
+    }
+    .attachments-browser .media-toolbar.wpmf-show > *,
+    .wp-filter.wpmf-show > * {
+        display: block;
+    }
+    .attachments-browser .media-toolbar .wpmf-show-hide,
+    .wp-filter .wpmf-show-hide {
+        display: block;
+    }
+    .wpmf-show-hide {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        color: #21759b;
+    }
+    .wpmf_sh {
+        float: left;
+    }
+    .wpmf_sh label {
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .media-frame .wpmf-attachments-wrapper {
+        top: 220px;
+        right: 265px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .media-frame .wpmf-attachments-wrapper {
+        top: 300px;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 640px) {
+    .mode-grid .addFolder {
+        margin-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .media-frame .wpmf-attachments-wrapper {
+        top: 185px;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #jao {
+        width: 95% !important;
+        padding: 0;
+    }
+
+    .media-toolbar-secondary {
+        max-width: 100% !important;
+        margin-top: 20px;
+    }
+    .upload-php .wp-filter .filter-items {
+        margin-top: 20px;
+    }
+
+    .media-frame .wpmf-attachments-wrapper {
+        top: 250px;
+    }
+    .media-frame .media-sidebar.visible {
+        margin-top: 20px;
+    }
+    .media-frame .media-frame-toolbar .media-toolbar-primary .button {
+        font-size: 12px;
+    }
+    .media-frame .wpmf-attachments-wrapper .wpmf-attachments-browser {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .media-frame .wpmf-attachments-wrapper {
+        top: 330px;
+    }
+    .media-frame .media-frame-toolbar .media-toolbar-primary .button {
+        font-size: 10px;
+    }
+}
+
+.wpmfdirectory {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.wpmfaddFolder {
+    vertical-align: middle;
+    top: 1px !important;
+    margin-top: 1px !important;
+    cursor: pointer;
+}
+
+.wpmf-zmdi-folder-open:before {
+    content: '\f228';
+}
+
+.wpmf_checkbox_tree{
+    margin:0;
+    vertical-align: middle
+}
+
+.wpmf-folder-tree .foldershow {
+    display: block;
+}
+
+.wpmf-folder-tree .folderhide {
+    display: none;
+}

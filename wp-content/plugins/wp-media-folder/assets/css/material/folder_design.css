@@ -1,0 +1,287 @@
+.wpmf-attachment.mdc-list-item {
+    width: 172px !important;
+    padding: 0 16px !important;
+    margin: 8px 12px 8px 8px !important;
+    background: #fff;
+    overflow: hidden;
+    height: 48px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.wpmf-attachment.mdc-list-item.mdc-ripple-upgraded.mdc-ripple-upgraded::before {
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(var(--mdc-ripple-fg-scale, 0));
+    transform: scale(var(--mdc-ripple-fg-scale, 0));
+}
+
+.wpmf-attachment .mdc-list-item__start-detail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #8f8f8f;
+}
+
+.wpmf-attachment .mdc-list-item__start-detail {
+    width: 35px;
+    height: 35px;
+    margin-left: 0;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.wpmf-attachment .grey-bg {
+    background: rgba(0, 0, 0, .26);
+}
+
+.wpmf-attachment .white-bg {
+    background: #fff;
+}
+
+.wpmf-attachment .mdc-list-item__text {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: inline-block;
+    width: 90px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.attachments {
+    min-width: 320px;
+}
+
+.wpmf-attachment.material_design.wpmf-back .dashicons-arrow-left-alt2 {
+    display: block !important;
+    opacity: 1 !important;
+    color: #8f8f8f !important;
+}
+
+.wpmf-attachment.material_design.wpmf-hover-folder {
+    border: #4d90fe solid 2px;
+    background: rgba(77, 144, 254, 0.2);
+}
+
+.wpmf-attachment.wpmf-line-break {
+    flex-basis: 100%;
+    height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/** Css for context menu */
+.wpmf-contextmenu {
+    display: none;
+}
+
+.wpmf-contextmenu .colorsub .wp-picker-container {
+    width: 100%;
+    float: left;
+    margin: 4px;
+}
+
+.wpmf-contextmenu.grey-text.text-darken-2 {
+    color: #616161 !important;
+}
+
+.wpmf-contextmenu li {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    height: 40px;
+}
+
+.wpmf-contextmenu .wpmf-color-picker {
+    height: auto;
+}
+
+.wpmf-contextmenu li:hover > div.items_menu{
+    background: #eeeeee;
+}
+
+.wpmf-contextmenu li:hover > .submenu {
+    display: block;
+}
+
+.wpmf-contextmenu, .wpmf-contextmenu .submenu {
+    opacity: 1;
+    transition: opacity .5s;
+    margin: 0;
+    min-width: 250px;
+    box-sizing: border-box;
+    background: #fff;
+    position: fixed;
+    padding: 8px 0;
+    border-radius: 2px;
+    z-index: 999999;
+}
+
+.wpmf-contextmenu .z-depth-1, .wpmf-contextmenu.z-depth-1 {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.wpmf-contextmenu li div.items_menu, .wpmf-contextmenu .submenu li div.items_menu {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 8px 20px 8px 60px;
+    margin: 4px 0;
+    width: 100%;
+    transition: .3s;
+    text-align: left !important;
+    white-space: nowrap;
+    display: block;
+    cursor: pointer;
+}
+
+.wpmf-contextmenu .disabled, .wpmf-contextmenu .submenu .disabled {
+    opacity: .7;
+    cursor: default;
+}
+
+.wpmf-contextmenu li .material-icons, .wpmf-contextmenu .submenu li .material-icons {
+    position: absolute;
+    left: 24px;
+    color: #8f8f8f;
+    font-size: 20px !important;
+}
+
+.wpmf-contextmenu .sub, .wpmf-contextmenu .submenu .sub {
+    overflow: visible;
+}
+
+.wpmf-contextmenu .waves, .wpmf-contextmenu .submenu .waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.wpmf-contextmenu li .right, .wpmf-contextmenu .submenu li .right {
+    left: auto;
+    right: 24px;
+}
+
+.wpmf-contextmenu li .material-icons, .wpmf-contextmenu .submenu li .material-icons {
+    position: absolute;
+}
+
+.wpmf-contextmenu .sub .right, .wpmf-contextmenu .submenu .sub .right {
+    transition: .5s;
+}
+
+.wpmf-contextmenu i.right {
+    float: right;
+    margin-left: 15px;
+}
+
+.wpmf-contextmenu .right {
+    float: right !important;
+}
+
+.wpmf-contextmenu .sub .submenu {
+    display: none;
+    top: 0;
+    transition: .3s;
+    position: absolute;
+    z-index: 999999;
+    width: auto;
+    margin: 0;
+    left: calc(100%);
+}
+
+.wp-picker-ok {
+    width: 20%;
+    float: left;
+    margin: 4px !important;
+}
+
+.wpmf-contextmenu.context_overflow .sub .submenu {
+    right: calc(100%);
+    left: auto;
+}
+
+.wpmf-contextmenu .color-wrapper {
+    width: 240px;
+}
+
+.wpmf-contextmenu .color-wrapper .color {
+    float: left;
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    position: relative;
+}
+
+.wpmf-contextmenu .color-wrapper .color.custom_color {
+    margin: 0;
+}
+
+.wpmf-contextmenu .color-wrapper .color .color_check {
+    color: #fff !important;
+    font-size: 30px !important;
+    left: 0 !important;
+}
+
+.wpmf-contextmenu .color-wrapper .color .color_uncheck {
+    color: #eee !important;
+    font-size: 30px !important;
+    left: 0 !important;
+}
+
+.wpmf-contextmenu .colorsub {
+    padding: 10px !important;
+    min-width: 236px !important;
+}
+
+.wpmf-dialog-container #positive {
+    color: #fff !important;
+    font-weight: bold !important;
+    background: #4285f4 !important;
+}
+
+.wpmf-dialog-container #negative {
+    font-weight: bold !important;
+    color: #656565 !important;
+    margin-right: 5px !important;
+}
+
+.custom_color_wrap {
+    width: 240px;
+    float: left;
+}
+
+.wp-color-folder {
+    float: left;
+    height: 30px;
+    vertical-align: middle;
+    width: 210px;
+    margin: 0;
+}
+
+.wp-color-folder::placeholder {
+    opacity: 0.6;
+    font-size: 12px;
+}

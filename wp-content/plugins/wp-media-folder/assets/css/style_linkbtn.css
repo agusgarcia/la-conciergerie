@@ -1,0 +1,41 @@
+#wp-link-backdrop {
+    z-index: 999999 !important;
+}
+
+#wp-link-wrap {
+    z-index: 99999999999 !important;
+}
+
+.link-btn {
+    padding: 2px 3px 3px 3px;
+    line-height: normal;
+    float: left;
+    background: buttonface !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+.link-btn:hover {
+    background: buttonface !important;
+}
+
+.wpmf-zmdi-link {
+    color: #777;
+    line-height: 16px;
+    width: 20px;
+    height: 16px;
+    text-align: center;
+    padding: 0;
+    margin: 3px 0 0;
+    font-size: 20px;
+    transform: rotate(-40deg);
+}
+
+.rtl .wpmf-zmdi-link {
+    transform: none;
+}
+
+.media-modal .wpmf-zmdi-link{
+    line-height: 22px;
+    height: 22px;
+}

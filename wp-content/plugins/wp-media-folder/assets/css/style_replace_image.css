@@ -1,0 +1,71 @@
+.replace_wrap {
+    width: 100%;
+    float: left;
+}
+
+.media-modal .compat-field-wpmfbtn_select th{
+    width: 0 !important;
+}
+
+.media-modal .compat-field-wpmfbtn_select td{
+    width: 96% !important;
+}
+
+.replace_wrap .description{
+    margin: 7px 5px;
+}
+
+.media-modal.acf-expanded .replace_wrap{
+    float: left;
+}
+
+.compat-field-wpmfbtn_select:not(.upload-php .compat-field-wpmfbtn_select){
+    display: none !important;
+}
+
+.media-modal .media-uploader-status .upload-errors.wpmferror_replace{
+    margin: 8px auto 0;
+    padding: 8px;
+    border-left : 3px solid #dd823b;
+}
+
+.media-modal .media-uploader-status .upload-errors.wpmferror_replace .upload-error{
+    background: none;
+    border: 0;
+}
+
+.media-modal .upload-errors.wpmferror_replace .upload-dismiss-errors{
+    color: #dd823b;
+}
+
+.media-modal .upload-errors.wpmferror_replace .upload-error-label{
+    display: none;
+}
+
+.media-modal .upload-errors.wpmferror_replace .upload-error-message{
+    color: #000;
+} 
+
+#wpmf_upload_input_version,#wpmfreplace{
+    float: left;
+}
+
+.wpmf_img_replace{
+    max-width:70px;
+    max-height: 48px;
+    display: none;
+}
+
+#wpmf_form_upload {border-radius: 5px;}
+#wpmf_progress { width: 99%; height: 10px; background: rgba( 0, 0, 0, 0.1 ); margin-top: 30px;text-align: center;position: relative;display: none;border-radius : 10px;}
+#wpmf_bar { background: #0073aa; height: 10px; width: 0;border-radius : 10px;}
+#wpmf_percent { position: absolute; left: 50%; top: 0;display: none;}
+#wpmf_result{margin-top: 5px;}
+
+.media-modal #wpmf_form_upload #wpmf_upload_input_version{ 
+    padding-left: 0 !important; 
+}
+
+#wpmf_upload_input_version{
+    display: none;
+}

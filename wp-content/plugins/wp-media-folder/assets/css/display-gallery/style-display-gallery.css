@@ -1,0 +1,290 @@
+.wpmf-gallery-clear:before,
+.wpmf-gallery-clear:after {
+    content: '';
+    display: table;
+}
+.wpmf-gallery-clear:after {
+    clear: both;
+}
+/**
+ * [gallery]
+ * ----------------------------------------------------------------------------
+ */
+.wpmf-gallerys .gallery {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wpmf-gallerys .wpmf-gallery-bottomspace-default {
+    margin-bottom: 20px;
+}
+.wpmf-gallerys .wpmf-gallery-bottomspace-ten {
+    margin-bottom: 10px;
+}
+.wpmf-gallerys .wpmf-gallery-bottomspace-five {
+    margin-bottom: 5px;
+}
+.wpmf-gallerys .wpmf-gallery-bottomspace-none {
+    margin-bottom: 0;
+}
+
+.wpmf-gallerys .gallery-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wpmf-gallerys .wpmf-gallery-item {
+    float: left;
+    margin: 0;
+    position: relative;
+    max-width: none !important;
+    padding: 0 !important;
+}
+
+.wpmf-gallerys .gallery .gallery-icon a {
+    display: block;
+}
+
+.wpmf-gallerys .gallery .gallery-icon a img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.wpmf-gallerys .gallery.gallery-with-border .gallery-icon a {
+    border: 1px solid #eeeeee;
+}
+
+
+/**
+ * Image Links
+ * ----------------------------------------------------------------------------
+ */
+.wpmf-gallerys .wpmf-gallery-item .gallery-block {
+    position: relative;
+}
+
+.gallery-block { margin-top: 5px; margin-right: 5px;  display: none}
+
+/**
+ * [gallery flexslider]
+ * ----------------------------------------------------------------------------
+ */
+.wpmfflexslider-container {
+    overflow: hidden;
+}
+.wpmf-gallerys .gallery.wpmfflexslider {
+    border-width: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0px;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+.wpmf-gallerys .gallery.wpmfflexslider .wpmfflex-control-paging {
+    display: none;
+}
+.wpmf-gallerys .gallery.wpmfflexslider .wpmfflex-control-paging li a {
+    background-color: #eeeeee;
+    box-shadow: none;
+}
+
+.wpmf-gallerys .gallery.wpmfflexslider .wpmfflex-control-paging li a.wpmfflex-active {
+    background-color: #cccccc;
+}
+
+.wpmf-gallerys .gallery.wpmfflexslider .wpmfflex-slide-item {
+    position: relative;
+}
+
+.wpmf-gallerys .gallery.wpmfflexslider .wpmfflex-slide-item .wpmfflex-center-slide {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wpmf-gallerys .wpmfflexslider .slides .gallery-caption {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/*
+ * Image Popup
+ */
+.wpmf_mfp-close:hover,
+.wpmf_mfp-close:active,
+.wpmf_mfp-close:focus,
+.wpmf_mfp-arrow:hover,
+.wpmf_mfp-arrow:active,
+.wpmf_mfp-arrow:focus {
+    background-color: transparent;
+}
+
+.wpmf_mfp-bottom-bar *,
+.wpmf_mfp-bottom-bar p {
+    margin-bottom: 0;
+}
+.wpmf_mfp-arrow:hover,
+.wpmf_mfp-arrow:active,
+.wpmf_mfp-arrow:focus {
+    top: 50%;
+}
+body .wpmf_mfp-arrow:active {
+    margin-top: -55px;
+}
+
+.gallery-icon a{
+    border:none !important;
+}
+
+.gallery-caption .title{
+    color: #393939;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gallery-caption .excerpt{
+    color: #9a9a9a;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.gallery-masonry .gallery-icon{
+    position: relative;
+    margin: 0 auto;
+}
+
+.gallery-masonry .gallery-icon img.attachment-medium{
+    width: 100%;
+}
+
+.gallery-caption p{
+    text-align: center !important;
+}
+.owl-wrapper .gallery-icon img{
+    width: 98%;
+}
+
+.owl-wrapper .wp-caption-text.gallery-caption{
+    width: 98%;
+}
+
+.wp-caption-text.gallery-caption{
+    bottom: 0;
+    text-align: center !important;
+}
+
+.wpmfflexslider .wp-caption-text.gallery-caption,.gallery-portfolio .wp-caption-text.gallery-caption{
+    position: relative !important;
+}
+
+.hover_img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 888;
+    background: rgba(10,6,6,0.75);;
+    display: none !important;
+}
+
+.wpmf_gallery_box .flipster .hover_img {
+    width: 80%;
+}
+
+.portfolio_lightbox{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -18px;
+    display: none !important;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    line-height: 36px;
+    color: #393939 !important;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 2em;
+    z-index: 999;
+    transition: opacity .3s ease-in-out,color .3s ease-in-out,background-color .3s ease-in-out,border-color .3s ease-in-out;
+}
+
+
+.gallery-masonry .gallery-icon:hover>.hover_img,.gallery-masonry .gallery-icon:hover>.portfolio_lightbox{
+    display: block !important;
+}
+
+.portfolio_lightbox:hover{
+    background: #7c7c7c;
+    color: #fff !important;
+}
+
+.wpmf-gallery-caption{
+    position: relative !important;
+    bottom: 0;
+    text-align: center !important;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wpmf-gallery-caption .title{
+    color: #393939;
+    font-family: Raleway;
+    font-size: 13px !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.wpmf-gallery-caption .excerpt{
+    color: #9a9a9a;
+    font-family: Raleway;
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.gallery_default .wpmf-gallery-item{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+.gallery-portfolio .wpmf-gallery-item{
+    min-height: 200px;
+}
+
+.gallery_default{
+    width:100%;
+}
+
+.gallery_default .wpmf-gallery-item{
+    margin: 0 0 4px 0 !important;
+}
+
+.wpmf-gallerys .gallery-icon img {
+    margin: 0 auto;
+}
+
+.wpmf_mfp-title{
+    display: block !important;
+}
+
+.wpmf-slides {
+    padding: 0 !important;
+}

@@ -1,0 +1,23 @@
+
+                            .wpmf-defile{
+                                background: #444444 url(../images/download.png)
+                                 no-repeat scroll 5px center !important;
+                                color: #ffffff;
+                                border: none;
+                                border-radius: 0;
+                                box-shadow: none;
+                                text-shadow: none;
+                                transition: all 0.2s ease 0s;
+                                float: left;
+                                margin: 7px;
+                                padding: 10px 20px 10px 60px;
+                                text-decoration: none;
+                            }
+                            
+                            .wpmf-defile:hover{
+                                background: #888888 url(../images/download.png)
+                                 no-repeat scroll 5px center !important;
+                                box-shadow: 1px 1px 12px #ccc !important;
+                                color: #ffffff !important;
+                            }
+                            

@@ -1,0 +1,43 @@
+.wpmf-dialog-container,
+.wpmf-loading-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999999999;
+    opacity: 0;
+    -webkit-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+}
+
+.wpmf-dialog-container > div {
+    position: relative;
+    width: 90%;
+    max-width: 510px;
+    min-height: 25px;
+    margin: 10% auto;
+    z-index: 9999;
+    padding: 16px 16px 0;
+}
+
+.dialog-button-bar {
+    text-align: right;
+    margin-top: 8px;
+}
+
+.wpmf-loading-container > div {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 10% auto;
+    z-index: 9999;
+}
+
+.wpmf-loading-container > div > div {
+    width: 100%;
+    height: 100%;
+}
