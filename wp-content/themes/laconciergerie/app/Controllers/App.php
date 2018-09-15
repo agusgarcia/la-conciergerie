@@ -6,6 +6,8 @@ use Sober\Controller\Controller;
 
 class App extends Controller
 {
+    protected $acf = true;
+
     public function siteName()
     {
         return get_bloginfo('name');
@@ -29,5 +31,28 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+
+    public static function currentSeason()
+    {
+
+        $year = date('Y');
+        $month = date('m');
+        $next_year = (int)$year + 1;
+        $last_year = (int)$year - 1;
+
+        // If current month is August or later,
+        // current season is thisYear-nextYear (2018-2019)
+        // If current month is between January and August
+        // current season is lastYear-thisYear (2018-2019)
+        // until next August (2019-2020)
+
+        if ($month >= 8) {
+            $current_season = $year . '-' . $next_year;
+        } else {
+            $current_season = $last_year . '-' . $year;
+        }
+
+        return $current_season;
     }
 }
