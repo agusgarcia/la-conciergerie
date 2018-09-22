@@ -55,4 +55,11 @@ class App extends Controller
 
         return $current_season;
     }
+
+    public static function formattedDate($date)
+    {
+        setlocale(LC_ALL, "fr_FR");
+        $date_s = strtotime($date);
+        return strftime('%e %B %Y', $date_s);
+    }
 }

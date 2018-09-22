@@ -3,7 +3,7 @@
 {!! $educational_resources->intro !!}
 
 @foreach($educational_resources->resources_list as $resource)
-    ↓ <a href="{{ $resource->document }}" title="{{ $resource->title }}">{{ $resource->title }}</a>
+    ↓ <a href="{{ $resource->document->url }}" title="{{ $resource->document->title }}" download>{{ $resource->document->title }}</a>
 @endforeach
 
 @foreach($images as $image)

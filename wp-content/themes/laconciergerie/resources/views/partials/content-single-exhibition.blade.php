@@ -23,7 +23,7 @@
     </li>
     <li>
         <strong>Exposition</strong>
-        <p>Du {{ $exhibition_date->exhibition_date_opening }} au {{ $exhibition_date->exhibition_date_closing }}</p>
+        <p>Du {{ $exhibition_date->exhibition_date_opening }} au  {{ App::formattedDate($exhibition_date->exhibition_date_closing) }}</p>
         <p>{{ $exhibition_closing_dates }}</p>
     </li>
     <li>
