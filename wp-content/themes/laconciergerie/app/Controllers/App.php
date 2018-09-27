@@ -22,7 +22,7 @@ class App extends Controller
             return __('Latest Posts', 'sage');
         }
         if (is_archive()) {
-            return get_the_archive_title();
+            return post_type_archive_title('', false);
         }
         if (is_search()) {
             return sprintf(__('Search Results for %s', 'sage'), get_search_query());
@@ -61,5 +61,12 @@ class App extends Controller
         setlocale(LC_ALL, "fr_FR");
         $date_s = strtotime($date);
         return strftime('%e %B %Y', $date_s);
+    }
+
+    public static function formattedDateWithDay($date)
+    {
+        setlocale(LC_ALL, "fr_FR");
+        $date_s = strtotime($date);
+        return strftime('%A %e %B %Y', $date_s);
     }
 }

@@ -60,7 +60,9 @@ class FrontPage extends Controller
                 break;
             }
         }
+
         $current_exhibition->closing_date = get_field('exhibition_date', get_post($current_exhibition))["exhibition_date_closing"];
+
         return $current_exhibition;
     }
 
@@ -82,7 +84,31 @@ class FrontPage extends Controller
         );
 
         $season_results = get_posts($args);
-        return $season_results;
+
+        $results = array_map(function ($post) {
+            if ($post->post_type == 'exhibition') {
+                // Link
+                $post->link = get_permalink($post->ID);
+                // ACF Fields
+                $post->opening_date = get_field('opening_date', $post);
+                $post->artist_name = get_field('artist_name', $post);
+                $post->exhibition_title = get_field('exhibition_title', $post);
+                $post->thumbnail = get_field('thumbnail', $post);
+                return $post;
+            } else {
+                // Link
+                $post->link = get_permalink($post->ID);
+                $post->title = apply_filters('the_title', $post->post_title);
+                // ACF Fields
+                $post->opening_date = get_field('opening_date', $post);
+                $post->hour = get_field('event_hour', $post);
+                $post->place = get_field('event_place', $post);
+                $post->thumbnail = get_field('thumbnail', $post);
+                return $post;
+            }
+        }, $season_results);
+
+        return $results;
     }
 
     public function lastNews()
@@ -113,7 +139,7 @@ class FrontPage extends Controller
                 'content' => apply_filters('the_content', $post->post_content),
                 'thumbnail' => get_the_post_thumbnail($post->ID, 'thumbnail'),
                 'date' => get_the_date('', $post->ID),
-                'link' => get_permalink( $post->ID),
+                'link' => get_permalink($post->ID),
                 // ACF Fields
                 'quotes' => get_field('quotes', $post),
                 'images' => get_field('images', $post),

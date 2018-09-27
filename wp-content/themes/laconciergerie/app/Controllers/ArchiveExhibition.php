@@ -34,9 +34,25 @@ class ArchiveExhibition extends Controller
                 )
             );
 
-            $postlist = get_posts($args);
-            $posts[] = array($term->slug, $postlist);
+            $postsList = get_posts($args);
+
+            $postsList = array_map(function ($post) {
+                return [
+
+                    // Link
+                    'link' => get_permalink($post->ID),
+
+                    // ACF Fields
+                    'opening_date' => get_field('opening_date', $post),
+                    'artist_name' => get_field('artist_name', $post),
+                    'exhibition_title' => get_field('exhibition_title', $post),
+                    'thumbnail' => get_field('thumbnail', $post),
+                ];
+            }, $postsList);
+
+            $posts[] = array($term->slug, $postsList);
         }
+
         return $posts;
     }
 
@@ -55,15 +71,30 @@ class ArchiveExhibition extends Controller
             'order_by' => 'post_title'
         );
 
-        $postlist = get_posts($args);
+        $postsList = get_posts($args);
+
+        $postsList = array_map(function ($post) {
+            return [
+                // Link
+                'link' => get_permalink($post->ID),
+
+                // ACF Fields
+                'opening_date' => get_field('opening_date', $post),
+                'artist_name' => get_field('artist_name', $post),
+                'exhibition_title' => get_field('exhibition_title', $post),
+                'thumbnail' => get_field('thumbnail', $post),
+            ];
+        }, $postsList);
 
         $letter_keyed_posts = array();
 
-        if ($postlist) {
-            foreach ($postlist as $post) {
-                $name = explode(' ', $post->post_title)[1];
+        if ($postsList) {
+            foreach ($postsList as $post) {
+                $name = explode(' ', $post['artist_name'])[1];
                 $first_letter = strtoupper(substr($name, 0, 1));
 
+                // If the array $letter_keyed_posts hasn't a key $first_letter
+                // Create an array into the key
                 if (!array_key_exists($first_letter, $letter_keyed_posts)) {
                     $letter_keyed_posts[$first_letter] = array();
                 }
