@@ -1,0 +1,132 @@
+footer {
+  background-color: $grey;
+  color: $white;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  align-items: flex-start;
+  padding: 30px 50px;
+  line-height: 1.3em;
+  font-size: 15px;
+  a {
+    color: inherit;
+    position: relative;
+    @include underline;
+    &::after {
+      position: absolute;
+      //content: '';
+      bottom: -3px;
+      left: -5px;
+      background-color: rgba(red, 0.7);
+      width: calc(100% + 10px);
+      z-index: -1;
+      height: 0;
+      transition: height 0.2s ease-out;
+    }
+    &:hover {
+      //text-decoration: underline;
+      &::after {
+        height: calc(100% + 5px);
+      }
+    }
+  }
+  .logo {
+    grid-column: 1 / 3;
+    width: 250px;
+  }
+
+  .container {
+    grid-row: 2 / 3;
+  }
+
+  .footer {
+    &__information {
+      h3 {
+        font-family: $font-open-sans;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+      .link--facebook {
+        margin: 30px 0;
+        display: block;
+        color: inherit;
+        background: none;
+        img {
+          width: 50px;
+          height: auto;
+          margin-right: 20px;
+          float: left;
+          margin-top: -5px;
+        }
+      }
+    }
+    &__newsletter {
+      grid-row: 2;
+      justify-self: flex-end;
+      label {
+        display: block;
+      }
+      .input {
+        padding: 8px 13px;
+        margin-top: 10px;
+        display: inline-block;
+      }
+      .button {
+        display: inline-block;
+        padding: 8px;
+        margin-left: -5px;
+        background-color: $blue;
+        color: $white;
+        font-weight: bold;
+      }
+    }
+    &__menu {
+      &--main {
+        grid-row: 2;
+        line-height: 1.5em;
+        li {
+          &:nth-child(3n) {
+            margin-bottom: 20px;
+          }
+        }
+        a {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+      &--secondary {
+        align-self: flex-end;
+        li {
+          display: inline-block;
+          &:not(:last-child) {
+            &::after {
+              content: '|';
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+    &__credits {
+      justify-self: flex-end;
+      font-style: italic;
+      font-size: 14px;
+      a:hover {
+        text-decoration: none;
+        color: #ffaac2;
+      }
+      img {
+        height: 35px;
+        width: auto;
+        margin-right: 5px;
+        margin-top: -6px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+

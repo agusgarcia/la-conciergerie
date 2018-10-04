@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
-    @include('partials.page-header')
+    <div class="page-header">
+        <h1>La saison</h1>
+        <h2>2018-2019</h2>
+    </div>
     NOW : {{ $current_exhibition->post_title }} - Du {{ App::formattedDate($current_exhibition->opening_date) }}
     au {{ App::formattedDate($current_exhibition->closing_date) }}
     <br>

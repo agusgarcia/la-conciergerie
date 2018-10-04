@@ -1,6 +1,22 @@
 /** Import Bootstrap functions */
-@import "~bootstrap/scss/functions";
+//@import "~bootstrap/scss/functions";
 
-$theme-colors: (
-  primary: #525ddc
-);
+$blue: #7eb2dd;
+
+$black: #000;
+$white: #fff;
+$grey: #2b2b2b;
+
+:root {
+  --page-color: #7eb2dd;
+}
+
+/** Hamburger icon */
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 25px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 5px;
+$hamburger-layer-color: $white;
+$hamburger-layer-border-radius : 0;
+$hamburger-types: (spin);

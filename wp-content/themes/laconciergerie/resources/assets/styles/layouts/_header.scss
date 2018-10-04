@@ -1,7 +1,31 @@
-.banner .nav li {
-  @extend .nav-item;
+.banner {
+  display: flex;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  padding: 15px 20px;
+  .logo {
+    width: 200px;
+  }
+  .hamburger {
+    margin-left: auto;
+    &-box {
+      transform: rotate(180deg);
+    }
+    &:not(.is-active) {
+      .hamburger-inner {
+        &::before {
+          width: 20px;
+        }
+        &::after {
+          width: 15px;
+        }
+      }
+    }
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
+.nav-primary {
+  margin-left: 0;
+  display: none;
 }

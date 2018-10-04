@@ -70,6 +70,15 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    add_theme_support('starter-content', [
+        'widgets' => [
+            'sidebar-footer' => [
+                'text_business_info',
+                'search'
+            ]
+        ]
+    ]);
 }, 20);
 
 /**
@@ -78,18 +87,23 @@ add_action('after_setup_theme', function () {
 add_action('widgets_init', function () {
     $config = [
         'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
+        'after_widget' => '</section>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
-    ] + $config);
+            'name' => __('Primary', 'sage'),
+            'id' => 'sidebar-primary'
+        ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
-    ] + $config);
+            'name' => __('Footer', 'sage'),
+            'id' => 'sidebar-footer'
+        ] + $config);
+    register_sidebar([
+            'name' => __('Accès et horaires', 'sage'),
+            'id' => 'sidebar-information'
+        ] + $config);
+
 });
 
 /**
@@ -129,4 +143,5 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
+
 });

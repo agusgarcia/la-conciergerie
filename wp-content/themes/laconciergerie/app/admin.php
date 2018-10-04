@@ -14,6 +14,23 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
             bloginfo('name');
         }
     ]);
+
+    //adding section in wordpress customizer
+    $wp_customize->add_section('copyright_extras_section', array(
+        'title'          => 'Copyright Text Section'
+    ));
+
+    //adding setting for copyright text
+    $wp_customize->add_setting('text_setting', array(
+        'default'        => 'Default Text For copyright Section',
+    ));
+
+    $wp_customize->add_control('text_setting', array(
+        'label'   => 'Copyright text',
+        'section' => 'copyright_extras_section',
+        'type'    => 'text',
+    ));
+
 });
 
 /**

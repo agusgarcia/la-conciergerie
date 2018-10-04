@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./../fonts/Avenir-BlackOblique.woff2') format('woff2'),
+    url('./../fonts/Avenir-BlackOblique.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./../fonts/Avenir-Medium.woff2') format('woff2'),
+    url('./../fonts/Avenir-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./../fonts/Avenir-MediumOblique.woff2') format('woff2'),
+    url('./../fonts/Avenir-MediumOblique.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('./../fonts/Avenir-Black.woff2') format('woff2'),
+    url('./../fonts/Avenir-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+$font-open-sans: 'Open Sans', 'Arial', sans-serif;
+$font-avenir: 'Avenir', 'Arial', sans-serif;

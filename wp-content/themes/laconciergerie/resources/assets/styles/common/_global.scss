@@ -1,0 +1,30 @@
+body {
+  font-family: $font-open-sans;
+  line-height: 1.5em;
+}
+
+h1 {
+  font-family: $font-avenir;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: initial;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $font-avenir;
+}
+
+h3 {
+  font-family: $font-avenir;
+}
+
+h4 {
+  font-family: $font-avenir;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  z-index: 2;
+}
