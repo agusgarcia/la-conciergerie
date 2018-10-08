@@ -1,29 +1,27 @@
 @import "common/functions";
 @import "common/variables";
-
-/** Import everything from autoload */
-//@import "./autoload/**/*";
-
 /**
  * Import npm dependencies
- *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 @import "~hamburgers/_sass/hamburgers/hamburgers";
+@import url("~swiper/dist/css/swiper.min.css");
 
 /** Import theme styles */
+// Common
 @import "common/reboot";
 @import "common/fonts";
 @import "common/global";
 @import "common/mixins";
+// Components
 @import "components/buttons";
-//@import "components/comments";
 @import "components/forms";
-//@import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
-@import "layouts/footer";
+@import "components/item";
+// Partials
+@import "partials/header";
+@import "partials/sidebar";
+@import "partials/footer";
+@import "partials/tinymce";
+// Layouts
 @import "layouts/pages";
 @import "layouts/posts";
-@import "layouts/tinymce";
+@import "layouts/homepage";

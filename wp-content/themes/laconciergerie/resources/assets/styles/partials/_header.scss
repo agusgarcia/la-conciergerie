@@ -4,6 +4,7 @@
   background-color: $black;
   color: $white;
   padding: 15px 20px;
+  height: $header-height;
   .logo {
     width: 200px;
   }
@@ -19,6 +20,7 @@
         }
         &::after {
           width: 15px;
+          transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.1s 0.3s;
         }
       }
     }

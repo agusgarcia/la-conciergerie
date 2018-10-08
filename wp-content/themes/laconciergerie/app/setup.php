@@ -79,6 +79,13 @@ add_action('after_setup_theme', function () {
             ]
         ]
     ]);
+
+    /*
+     * Create new image size
+     * */
+
+    add_image_size('full', 1920, '');
+
 }, 20);
 
 /**

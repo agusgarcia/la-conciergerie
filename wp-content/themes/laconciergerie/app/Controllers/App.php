@@ -13,6 +13,10 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public static function color() {
+        return get_field('color');
+    }
+
     public static function title()
     {
         if (is_home()) {
@@ -68,5 +72,14 @@ class App extends Controller
         setlocale(LC_ALL, "fr_FR");
         $date_s = strtotime($date);
         return strftime('%A %e %B %Y', $date_s);
+    }
+
+    public static function formattedDayAndMonth($date)
+    {
+        setlocale(LC_ALL, "fr_FR");
+        $date_s = strtotime($date);
+        $day =  strftime('%d', $date_s);
+        $month =  strftime('%m', $date_s);
+        return array($day, $month);
     }
 }

@@ -45,7 +45,7 @@ collect([
     'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date', 'home',
     'frontpage', 'page', 'paged', 'search', 'single', 'singular', 'attachment'
 ])->map(function ($type) {
-    add_filter("{$type}_template_hierarchy", __NAMESPACE__.'\\filter_templates');
+    add_filter("{$type}_template_hierarchy", __NAMESPACE__ . '\\filter_templates');
 });
 
 /**
@@ -57,7 +57,7 @@ add_filter('template_include', function ($template) {
     }, []);
     if ($template) {
         echo template($template, $data);
-        return get_stylesheet_directory().'/index.php';
+        return get_stylesheet_directory() . '/index.php';
     }
     return $template;
 }, PHP_INT_MAX);
@@ -76,7 +76,7 @@ add_filter('comments_template', function ($comments_template) {
 
     if ($theme_template) {
         echo template($theme_template);
-        return get_stylesheet_directory().'/index.php';
+        return get_stylesheet_directory() . '/index.php';
     }
 
     return $comments_template;
@@ -94,10 +94,10 @@ add_filter('get_search_form', function () {
  */
 add_filter('sage/template/app/data', function ($data) {
     return $data + [
-        'sf_action' => esc_url(home_url('/')),
-        'sf_screen_reader_text' => _x('Search for:', 'label', 'sage'),
-        'sf_placeholder' => esc_attr_x('Search &hellip;', 'placeholder', 'sage'),
-        'sf_current_query' => get_search_query(),
-        'sf_submit_text' => esc_attr_x('Search', 'submit button', 'sage'),
-    ];
+            'sf_action' => esc_url(home_url('/')),
+            'sf_screen_reader_text' => _x('Search for:', 'label', 'sage'),
+            'sf_placeholder' => esc_attr_x('Search &hellip;', 'placeholder', 'sage'),
+            'sf_current_query' => get_search_query(),
+            'sf_submit_text' => esc_attr_x('Search', 'submit button', 'sage'),
+        ];
 });

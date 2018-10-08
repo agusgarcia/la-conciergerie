@@ -1,0 +1,17 @@
+.button {
+  background-color: $blue;
+  font-style: italic;
+  color: $white;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: $font-avenir;
+  padding: 3px 8px;
+  margin-top: 10px;
+  display: inline-block;
+  i {
+    font-family: "Arial Narrow", sans-serif;
+  }
+  &:hover {
+    background-color: lighten($blue, 5);
+  }
+}

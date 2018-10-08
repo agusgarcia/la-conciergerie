@@ -4,7 +4,7 @@ footer {
   display: grid;
   grid-auto-flow: column;
   grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
   align-items: flex-start;
   padding: 30px 50px;
@@ -130,3 +130,64 @@ footer {
   }
 }
 
+@media screen and (max-width: $bp-m) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    justify-content: space-around;
+    .footer {
+      &__newsletter {
+        justify-self: flex-start;
+        grid-column: 1;
+        grid-row: 3;
+      }
+      &__menu--secondary {
+        grid-row: 4;
+        grid-column: 1 / span 2;
+        text-align: center;
+        padding-top: 20px;
+      }
+      &__credits {
+        align-self: flex-end;
+        justify-self: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-s) {
+  footer {
+    .footer {
+      &__newsletter {
+        align-self: flex-end;
+        grid-column: 1 / span 2;
+        justify-self: center;
+      }
+      &__credits {
+        justify-self: center;
+        grid-column: 1 / span 2;
+        grid-row: 5;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    .footer {
+      &__newsletter, &__menu--secondary, &__credits {
+        align-self: center;
+      }
+      &__newsletter {
+        margin: 30px 0;
+      }
+      &__menu--main {
+        margin-top: 20px;
+      }
+    }
+  }
+}

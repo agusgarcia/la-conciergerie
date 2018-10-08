@@ -34,13 +34,14 @@
         </div>
 
         <!--End mc_embed_signup-->
+
     </div>
 
     {{-- Agustina --}}
     <div class="footer__credits">
         <a href="https://agusgarcia.com">
-            <abbr title="Agustina fut ici !">
-                <img src="@asset('images/signature_agus_white.png')" alt="Agustina Garcia"> fuit hic</abbr>
+            <abbr title="Agustina fuit hic">
+              <img src="@asset('images/signature_agus_white.png')" alt="Agustina Garcia"> </abbr>
         </a>
     </div>
 </footer>
