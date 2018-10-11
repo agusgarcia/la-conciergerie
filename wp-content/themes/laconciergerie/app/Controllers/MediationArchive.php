@@ -22,7 +22,7 @@ class MediationArchive extends Controller
                 // Title, Content and Image
                 'title' => apply_filters('the_title', $post->post_title),
                 'content' => apply_filters('the_content', $post->post_content),
-                'thumbnail' => get_the_post_thumbnail($post->ID, 'thumbnail'),
+                'thumbnail' => get_the_post_thumbnail($post->ID, 'medium_large'),
                 'date' => get_the_date('', $post->ID),
                 'link' => get_permalink($post->ID),
                 // ACF Fields

@@ -109,32 +109,32 @@ class FrontPage extends Controller
     {
 //        $current_season = $this->currentSeason();
 
-   /*     global $current_season;
-        var_dump($current_season);
+        /*     global $current_season;
+             var_dump($current_season);
 
-        $criteria = array('post_type' => 'event');
-        $season_events = wp_list_filter($current_season, $criteria);
-        $upcoming_event = null;
-        foreach ($season_events as $event) {
-            // Get current date
-            $current_date = date_create(date('Ymd'));
+             $criteria = array('post_type' => 'event');
+             $season_events = wp_list_filter($current_season, $criteria);
+             $upcoming_event = null;
+             foreach ($season_events as $event) {
+                 // Get current date
+                 $current_date = date_create(date('Ymd'));
 
-            // Get the event's date
-            $event_date = date_create($event->opening_date);
+                 // Get the event's date
+                 $event_date = date_create($event->opening_date);
 
-            // Compare both dates
-            $date_diff = date_diff($current_date, $event_date)->format('%R%a');
+                 // Compare both dates
+                 $date_diff = date_diff($current_date, $event_date)->format('%R%a');
 
-            // If there's more than 0 days until the event
-            // And less than 10 days
-            // Set as the upcoming event and break
-            if ($date_diff >= 0 && $date_diff < 10) {
-                $upcoming_event = $event;
-                break;
-            }
-        }
+                 // If there's more than 0 days until the event
+                 // And less than 10 days
+                 // Set as the upcoming event and break
+                 if ($date_diff >= 0 && $date_diff < 10) {
+                     $upcoming_event = $event;
+                     break;
+                 }
+             }
 
-        return $upcoming_event;*/
+             return $upcoming_event;*/
 
         global $upcoming_found;
         $upcoming_event = $upcoming_found;
@@ -153,45 +153,5 @@ class FrontPage extends Controller
         }
 
         return $current_exhibition;
-    }
-
-
-    public
-    function lastNews()
-    {
-        $args = array(
-            'numberposts' => 2,
-            'post_type' => 'post',
-        );
-
-        $news = get_posts($args);
-        return $news;
-    }
-
-    public
-    function lastMediationPosts()
-    {
-        $args = array(
-            'numberposts' => 3,
-            'post_type' => 'mediation',
-        );
-
-        $posts = get_posts($args);
-
-        return array_map(function ($post) {
-            return [
-
-                // Title, Content and Image
-                'title' => apply_filters('the_title', $post->post_title),
-                'content' => apply_filters('the_content', $post->post_content),
-                'thumbnail' => get_the_post_thumbnail($post->ID, 'thumbnail'),
-                'date' => get_the_date('', $post->ID),
-                'link' => get_permalink($post->ID),
-                // ACF Fields
-                'quotes' => get_field('quotes', $post),
-                'images' => get_field('images', $post),
-            ];
-        }, $posts);
-
     }
 }

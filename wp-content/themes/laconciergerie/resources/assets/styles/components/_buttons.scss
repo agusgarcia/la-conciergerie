@@ -8,10 +8,49 @@
   padding: 3px 8px;
   margin-top: 10px;
   display: inline-block;
+  backface-visibility: hidden;
+
   i {
     font-family: "Arial Narrow", sans-serif;
   }
   &:hover {
     background-color: lighten($blue, 5);
+  }
+  &--big {
+    font-size: 20px;
+    background-color: $grey;
+    padding: 10px;
+    box-shadow: 6px 6px 0 var(--main-color);
+    transform: rotate(-2deg);
+    &:hover {
+      background-color: darken($grey, 5);
+    }
+
+  }
+  &__container {
+    text-align: right;
+    padding-bottom: 50px;
+    & {
+      margin-right: 40px;
+    }
+  }
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  margin-left: auto;
+  user-select: none;
+}
+
+.arrow {
+  width: 20px;
+  cursor: pointer;
+  margin-top: 0;
+  user-select: none;
+  &-reverse {
+    transform: rotate(180deg);
+    margin-top: -5px;
   }
 }

@@ -1,3 +1,4 @@
+@import "autoload/swiper";
 @import "common/functions";
 @import "common/variables";
 /**
@@ -12,6 +13,8 @@
 @import "common/fonts";
 @import "common/global";
 @import "common/mixins";
+@import "layouts/pages";
+
 // Components
 @import "components/buttons";
 @import "components/forms";
@@ -22,6 +25,7 @@
 @import "partials/footer";
 @import "partials/tinymce";
 // Layouts
-@import "layouts/pages";
 @import "layouts/posts";
+@import "layouts/news";
+@import "layouts/mediation";
 @import "layouts/homepage";

@@ -8,8 +8,13 @@
         max-height: 100%;
         bottom: -10px;
         padding-bottom: 50px;
-        transition: bottom 0.25s, padding 0.15s, max-height 0.75s 0.0s;
+        transition: bottom 0.25s, padding 0.15s;
         //transition-timing-function: linear;
+        p {
+          transition: max-height 0.4s ease-in-out, opacity 0.2s 0s;
+          opacity: 1;
+          max-height: 100px;
+        }
       }
     }
     .button {
@@ -25,7 +30,7 @@
     display: block;
     overflow: hidden;
     position: relative;
-
+    width: 100%;
   }
   &__main {
     position: absolute;
@@ -36,15 +41,20 @@
     line-height: 1.5em;
     font-weight: 600;
     font-family: $font-avenir;
-    padding: 10px 10px 30px;
+    padding: 10px 10px 0;
     left: -5px;
     right: -5px;
     transform: rotate(-2deg);
-    max-height: 63px;
+    //max-height: 63px;
     bottom: 30px;
-    transition: bottom 0.4s 0s , max-height 0.3s , padding 0.3s;
+    transition: bottom 0.4s 0s, padding 0.3s;
     transition-timing-function: ease;
     overflow: hidden;
+    p {
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), opacity 0.2s 0s;
+    }
   }
 
   &__title {
@@ -78,5 +88,21 @@
     transition-property: opacity, bottom;
     transition-duration: 0.25s;
     transition-delay: 0s;
+  }
+}
+
+@media screen and (max-width: $bp-s) {
+  .item {
+    img {
+      height: calc(80vw / 2 - 10px);
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  .item {
+    img {
+      height: calc(80vw - 10px);
+    }
   }
 }

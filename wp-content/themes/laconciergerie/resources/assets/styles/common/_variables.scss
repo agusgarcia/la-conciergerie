@@ -4,7 +4,8 @@
 $blue: #7eb2dd;
 $yellow: #fee155;
 $pink: #ffaac2;
-$green: #baf27e;
+$pink-dark: #b7666a;
+$green: #b9f27f;
 
 $black: #000;
 $white: #fff;
@@ -13,9 +14,18 @@ $grey-light: #d0d0d0;
 
 :root {
   --page-color: #7eb2dd;
+  --main-color: #7eb2dd;
+  .news {
+    --main-color: #b7666a;
+  }
+  .mediation {
+    --main-color: #a1dd63;
+  }
 }
 
+
 $header-height: 70px;
+$padding-sides: 60px;
 
 /** Hamburger icon */
 $hamburger-padding-x: 0;

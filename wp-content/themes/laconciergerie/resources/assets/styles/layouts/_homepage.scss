@@ -1,11 +1,12 @@
 .home {
-  .subtitle {
-    margin-left: calc(190px + 10%);
-  }
   .currently {
     &__slider {
       height: calc(100vh - #{$header-height} - 30px);
       width: 100%;
+      //max-height: 900px;
+      @media screen and (orientation: portrait) {
+        height: 50vh;
+      }
     }
     .swiper-slide {
       display: flex;
@@ -87,6 +88,18 @@
   }
   .season {
     margin-bottom: 50px;
+
+    .title {
+      margin-bottom: 0;
+    }
+    .subtitle {
+      //margin-left: calc(190px + 10%);
+      font-size: 38px;
+      line-height: 43px;
+      //left: 15px;
+      margin-left: 155px;
+    }
+
     &__slider {
       width: 100%;
       margin-top: 50px;
@@ -115,17 +128,28 @@
   }
   .news {
     background-image: linear-gradient(177deg, #fac8ca, #fbe6e7);
-    &:before {
+    margin-top: 100px;
+    margin-bottom: 70px;
+    &:before, &:after {
       background-color: #fac8ca;
+      //width: calc(100% + (#{$padding-sides} * 2));
       width: 100%;
+      left: 0;
       height: 25px;
       position: relative;
       content: '';
       display: block;
       transform: rotate(-1deg);
-      top: -10px;
+      top: -8px;
+    }
+    &:after {
+      background-color: #fbe6e7;
+      top: 8px;
+
     }
     .title {
+      //margin-bottom: 80px;
+
       &:after {
         background-color: $white;
       }
@@ -142,6 +166,12 @@
 
 @media screen and (max-width: $bp-xs) {
   .home {
+    .season {
+      .subtitle {
+        line-height: 50px;
+        margin-left: 65px;
+      }
+    }
     .currently {
       &__slider {
         height: auto;
@@ -181,6 +211,9 @@
       &__info {
         margin-left: 0;
       }
+    }
+    .news {
+      margin-bottom:40px;
     }
   }
 }

@@ -14,8 +14,10 @@ export default {
         };
         this.currentlySlider = null;
         this.seasonSlider = null;
+        this.mediationSlider = null;
         this.currentlySliderId = '.currently__slider';
         this.seasonSliderId = '.season__slider';
+        this.mediationSliderId = '.mediation__slider';
     },
 
     initEvents() {
@@ -31,12 +33,45 @@ export default {
             slidesPerView: 3,
             spaceBetween: 10,
             scrollbar: {
-                el: $(`.swiper-scrollbar, ${this.seasonSliderId}`),
+                el: `.swiper-scrollbar, ${this.seasonSliderId}`,
                 draggable: true,
             },
+            breakpoints: {
+                1366: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+            },
         });
+
+        this.mediationSlider = new Swiper(this.mediationSliderId, {
+            watchOverflow: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            breakpoints: {
+                960: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                480: {
+                    slidesPerView: 1,
+                },
+            },
+            navigation: {
+                nextEl: `.swiper-button-next, ${this.mediationSliderId}`,
+                prevEl: `.swiper-button-prev, ${this.mediationSliderId}`,
+            },
+        });
+
         const currentIndex = $(this.$els.currentExhibition).index();
-       this.seasonSlider.slideTo(currentIndex);
+        this.seasonSlider.slideTo(currentIndex);
     },
 
     finalize() {
