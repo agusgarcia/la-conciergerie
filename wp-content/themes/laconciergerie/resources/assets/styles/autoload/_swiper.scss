@@ -2,3 +2,40 @@
   background: none;
   position: relative;
 }
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  margin-left: auto;
+  user-select: none;
+
+  .arrow {
+    width: 20px;
+    cursor: pointer;
+    margin-top: 0;
+    user-select: none;
+    &-reverse {
+      transform: rotate(180deg);
+      margin-top: -5px;
+    }
+  }
+
+  &--big {
+    .arrow {
+      transform: rotate(-90deg);
+      fill: rgba($white, 0.85);
+      height: 100px;
+      width: 80px;
+      right: 0;
+      path {
+        box-shadow: 1px 1px 1px rgba($black, 0.6);
+      }
+      &--reverse {
+        transform: rotate(90deg);
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+}

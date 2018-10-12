@@ -1,0 +1,342 @@
+.single-exhibition, .single-event {
+  .hero {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: cover;
+  }
+  .title {
+    color: var(--page-color);
+    margin-bottom: 25px;
+    line-height: 1em;
+    &:after {
+      content: none;
+    }
+  }
+  .subtitle {
+    color: $white;
+    background-color: var(--page-color);
+    padding: 3px 10px;
+    font-weight: normal;
+    font-style: italic;
+    &:after {
+      content: none;
+    }
+  }
+  .content {
+    &__first {
+      padding-left: 10%;
+      margin-bottom: 60px;
+      margin-top: 80px;
+      > div {
+        max-width: 1600px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .media__container {
+        img {
+          max-height: 500px;
+        }
+      }
+    }
+    &__second {
+      background-color: var(--page-color);
+      margin-bottom: 60px;
+      > div {
+        display: flex;
+        max-width: 1600px;
+        margin: auto;
+      }
+      .media__container {
+        min-height: 400px;
+        max-height: 400px;
+        padding-left: 60px;
+        figure {
+          position: absolute;
+          top: -30px;
+          bottom: -30px;
+        }
+      }
+    }
+  }
+  .media__container {
+    position: relative;
+    flex-basis: 60%;
+
+    iframe, img {
+      width: 100%;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    figcaption {
+      text-align: right;
+    }
+  }
+  .text {
+    text-align: justify;
+    line-height: 1.8em;
+    p {
+      margin-bottom: 15px;
+
+    }
+    figure {
+      max-width: 100%;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .text--main {
+    padding-right: 40px;
+    flex-basis: 40%;
+  }
+  .text--secondary {
+    margin-top: 120px;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  .information {
+    color: $white;
+    margin: 30px 0;
+    text-align: right;
+    padding: 10px 30px;
+    padding-right: 60px;
+    grid-column-end: span 2;
+    flex-grow: 1;
+    a {
+      color: inherit;
+      text-decoration: underline;
+      word-break: break-word;
+    }
+    strong {
+      display: block;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    figure {
+      width: 60%;
+      max-width: 1024px;
+      min-width: 500px;
+      margin-bottom: 30px;
+      &:nth-child(even) {
+        align-self: flex-end;
+        .image__container {
+          &:after {
+            left: 30px;
+            right: 0;
+          }
+        }
+        figcaption {
+          margin-top: 10px;
+          margin-right: 10px;
+          text-align: right;
+        }
+
+      }
+      .image__container {
+        position: relative;
+        @include underline(var(--page-color));
+        &:after {
+          right: 30px;
+          left: 0;
+        }
+      }
+    }
+    img {
+      z-index: 2;
+      height: auto;
+      position: relative;
+      width: 100%;
+    }
+    figcaption {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+  }
+  .gallery__slider {
+    max-width: 1024px;
+    margin: auto;
+    .swiper-slide {
+      background: $grey-light;
+    }
+    .title {
+      font-size: 24px;
+      color: $grey;
+      font-weight: 800;
+    }
+    .image__container {
+      text-align: center;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+  .swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    &.arrow {
+      //width: 50px;
+    }
+  }
+  .post__navigation {
+    display: flex;
+    width: 100%;
+    margin: 80px 0;
+    font-size: 28px;
+  }
+  .post__previous, .post__next {
+    @include underline(var(--page-color));
+    text-transform: uppercase;
+    color: $grey;
+    font-weight: 800;
+    font-family: $font-avenir;
+    padding-left: 30px;
+    padding-right: 15px;
+    max-width: 90%;
+    &:after {
+      bottom: -10px;
+      height: 16px;
+    }
+    span {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 30px;
+      background-color: $grey;
+      color: $white;
+      font-size: 18px;
+      padding: 6px 10px;
+      transform: rotate(-1deg);
+    }
+  }
+  .post__next {
+    padding-left: 15px;
+    padding-right: 30px;
+    margin-left: auto;
+    span {
+      left: auto;
+      right: 0;
+      transform: rotate(1deg);
+    }
+  }
+
+}
+
+@media screen and (max-width: 1600px) {
+  .single-exhibition, .single-event {
+    .content__first {
+      figcaption {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-l) {
+  .single-exhibition, .single-event {
+    .content {
+      &__first {
+        padding-left: 7%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-m) {
+  .single-exhibition, .single-event {
+    .title {
+      font-size: 45px;
+    }
+    .subtitle {
+      font-size: 24px;
+    }
+    .text {
+      line-height: 1.5em;
+    }
+    .gallery {
+      margin-top: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-s) {
+  .single-event, .single-exhibition {
+    font-size: 15px;
+    .text {
+    }
+  }
+}
+
+@media screen and (max-width: $bp-s) {
+  .single-event, .single-exhibition {
+    .content {
+      &__first, &__second {
+        > div {
+          flex-direction: column;
+        }
+      }
+      &__first {
+        margin-top: 40px;
+      }
+      &__second {
+        margin-top: 120px;
+        .media__container {
+          padding-left: 0;
+          width: 90%;
+          margin: -30px auto 0;
+          max-height: unset;
+          min-height: unset;
+          figure {
+            position: relative;
+            top: auto;
+            bottom: auto;
+          }
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .text {
+      &--main {
+        padding-right: 7%;
+        margin-bottom: 30px;
+      }
+      &--secondary {
+        margin-top: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  .single-event, .single-exhibition {
+    .gallery {
+      figure {
+        width: 90%;
+        max-width: unset;
+        min-width: unset;
+      }
+    }
+    .post__navigation {
+      font-size: 22px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .post__next {
+      margin-top: 40px;
+    }
+  }
+}

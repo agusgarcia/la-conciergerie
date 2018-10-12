@@ -13,7 +13,7 @@ footer {
   a {
     color: inherit;
     position: relative;
-    @include underline;
+    @include link-hover;
     &::after {
       position: absolute;
       //content: '';
@@ -34,7 +34,7 @@ footer {
   }
   .logo {
     grid-column: 1 / 3;
-    width: 250px;
+    width: 200px;
   }
 
   .container {

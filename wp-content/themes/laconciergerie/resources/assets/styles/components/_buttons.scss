@@ -35,22 +35,3 @@
     }
   }
 }
-
-.arrows {
-  display: flex;
-  justify-content: space-between;
-  width: 80px;
-  margin-left: auto;
-  user-select: none;
-}
-
-.arrow {
-  width: 20px;
-  cursor: pointer;
-  margin-top: 0;
-  user-select: none;
-  &-reverse {
-    transform: rotate(180deg);
-    margin-top: -5px;
-  }
-}

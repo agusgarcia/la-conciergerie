@@ -3,6 +3,8 @@
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
  */
 
+$spacer: 60px;
+
 /** Media alignment */
 .alignnone {
   margin-left: 0;
@@ -22,7 +24,8 @@
   height: auto;
 }
 
-@include media-breakpoint-up(sm) {
+//@media screen and (max-width: $bp-xs) {
+
   .alignleft {
     float: left;
     margin-right: ($spacer / 2);
@@ -32,9 +35,11 @@
     float: right;
     margin-left: ($spacer / 2);
   }
-}
+//}
 
-/** Captions */
+
+/*
+!** Captions *!
 .wp-caption {
   @extend .figure;
 }
@@ -48,8 +53,8 @@
   @extend .figure-caption;
 }
 
-/** Text meant only for screen readers */
+!** Text meant only for screen readers *!
 .screen-reader-text {
   @extend .sr-only;
   @extend .sr-only-focusable;
-}
+}*/
