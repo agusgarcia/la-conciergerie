@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    {{ $global }}
+    {{--{{ $global }}--}}
     <section class="currently">
         <div class="swiper-container currently__slider">
             <div class="swiper-wrapper">
@@ -21,7 +21,9 @@
                     <div class="currently__info">
                         <p>Vernissage le {{ App::formattedDateWithDay($current_exhibition->opening_date) }}
                             à {{ $current_exhibition->preview_hour }}</p>
-                        <p>Ouverture du {{ $current_exhibition->start_date }}
+                        <p>Ouverture du
+                            {{ App::formattedDateNoYear($current_exhibition->start_date) }}
+
                             au {{ App::formattedDate($current_exhibition->closing_date) }}</p>
 
                         <a class="button" href="{{ get_permalink($current_exhibition->ID) }}">En savoir plus <i
@@ -72,7 +74,8 @@
                 <div class="swiper-wrapper">
                     @foreach($posts as $post)
                         <div class="swiper-slide">
-                            @if($post->exhibition_title)                                @include('components.exhibition-item', (array) $post)
+                            @if($post->exhibition_title)
+                                @include('components.exhibition-item', (array) $post)
                             @else
                                 @include('components.event-item', (array) $post)
                             @endif

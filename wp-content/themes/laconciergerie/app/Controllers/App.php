@@ -66,6 +66,12 @@ class App extends Controller
         $date_s = strtotime($date);
         return strftime('%e %B %Y', $date_s);
     }
+    public static function formattedDateNoYear($date)
+    {
+        setlocale(LC_ALL, "fr_FR");
+        $date_s = strtotime($date);
+        return strftime('%e %B', $date_s);
+    }
 
     public static function formattedDateWithDay($date)
     {

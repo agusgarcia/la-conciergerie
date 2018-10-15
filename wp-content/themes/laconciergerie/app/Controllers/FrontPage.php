@@ -46,6 +46,8 @@ class FrontPage extends Controller
                 $post->exhibition_title = get_field('exhibition_title', $post);
                 $post->thumbnail = get_field('thumbnail', $post);
                 $post->color = get_field('color', $post);
+                $post->start_date = get_field('exhibition_date', get_post($post))["exhibition_date_opening"];
+                $post->closing_date = get_field('exhibition_date', get_post($post))["exhibition_date_closing"];
                 if ($current_found === null) {
                     // Get current date
                     $current_date = date_create(date('Ymd'));
@@ -145,13 +147,13 @@ class FrontPage extends Controller
     {
 
         global $current_found;
-        $current_exhibition = $current_found;
+        $post = $current_found;
 
-        if ($current_exhibition) {
-            $current_exhibition->start_date = get_field('exhibition_date', get_post($current_exhibition))["exhibition_date_opening"];
-            $current_exhibition->closing_date = get_field('exhibition_date', get_post($current_exhibition))["exhibition_date_closing"];
+        if ($post) {
+            //  $post->start_date = get_field('exhibition_date', get_post($post))["exhibition_date_opening"];
+            //    $post->closing_date = get_field('exhibition_date', get_post($post))["exhibition_date_closing"];
         }
 
-        return $current_exhibition;
+        return $post;
     }
 }

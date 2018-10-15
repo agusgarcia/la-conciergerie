@@ -5,9 +5,7 @@
  */
 @import "~hamburgers/_sass/hamburgers/hamburgers";
 @import url("~swiper/dist/css/swiper.min.css");
-
 @import "autoload/swiper";
-
 /** Import theme styles */
 // Common
 @import "common/reboot";
@@ -15,13 +13,11 @@
 @import "common/global";
 @import "common/mixins";
 @import "layouts/pages";
-
 // Components
 @import "components/buttons";
 @import "components/forms";
 @import "components/item";
 @import "components/wp-classes";
-
 // Partials
 @import "partials/header";
 @import "partials/sidebar";
@@ -34,3 +30,4 @@
 @import "layouts/homepage";
 @import "layouts/exhibition-event";
 @import "layouts/event";
+@import "layouts/archive";

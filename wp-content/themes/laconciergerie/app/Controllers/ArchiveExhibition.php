@@ -36,21 +36,23 @@ class ArchiveExhibition extends Controller
 
             $postsList = get_posts($args);
 
-            $postsList = array_map(function ($post) {
-                return [
+            $result = array_map(function ($post) {
+                $post->link = get_permalink($post->ID);
+                // ACF Fields
+//                $post->opening_date = get_field('opening_date', $post);
+//                $post->preview_hour = get_field('preview_hour', $post);
+                $post->artist_name = get_field('artist_name', $post);
+                $post->exhibition_title = get_field('exhibition_title', $post);
+                $post->thumbnail = get_field('thumbnail', $post);
+                $post->color = get_field('color', $post);
+//                $post->start_date = get_field('exhibition_date', get_post($post))["exhibition_date_opening"];
+//                $post->closing_date = get_field('exhibition_date', get_post($post))["exhibition_date_closing"];
 
-                    // Link
-                    'link' => get_permalink($post->ID),
+                return $post;
 
-                    // ACF Fields
-                    'opening_date' => get_field('opening_date', $post),
-                    'artist_name' => get_field('artist_name', $post),
-                    'exhibition_title' => get_field('exhibition_title', $post),
-                    'thumbnail' => get_field('thumbnail', $post),
-                ];
             }, $postsList);
 
-            $posts[] = array($term->slug, $postsList);
+            $posts[] = array($term->name, $result);
         }
 
         return $posts;
@@ -74,16 +76,12 @@ class ArchiveExhibition extends Controller
         $postsList = get_posts($args);
 
         $postsList = array_map(function ($post) {
-            return [
-                // Link
-                'link' => get_permalink($post->ID),
+            $post->artist_name = get_field('artist_name', $post);
+            $post->exhibition_title = get_field('exhibition_title', $post);
+            $post->thumbnail = get_field('thumbnail', $post);
+            $post->color = get_field('color', $post);
+            return (array) $post;
 
-                // ACF Fields
-                'opening_date' => get_field('opening_date', $post),
-                'artist_name' => get_field('artist_name', $post),
-                'exhibition_title' => get_field('exhibition_title', $post),
-                'thumbnail' => get_field('thumbnail', $post),
-            ];
         }, $postsList);
 
         $letter_keyed_posts = array();
