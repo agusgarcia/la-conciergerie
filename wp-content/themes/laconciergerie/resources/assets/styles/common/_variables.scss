@@ -15,10 +15,12 @@ $grey-light: #d0d0d0;
 :root {
   --page-color: #7eb2dd;
   --main-color: #7eb2dd;
-  .news {
+  .news, .blog {
+    --page-color: #facacb;
     --main-color: #b7666a;
   }
-  .mediation {
+  .mediation, .post-type-archive-mediation {
+    --page-color: #a1dd63;
     --main-color: #a1dd63;
   }
 }

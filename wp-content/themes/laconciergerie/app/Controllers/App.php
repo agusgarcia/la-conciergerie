@@ -13,8 +13,16 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
-    public static function color() {
-        return get_field('color');
+    public function pageColor()
+    {
+        if (is_archive()) {
+            return "";
+        }
+        if (get_field('page_color')) {
+            return get_field('page_color');
+        } else {
+            return get_field('color');
+        }
     }
 
     public static function title()
@@ -66,6 +74,7 @@ class App extends Controller
         $date_s = strtotime($date);
         return strftime('%e %B %Y', $date_s);
     }
+
     public static function formattedDateNoYear($date)
     {
         setlocale(LC_ALL, "fr_FR");
@@ -84,8 +93,8 @@ class App extends Controller
     {
         setlocale(LC_ALL, "fr_FR");
         $date_s = strtotime($date);
-        $day =  strftime('%d', $date_s);
-        $month =  strftime('%m', $date_s);
+        $day = strftime('%d', $date_s);
+        $month = strftime('%m', $date_s);
         return array($day, $month);
     }
 }

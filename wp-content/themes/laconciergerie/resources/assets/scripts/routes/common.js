@@ -1,3 +1,4 @@
+import Swiper from 'swiper';
 require('viewport-units-buggyfill').init();
 
 export default {
@@ -11,12 +12,16 @@ export default {
         this.$els = {
             body: document.querySelector('body'),
             color: document.querySelector('body').getAttribute('data-color'),
-        }
+            mediationSlider: document.querySelector('.js-mediation__slider'),
+        };
+        this.mediationSlider = null;
+        this.mediationSliderId = '.mediation__slider';
     },
 
     initEvents() {
         this.initColorPage();
         this.initMenu();
+        this.initCommonSliders();
     },
 
     initColorPage() {
@@ -26,6 +31,35 @@ export default {
     initMenu() {
         $('.hamburger').click(function () {
             $(this).toggleClass('is-active');
+        });
+    },
+
+    initCommonSliders() {
+        if (this.$els.mediationSlider !== null) {
+            this.initMediationSlider();
+        }
+    },
+
+    initMediationSlider() {
+        this.mediationSlider = new Swiper(this.mediationSliderId, {
+            watchOverflow: true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            breakpoints: {
+                960: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                480: {
+                    slidesPerView: 1,
+                },
+            },
+            navigation: {
+                nextEl: `.swiper-button-next, ${this.mediationSliderId}`,
+                prevEl: `.swiper-button-prev, ${this.mediationSliderId}`,
+            },
         });
     },
 

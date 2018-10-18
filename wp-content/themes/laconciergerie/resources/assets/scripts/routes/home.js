@@ -14,10 +14,8 @@ export default {
         };
         this.currentlySlider = null;
         this.seasonSlider = null;
-        this.mediationSlider = null;
         this.currentlySliderId = '.currently__slider';
         this.seasonSliderId = '.season__slider';
-        this.mediationSliderId = '.mediation__slider';
     },
 
     initEvents() {
@@ -46,27 +44,6 @@ export default {
                 640: {
                     slidesPerView: 1,
                 },
-            },
-        });
-
-        this.mediationSlider = new Swiper(this.mediationSliderId, {
-            watchOverflow: true,
-            slidesPerView: 3,
-            spaceBetween: 30,
-            breakpoints: {
-                960: {
-                    slidesPerView: 2,
-                },
-                640: {
-                    slidesPerView: 1,
-                },
-                480: {
-                    slidesPerView: 1,
-                },
-            },
-            navigation: {
-                nextEl: `.swiper-button-next, ${this.mediationSliderId}`,
-                prevEl: `.swiper-button-prev, ${this.mediationSliderId}`,
             },
         });
 

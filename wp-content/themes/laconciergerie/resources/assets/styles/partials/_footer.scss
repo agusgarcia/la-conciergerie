@@ -87,10 +87,11 @@ footer {
     &__menu {
       &--main {
         grid-row: 2;
-        line-height: 1.5em;
+        line-height: 1.6em;
+        margin-top: 5px;
         li {
           &:nth-child(3n) {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
           }
         }
         a {

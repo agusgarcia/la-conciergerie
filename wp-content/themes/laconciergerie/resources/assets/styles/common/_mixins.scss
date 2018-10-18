@@ -1,11 +1,14 @@
-@mixin link-hover() {
+@mixin link-hover($color: $blue) {
   padding: 3px 5px;
-  background-image: linear-gradient(120deg, rgba($blue, 0.7) 0%, rgba($blue, 0.7) 100%);
+  $color: rgba($color, 0.7);
+  background-image: linear-gradient($color 0%, $color 100%);
+  //background-image: linear-gradient(120deg, RGBA($color, 0.7) 0%, RGBA($color, 0.7) 100%);
   background-repeat: no-repeat;
   background-size: 100% 0;
   background-position: 0 80%;
-  transition: background-size 0.2s ease-in;
+  transition: background-size 0.2s ease-in, color 0.2s ease-in;
   &:hover {
+    color: $white;
     background-size: 100% 90%;
   }
 }
