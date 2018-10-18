@@ -64,6 +64,10 @@
   }
 }
 
+.blog {
+  background-image: linear-gradient(177deg, #fac8ca, #fbe6e7);
+}
+
 @media screen and (max-width: $bp-s) {
   .news {
     &-single {
