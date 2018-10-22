@@ -12,6 +12,8 @@ class NewsArchive extends Controller
         $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
         $args = array(
             'numberposts' => $number,
+            // If different posts_per_page needed, change it too in Wordpress Settings > Reading
+            'posts_per_page' => 10,
             'paged'          => $paged
         );
 

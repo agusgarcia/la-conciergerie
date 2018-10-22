@@ -17,7 +17,10 @@
 @import "components/buttons";
 @import "components/forms";
 @import "components/item";
+@import "components/breadcrumb";
 @import "components/wp-classes";
+@import "components/gallery-slider";
+@import "components/posts-navigation";
 // Partials
 @import "partials/header";
 @import "partials/sidebar";
@@ -32,3 +35,4 @@
 @import "layouts/event";
 @import "layouts/archive";
 @import "layouts/espace-pedagogique";
+@import "layouts/single";

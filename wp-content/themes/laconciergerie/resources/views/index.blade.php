@@ -6,6 +6,7 @@
     @foreach(NewsArchive::lastPosts(-1) as $news)
         @include('components.news-item', $news)
     @endforeach
-
-    {!! get_the_posts_navigation() !!}
+    <div class="post__navigation">
+        {!! get_the_posts_navigation() !!}
+    </div>
 @endsection

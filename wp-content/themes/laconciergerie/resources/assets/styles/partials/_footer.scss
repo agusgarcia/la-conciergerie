@@ -4,7 +4,7 @@ footer {
   display: grid;
   grid-auto-flow: column;
   grid-gap: 20px;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 1fr auto 1fr;
   grid-template-rows: repeat(3, auto);
   align-items: flex-start;
   padding: 50px 50px;
@@ -88,7 +88,7 @@ footer {
       &--main {
         grid-row: 2;
         line-height: 1.6em;
-        margin-top: 5px;
+        margin-top: 10px;
         li {
           &:nth-child(3n) {
             margin-bottom: 10px;

@@ -22,19 +22,26 @@
   }
 
   &--big {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
     .arrow {
       transform: rotate(-90deg);
       fill: rgba($white, 0.85);
-      height: 100px;
-      width: 80px;
+      height: 70px;
+      width: auto;
+      top: 0;
+      left:0;
       right: 0;
       path {
         box-shadow: 1px 1px 1px rgba($black, 0.6);
       }
       &--reverse {
         transform: rotate(90deg);
-        left: 0;
-        right: auto;
       }
     }
   }

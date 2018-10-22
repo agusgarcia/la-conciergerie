@@ -1,0 +1,14 @@
+.breadcrumb {
+  font-family: $font-avenir;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 30px;
+  li {
+    display: inline-block;
+    a {
+      color: var(--main-color);
+      @include link-hover();
+      background-image: linear-gradient(var(--main-color) 0%, var(--main-color) 100%);
+    }
+  }
+}

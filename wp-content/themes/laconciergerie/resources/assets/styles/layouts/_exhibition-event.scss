@@ -49,7 +49,7 @@
       }
       .media__container {
         min-height: 400px;
-        max-height: 400px;
+        max-height: 450px;
         padding-left: 60px;
         figure {
           position: absolute;
@@ -164,74 +164,6 @@
       margin-left: 10px;
     }
   }
-  .gallery__slider {
-    max-width: 1024px;
-    margin: auto;
-    .swiper-slide {
-      background: $grey-light;
-    }
-    .title {
-      font-size: 24px;
-      color: $grey;
-      font-weight: 800;
-    }
-    .image__container {
-      text-align: center;
-    }
-    img {
-      height: 100%;
-      width: 100%;
-      display: block;
-    }
-  }
-  .swiper-button-next, .swiper-button-prev {
-    position: absolute;
-    &.arrow {
-      //width: 50px;
-    }
-  }
-  .post__navigation {
-    display: flex;
-    width: 100%;
-    margin: 80px 0;
-    font-size: 28px;
-  }
-  .post__previous, .post__next {
-    @include underline(var(--page-color));
-    text-transform: uppercase;
-    color: $grey;
-    font-weight: 800;
-    font-family: $font-avenir;
-    padding-left: 30px;
-    padding-right: 15px;
-    max-width: 90%;
-    &:after {
-      bottom: -10px;
-      height: 16px;
-    }
-    span {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 30px;
-      background-color: $grey;
-      color: $white;
-      font-size: 18px;
-      padding: 6px 10px;
-      transform: rotate(-1deg);
-    }
-  }
-  .post__next {
-    padding-left: 15px;
-    padding-right: 30px;
-    margin-left: auto;
-    span {
-      left: auto;
-      right: 0;
-      transform: rotate(1deg);
-    }
-  }
-
 }
 
 @media screen and (max-width: 1600px) {

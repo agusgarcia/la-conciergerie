@@ -6,17 +6,18 @@
   //max-width: 1600px;
   &.swiper-container {
     padding: 0;
-    margin: 0 10%;
+    margin-left: 10%;
+    margin-right: 10%;
     width: calc(100% - 20%);
   }
 }
-
 @media screen and (max-width: $bp-l) {
   .row {
     padding: 0 7%;
     &.swiper-container {
       padding: 0;
-      margin: 0 7%;
+      margin-left: 7%;
+      margin-right: 7%;
       width: calc(100% - 14%);
     }
   }

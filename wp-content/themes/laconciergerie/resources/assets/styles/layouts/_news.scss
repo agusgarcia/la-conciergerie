@@ -4,6 +4,14 @@
     margin-bottom: 80px;
     align-items: flex-start;
   }
+  &__date {
+    font-family: $font-avenir;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin: 8px 0 15px;
+    display: block;
+  }
   &__thumb {
     position: relative;
     margin-top: 20px;
@@ -39,14 +47,6 @@
     a {
       color: inherit;
     }
-  }
-  &__date {
-    font-family: $font-avenir;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--main-color);
-    margin: 8px 0 15px;
-    display: block;
   }
   &__content {
     font-size: 14px;

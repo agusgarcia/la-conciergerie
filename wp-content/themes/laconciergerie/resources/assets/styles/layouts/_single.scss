@@ -1,0 +1,60 @@
+.single {
+  &-mediation, &-post {
+    .title {
+      font-size: 42px;
+      &__container {
+        padding-left: 0;
+      }
+      &:after {
+        bottom: 5px;
+      }
+    }
+    .row {
+      margin-bottom: 60px;
+    }
+  }
+  &__date {
+    font-family: $font-avenir;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin: 8px 0 15px;
+    display: block;
+  }
+
+  &__content {
+    font-size: 16px;
+    line-height: 1.8em;
+    text-align: justify;
+    p {
+      margin: 20px 0;
+    }
+    a {
+      @include link-hover;
+      background-image: linear-gradient(var(--page-color) 0%, var(--page-color) 100%);
+    }
+  }
+
+  &__thumb {
+    margin: auto;
+    display: block;
+    text-align: center;
+    img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  .single {
+    &-post, &-mediation {
+      .title {
+        font-size: 32px;
+        hyphens: none;
+      }
+    }
+  }
+}

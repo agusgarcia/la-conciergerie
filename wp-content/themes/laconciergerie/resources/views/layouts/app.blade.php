@@ -1,5 +1,5 @@
 <!doctype html>
-<html {{ get_language_attributes() }}>
+<html lang="{{ get_bloginfo('language') }}">
 @include('partials.head')
 <body @php body_class() @endphp data-color="{{ App::pageColor() }}">
 @php do_action('get_header') @endphp

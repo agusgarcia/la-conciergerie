@@ -1,0 +1,30 @@
+.gallery__slider {
+  max-width: 1024px;
+  margin: 60px auto 0;
+  .swiper-slide {
+    background: $grey-light;
+  }
+  .title {
+    font-size: 24px;
+    color: $grey;
+    font-weight: 800;
+  }
+  .image__container {
+    text-align: center;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  figcaption {
+    background-color: white;
+    padding-left: 10px;
+    padding-top: 2px;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    //position: absolute;
+  }
+
+}
