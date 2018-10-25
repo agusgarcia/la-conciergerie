@@ -12,10 +12,13 @@ export default {
         this.$els = {
             body: document.querySelector('body'),
             color: document.querySelector('body').getAttribute('data-color'),
-            mediationSlider: document.querySelector('.js-mediation__slider'),
+            sliderThree: document.querySelector('.js-slider--three'),
+            sliderFour: document.querySelector('.js-slider--four'),
         };
-        this.mediationSlider = null;
-        this.mediationSliderId = '.mediation__slider';
+        this.sliderThree = null;
+        this.sliderFour = null;
+        this.sliderThreeId = '.slider__three';
+        this.sliderFourId = '.slider__four';
     },
 
     initEvents() {
@@ -35,13 +38,16 @@ export default {
     },
 
     initCommonSliders() {
-        if (this.$els.mediationSlider !== null) {
-            this.initMediationSlider();
+        if (this.$els.sliderThree !== null) {
+            this.initSliderThree();
+        }
+        if (this.$els.sliderFour !== null) {
+            this.initSliderFour();
         }
     },
 
-    initMediationSlider() {
-        this.mediationSlider = new Swiper(this.mediationSliderId, {
+    initSliderThree() {
+        this.sliderThree = new Swiper(this.sliderThreeId, {
             watchOverflow: true,
             slidesPerView: 3,
             spaceBetween: 30,
@@ -52,16 +58,37 @@ export default {
                 640: {
                     slidesPerView: 1,
                 },
+            },
+            navigation: {
+                nextEl: `.swiper-button-next, ${this.sliderThreeId}`,
+                prevEl: `.swiper-button-prev, ${this.sliderThreeId}`,
+            },
+        });
+    },
+    initSliderFour() {
+        console.log('init');
+        this.sliderFour = new Swiper(this.sliderFourId, {
+            watchOverflow: true,
+            slidesPerView: 4,
+            spaceBetween: 30,
+            breakpoints: {
+                960: {
+                    slidesPerView: 3,
+                },
+                640: {
+                    slidesPerView: 2,
+                },
                 480: {
                     slidesPerView: 1,
                 },
             },
             navigation: {
-                nextEl: `.swiper-button-next, ${this.mediationSliderId}`,
-                prevEl: `.swiper-button-prev, ${this.mediationSliderId}`,
+                nextEl: `.swiper-button-next, ${this.sliderFourId}`,
+                prevEl: `.swiper-button-prev, ${this.sliderFourId}`,
             },
         });
     },
+
 
     finalize() {
         // JavaScript to be fired on all pages, after page specific JS is fired

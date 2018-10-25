@@ -10,7 +10,30 @@
     margin-right: 10%;
     width: calc(100% - 20%);
   }
+  &.content {
+    margin-bottom: 40px;
+    a {
+      @include link-hover;
+      //background-image: linear-gradient(var(--page-color) 0%, var(--page-color) 100%);
+    }
+    p {
+      margin: 10px 0;
+    }
+    h3 {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 2em;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+  }
 }
+
+.wrap.container {
+  min-height: calc(100vh - 500px - 70px);
+}
+
+
 @media screen and (max-width: $bp-l) {
   .row {
     padding: 0 7%;

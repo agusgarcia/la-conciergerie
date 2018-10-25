@@ -5,4 +5,67 @@ label {
 input, button {
   border: none;
   font: inherit;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.wpforms-field {
+  &:first-child, &:nth-child(2) {
+    display: inline-block;
+  }
+  &:first-child {
+    margin-right: 20px;
+  }
+  &.wpforms-field-hp {
+    display: none;
+  }
+  label {
+    text-transform: uppercase;
+    font-family: $font-avenir;
+    font-size: 16px;
+    font-weight: 800;
+    display: inline-block;
+    margin: 20px 0 15px;
+    @include underline();
+    &:after {
+      height: 8px;
+      bottom: 2px;
+      background-color: lighten($blue, 7);
+    }
+    &.wpforms-error {
+      &:after {
+        background-color: $red;
+      }
+    }
+  }
+  input, select, textarea {
+    display: block;
+    max-width: 100%;
+    -webkit-appearance: none;
+  }
+  input {
+    border-bottom: 1px solid $grey-light;
+  }
+  select {
+    padding: 10px;
+    font: inherit;
+    border: 1px solid $grey-light;
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+    margin: 20px 0;
+    padding: 10px;
+    font: inherit;
+    border: 1px solid $grey-light;
+  }
+
+}
+
+.wpforms-submit-container {
+  width: 100%;
+  text-align: right;
+  .button {
+    cursor: pointer;
+  }
 }

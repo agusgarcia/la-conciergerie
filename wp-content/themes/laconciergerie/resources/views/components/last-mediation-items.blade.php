@@ -2,7 +2,7 @@
     <div class="title__container">
         <h2 class="title">Médiation</h2>
     </div>
-    <div class="mediation__container row mediation__slider js-mediation__slider swiper-container">
+    <div class="mediation__container row mediation__slider js-slider--three slider--three swiper-container">
         <div class="swiper-wrapper">
             @foreach(MediationArchive::lastPosts() as $post)
                 <div class="swiper-slide">

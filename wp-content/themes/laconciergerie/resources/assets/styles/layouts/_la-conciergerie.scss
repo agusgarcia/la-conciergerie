@@ -1,0 +1,32 @@
+.la-conciergerie {
+  .team {
+    margin: 40px auto;
+    .item {
+      &__main {
+        background-color: $blue;
+        p {
+          max-height: unset;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    a {
+      color: $black;
+    }
+    .partner {
+      width: calc(25% - 20px);
+      margin: 20px 20px 20px 0;
+      min-width: 190px;
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+}

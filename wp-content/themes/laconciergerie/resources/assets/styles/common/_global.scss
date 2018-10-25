@@ -48,7 +48,7 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 14%;
-
+    margin-top: 30px;
     &--right {
       //align-items: flex-start;
       //margin-left: auto;
@@ -74,7 +74,6 @@ h2 {
   position: relative;
   z-index: 2;
   display: table;
-  margin-top: -15px;
   &:after {
     content: '';
     position: absolute;
@@ -103,7 +102,11 @@ a {
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 800;
+}
+
+small {
+  font-size: 13px;
 }
 
 figcaption {
@@ -135,6 +138,7 @@ q, blockquote {
     content: open-quote;
   }
 }
+
 cite {
   display: block;
 }

@@ -7,8 +7,9 @@
 @section('content')
     @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
-    @php the_content() @endphp
-
+    <div class="row content">
+        @php the_content() @endphp
+    </div>
     @foreach($gallery_plans as $plan)
         <a href="{{ $plan->file->url }}" download>{{ $plan->file->title }}</a>
     @endforeach

@@ -73,7 +73,9 @@
   img {
     width: 100%;
     height: calc(80vw / 3 - 10px);
+    min-height: 270px;
     object-fit: cover;
+    display: block;
   }
   .button {
     position: absolute;
