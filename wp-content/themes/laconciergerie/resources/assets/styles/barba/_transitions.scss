@@ -1,0 +1,39 @@
+body {
+  //position: relative;
+}
+
+#transition-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 30;
+  pointer-events: none;
+  &.transition {
+    &:before, &:after {
+      transform: rotate(-3deg);
+      max-height: calc(50vh + 101px);
+      transition: max-height 1s ease-in, background-color 1s ease-in;
+    }
+  }
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    z-index: 30;
+    left: -50%;
+    right: -50%;
+    top: -100px;
+    background-color: var(--page-color);
+    transition: max-height 1s 0.2s ease-out, background-color 0.15s ease-out;
+    transform: rotate(-3deg);
+    max-height: 0;
+    height: 100%;
+  }
+
+  &:after {
+    top: auto;
+    bottom: -100px;
+  }
+}

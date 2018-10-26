@@ -5,6 +5,7 @@ export default {
         // JavaScript to be fired on all pages
         this.initEls();
         this.initEvents();
+        console.log('init home');
     },
 
     initEls() {
@@ -26,6 +27,7 @@ export default {
         this.currentlySlider = new Swiper(this.currentlySliderId, {
             watchOverflow: true,
         });
+        console.log('init');
         this.seasonSlider = new Swiper(this.seasonSliderId, {
             watchOverflow: true,
             slidesPerView: 3,

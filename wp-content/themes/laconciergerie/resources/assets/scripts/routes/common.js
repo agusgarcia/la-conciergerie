@@ -10,8 +10,8 @@ export default {
 
     initEls() {
         this.$els = {
-            body: document.querySelector('body'),
-            color: document.querySelector('body').getAttribute('data-color'),
+            body: document.querySelector('#body'),
+            color: document.querySelector('#body').getAttribute('data-color'),
             sliderThree: document.querySelector('.js-slider--three'),
             sliderFour: document.querySelector('.js-slider--four'),
         };
@@ -28,6 +28,7 @@ export default {
     },
 
     initColorPage() {
+        console.log("common", document.querySelector('#body').getAttribute('data-color'));
         this.$els.body.style.setProperty('--page-color', this.$els.color);
     },
 
