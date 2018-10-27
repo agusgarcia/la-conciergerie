@@ -28,7 +28,8 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => {
-        routes.loadEvents();
+        console.log('init Barba');
+        //routes.loadEvents() is now called after Barba transition;
         barbaInit(routes);
     }
 );

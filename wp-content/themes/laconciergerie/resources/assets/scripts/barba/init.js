@@ -37,17 +37,19 @@ export default function (routes) {
         },
 
         fadeIn: function () {
-           let timeout = window.setTimeout(() => {
+            let timeout = window.setTimeout(() => {
                 window.pageYOffset = 0;
                 document.documentElement.scrollTop = 0;
                 document.body.scrollTop = 0;
 
                 this.done();
+                // TODO : Remove this on PROD
+                $('#body', this.newContainer).html($('#body', this.newContainer).html().replace(/http:\/\/conciergerie.localhost/g, 'http://localhost:3000'));
                 document.querySelector('#transition-wrapper').style.setProperty('--page-color', $('#body', this.newContainer).data('color'));
                 $('#transition-wrapper').removeClass('transition');
-            }, 1300);
+            }, 1500);
 
-           timeout.clear();
+            timeout.clear();
         },
     });
 
@@ -60,12 +62,18 @@ export default function (routes) {
     Barba.Pjax.start();
     Barba.Prefetch.init();
 
-    Barba.Dispatcher.on('transitionCompleted', function () {
 
+    if (!$('body').hasClass('app')) {
+        console.log('has no app');
+        $('body').attr('class', $('#body').attr('class'));
+        routes.loadEvents();
+    }
+
+    Barba.Dispatcher.on('transitionCompleted', function () {
         // Set new classes from #af-classes to body
         $('body').attr('class', $('#body').attr('class'));
-
-        // Fire routes again after new content loaded
+        console.log('routes load');
+        // Fire routes after new content loaded
         routes.loadEvents();
     });
 

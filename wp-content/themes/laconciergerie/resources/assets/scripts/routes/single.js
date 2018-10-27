@@ -5,6 +5,7 @@ export default {
         // JavaScript to be fired on all pages
         this.initEls();
         this.initEvents();
+        console.log('init single');
     },
 
     initEls() {
@@ -22,7 +23,7 @@ export default {
     },
 
     initSliders() {
-        if(this.$els.slider) {
+        if(this.$els.slider !== null) {
             this.gallerySlider = new Swiper(this.gallerySliderId, {
                 watchOverflow: true,
                 navigation: {
@@ -32,8 +33,6 @@ export default {
                 autoHeight: true,
             });
         }
-
-
     },
 
     finalize() {

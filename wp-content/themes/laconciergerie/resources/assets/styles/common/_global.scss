@@ -3,6 +3,10 @@ body {
   line-height: 1.5em;
 }
 
+#body {
+  overflow: hidden;
+}
+
 h1 {
   font-family: $font-avenir;
   font-weight: 800;

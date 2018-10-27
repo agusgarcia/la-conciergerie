@@ -14,8 +14,8 @@ body {
   &.transition {
     &:before, &:after {
       transform: rotate(-3deg);
-      max-height: calc(50vh + 101px);
-      transition: max-height 1s ease-in, background-color 1s ease-in;
+      max-height: calc(50vh + 150px);
+      transition: max-height 1s ease-in, background-color 0.2s ease-in;
     }
   }
   &:before, &:after {
@@ -26,7 +26,7 @@ body {
     right: -50%;
     top: -100px;
     background-color: var(--page-color);
-    transition: max-height 1s 0.2s ease-out, background-color 0.15s ease-out;
+    transition: max-height 0.6s 0.15s ease-out, background-color 0.5s ease-out;
     transform: rotate(-3deg);
     max-height: 0;
     height: 100%;

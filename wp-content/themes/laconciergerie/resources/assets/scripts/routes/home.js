@@ -5,7 +5,7 @@ export default {
         // JavaScript to be fired on all pages
         this.initEls();
         this.initEvents();
-        console.log('init home');
+        console.log('init home init');
     },
 
     initEls() {
@@ -24,10 +24,12 @@ export default {
     },
 
     initSliders() {
+        console.log('init sliders home');
         this.currentlySlider = new Swiper(this.currentlySliderId, {
             watchOverflow: true,
         });
-        console.log('init');
+        console.log('init sliders home 2');
+
         this.seasonSlider = new Swiper(this.seasonSliderId, {
             watchOverflow: true,
             slidesPerView: 3,
@@ -54,6 +56,8 @@ export default {
     },
 
     finalize() {
+        console.log("finalize home");
+        console.log("----------");
         // JavaScript to be fired on the home page, after the init JS
     },
 };
