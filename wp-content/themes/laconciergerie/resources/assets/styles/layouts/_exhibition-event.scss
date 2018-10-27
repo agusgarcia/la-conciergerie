@@ -22,11 +22,13 @@
       content: none;
     }
   }
+
   .content {
     &__first {
       padding-left: 10%;
       margin-bottom: 60px;
       margin-top: 80px;
+      display: block;
       > div {
         max-width: 1600px;
         display: flex;
@@ -79,7 +81,6 @@
     line-height: 1.8em;
     p {
       margin-bottom: 15px;
-
     }
     figure {
       max-width: 100%;
@@ -217,6 +218,7 @@
       &__first, &__second {
         > div {
           flex-direction: column;
+          display: block;
         }
       }
       &__first {
@@ -227,7 +229,8 @@
         .media__container {
           padding-left: 0;
           width: 90%;
-          margin: -30px auto 0;
+          margin: 0 auto;
+          top: -30px;
           max-height: unset;
           min-height: unset;
           figure {
@@ -255,6 +258,10 @@
 
 @media screen and (max-width: $bp-xs) {
   .single-event, .single-exhibition {
+    .information {
+      margin-top: 0;
+      padding: 0 30px 10px;
+    }
     .gallery {
       figure {
         width: 90%;

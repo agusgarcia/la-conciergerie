@@ -14,29 +14,6 @@
       background-image: linear-gradient(var(--page-color) 0%, var(--page-color) 100%);
     }
   }
-  .resources_list {
-    margin: 50px 0;
-    h2 {
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
-    svg {
-      width: 20px;
-      margin-top: 12px;
-      vertical-align: bottom;
-    }
-    ul {
-      margin-top: 20px;
-    }
-    li {
-      display: block;
-    }
-    a {
-      vertical-align: text-bottom;
-      @include link-hover;
-      background-image: linear-gradient(var(--page-color) 0%, var(--page-color) 100%);
-    }
-  }
   .images {
     display: grid;
     grid-template-columns: 1fr 1fr;

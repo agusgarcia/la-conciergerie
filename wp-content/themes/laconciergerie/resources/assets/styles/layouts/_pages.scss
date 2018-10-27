@@ -14,10 +14,16 @@
     margin-bottom: 40px;
     a {
       @include link-hover;
-      //background-image: linear-gradient(var(--page-color) 0%, var(--page-color) 100%);
     }
     p {
       margin: 10px 0;
+      line-height: 1.8em;
+    }
+    iframe {
+      max-width: 100%;
+    }
+    h2 {
+      font-size: 24px;
     }
     h3 {
       font-weight: 800;

@@ -27,6 +27,7 @@ export default {
         console.log('init sliders home');
         this.currentlySlider = new Swiper(this.currentlySliderId, {
             watchOverflow: true,
+            spaceBetween: 0,
         });
         console.log('init sliders home 2');
 

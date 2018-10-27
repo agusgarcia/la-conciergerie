@@ -25,7 +25,8 @@
     display: block;
     position: absolute;
     left: 0;
-    top: 30px;
+    top: auto;
+    bottom: -40px;
     background-color: $grey;
     color: $white;
     font-size: 18px;

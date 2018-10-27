@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  text-align: center;
   &:hover {
     .item {
       &__main {
@@ -81,9 +82,12 @@
     position: absolute;
     bottom: -25px;
     z-index: 5;
-    transform: rotate(-2deg);
+    transform: rotate(-2deg) translateX(-50%);
+    left: 50%;
+    width: auto;
     background-color: $grey;
     font-size: 16px;
+    margin: auto;
     padding: 3px 15px;
     opacity: 0;
     outline: 1px solid transparent;

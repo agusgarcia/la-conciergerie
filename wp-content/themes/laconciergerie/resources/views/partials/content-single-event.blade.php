@@ -6,10 +6,13 @@
         <h2 class="subtitle">                        {{ App::formattedDate($opening_date) }}
         </h2>
     </div>
+
     <div class="content">
         <div class="content__first">
-            <div>
-                <div class="text text--main">{!! $main_text !!}</div>
+            <div style="display:block;">
+                <div class="text text--main">
+                    {!! $main_text !!}
+                </div>
                 <div class="media__container">
                     @if($main_media[0]->acf_fc_layout == 'image')
                         <figure>

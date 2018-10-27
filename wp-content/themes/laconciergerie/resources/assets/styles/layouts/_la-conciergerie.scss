@@ -21,8 +21,9 @@
       color: $black;
     }
     .partner {
-      width: calc(25% - 20px);
-      margin: 20px 20px 20px 0;
+      width: calc(25% - 40px);
+      text-align: center;
+      margin: 20px;
       min-width: 190px;
       img {
         max-width: 80%;

@@ -2,7 +2,7 @@
   .currently {
     &__slider {
       height: calc(100vh - #{$header-height} - 30px);
-      width: 100%;
+      background-color: blue;
       //max-height: 900px;
       @media screen and (orientation: portrait) {
         height: 50vh;
@@ -13,6 +13,7 @@
       flex-direction: column;
       padding: 50px 30px;
       position: relative;
+      flex-basis: 100%;
       &:after {
         content: '';
         position: absolute;
@@ -173,7 +174,8 @@
     }
     .currently {
       &__slider {
-        height: auto;
+        background-color: lime;
+        height: auto !important;
       }
       .swiper-slide {
         padding: 40px 20px;

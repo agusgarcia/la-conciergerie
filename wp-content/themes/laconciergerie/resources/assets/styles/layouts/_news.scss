@@ -90,11 +90,14 @@
       width: calc(100% - 40px);
     }
     &__text {
-      margin: 0 20px;
+      margin: 0;
       text-align: center;
     }
+    &__content {
+      font-size: 15px;
+    }
     &-single {
-      margin-bottom: 45px
+      margin-bottom: 45px;
     }
   }
 }
