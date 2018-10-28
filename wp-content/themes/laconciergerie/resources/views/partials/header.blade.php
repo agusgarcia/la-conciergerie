@@ -7,7 +7,7 @@
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
-        {{--<span class="hamburger-label">Menu</span>--}}
+        <span class="hamburger-label">Menu</span>
     </button>
     <nav class="nav-primary">
         @if (has_nav_menu('primary_navigation'))

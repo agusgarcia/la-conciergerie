@@ -59,10 +59,11 @@
                     </div>
                 @endif
             </div>
+            <span class="chevron--down js-scroll-season"></span>
         </div>
 
     </section>
-    <section class="season">
+    <section class="season" id="currentSeason">
         <div class="title__container">
             <h1 class="title">La saison</h1>
             <h2 class="subtitle">2018-2019</h2>
@@ -72,15 +73,6 @@
         <div class="row">
             <div class="swiper-container season__slider">
                 <div class="swiper-wrapper">
-                    @foreach($posts as $post)
-                        <div class="swiper-slide">
-                            @if($post->exhibition_title)
-                                @include('components.exhibition-item', (array) $post)
-                            @else
-                                @include('components.event-item', (array) $post)
-                            @endif
-                        </div>
-                    @endforeach
                     @foreach($posts as $post)
                         <div class="swiper-slide @if($post->current)current @endif">
                             @if($post->exhibition_title)                                @include('components.exhibition-item', (array) $post)

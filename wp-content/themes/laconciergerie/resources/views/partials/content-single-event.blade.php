@@ -9,7 +9,7 @@
 
     <div class="content">
         <div class="content__first">
-            <div style="display:block;">
+            <div>
                 <div class="text text--main">
                     {!! $main_text !!}
                 </div>
@@ -78,13 +78,6 @@
     @if($images)
         <div class="gallery">
             @foreach($images as $image)
-                <figure>
-                    <div class="image__container">
-                        <img src="{{ $image->sizes->large }}" alt="{{ $image->alt }}">
-                    </div>
-                    <figcaption>{{ $image->caption }}</figcaption>
-                </figure>
-            @endforeach     @foreach($images as $image)
                 <figure>
                     <div class="image__container">
                         <img src="{{ $image->sizes->large }}" alt="{{ $image->alt }}">

@@ -36,9 +36,9 @@
 }
 
 .wrap.container {
-  min-height: calc(100vh - 500px - 70px);
+  min-height: calc(100vh - 500px - #{$header-height});
+  margin-top: $header-height;
 }
-
 
 @media screen and (max-width: $bp-l) {
   .row {

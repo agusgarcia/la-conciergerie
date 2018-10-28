@@ -12,6 +12,7 @@ export default {
         this.$els = {
             body: document.querySelector('body'),
             currentExhibition: document.querySelector('.swiper-slide.current'),
+            buttonScrollSeason: $('.js-scroll-season'),
         };
         this.currentlySlider = null;
         this.seasonSlider = null;
@@ -21,6 +22,7 @@ export default {
 
     initEvents() {
         this.initSliders();
+        this.$els.buttonScrollSeason.on('click', this.scrollToSeason.bind(this))
     },
 
     initSliders() {
@@ -54,6 +56,10 @@ export default {
 
         const currentIndex = $(this.$els.currentExhibition).index();
         this.seasonSlider.slideTo(currentIndex);
+    },
+
+    scrollToSeason() {
+        $('html, body').animate({scrollTop: $('#currentSeason').offset().top - 70}, 500);
     },
 
     finalize() {

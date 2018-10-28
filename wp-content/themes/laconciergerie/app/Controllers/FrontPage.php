@@ -34,7 +34,6 @@ class FrontPage extends Controller
             global $current_found;
             global $upcoming_found;
             if ($post->post_type == 'exhibition') {
-
                 // Link
                 $post->link = get_permalink($post->ID);
                 // ACF Fields
@@ -109,35 +108,6 @@ class FrontPage extends Controller
 
     public function upcomingEvent()
     {
-//        $current_season = $this->currentSeason();
-
-        /*     global $current_season;
-             var_dump($current_season);
-
-             $criteria = array('post_type' => 'event');
-             $season_events = wp_list_filter($current_season, $criteria);
-             $upcoming_event = null;
-             foreach ($season_events as $event) {
-                 // Get current date
-                 $current_date = date_create(date('Ymd'));
-
-                 // Get the event's date
-                 $event_date = date_create($event->opening_date);
-
-                 // Compare both dates
-                 $date_diff = date_diff($current_date, $event_date)->format('%R%a');
-
-                 // If there's more than 0 days until the event
-                 // And less than 10 days
-                 // Set as the upcoming event and break
-                 if ($date_diff >= 0 && $date_diff < 10) {
-                     $upcoming_event = $event;
-                     break;
-                 }
-             }
-
-             return $upcoming_event;*/
-
         global $upcoming_found;
         $upcoming_event = $upcoming_found;
         return $upcoming_event;
@@ -145,15 +115,8 @@ class FrontPage extends Controller
 
     public function currentExhibition()
     {
-
         global $current_found;
         $post = $current_found;
-
-        if ($post) {
-            //  $post->start_date = get_field('exhibition_date', get_post($post))["exhibition_date_opening"];
-            //    $post->closing_date = get_field('exhibition_date', get_post($post))["exhibition_date_closing"];
-        }
-
         return $post;
     }
 }

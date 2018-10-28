@@ -2,6 +2,13 @@
     {{--   <img class="logo" src="@asset('images/logo_conciergerie.jpg')" alt="Logo La Conciergerie"/>
    --}}
 
+    <div class="footer__information">
+        @php dynamic_sidebar('sidebar-information') @endphp
+    </div>
+    {{-- Main menu & secondary menu--}}
+    <div class="footer__menu footer__menu--main ">
+        @php dynamic_sidebar('sidebar-primary') @endphp
+    </div>
     <div class="footer__logo">
         <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 904.49 283.38">
             <defs>
@@ -17,17 +24,6 @@
             </g>
         </svg>
     </div>
-    <div class="footer__information">
-        @php dynamic_sidebar('sidebar-information') @endphp
-    </div>
-    {{-- Main menu & secondary menu--}}
-    <div class="footer__menu footer__menu--main ">
-        @php dynamic_sidebar('sidebar-primary') @endphp
-    </div>
-    <div class="footer__menu footer__menu--secondary">
-        @php dynamic_sidebar('sidebar-footer') @endphp
-    </div>
-    {{--{{ get_theme_mod( 'text_setting', '' ) }}--}}
     {{-- Newsletter form --}}
     <div class="footer__newsletter">
         <div id="mc_embed_signup">
@@ -54,6 +50,12 @@
 
         <!--End mc_embed_signup-->
     </div>
+
+    <div class="footer__menu footer__menu--secondary">
+        @php dynamic_sidebar('sidebar-footer') @endphp
+    </div>
+    {{--{{ get_theme_mod( 'text_setting', '' ) }}--}}
+
 
     {{-- Agustina --}}
     <div class="footer__credits">

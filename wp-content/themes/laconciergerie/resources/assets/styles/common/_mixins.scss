@@ -19,10 +19,38 @@
     z-index: -1;
     content: '';
     position: absolute;
-    height: 20px;
+    height: 16px;
     background-color: $color;
     bottom: -10px;
     left: 0;
     right: 0;
+    transition: bottom cubic-bezier(.22,.61,.36,1) 0.15s;
   }
+  &:hover {
+    &:after {
+      //bottom: -5px;
+    }
+  }
+  /*  &::before {
+      width: 0;
+      left: 0;
+      transition: width ease 0.4s;
+    }
+    &::after {
+      width: 100%;
+      pointer-events: none;
+      left: 0;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+
+      &::after {
+        left: 100%;
+        width: 0;
+        transition: all ease 0.2s;
+      }
+    }*/
 }

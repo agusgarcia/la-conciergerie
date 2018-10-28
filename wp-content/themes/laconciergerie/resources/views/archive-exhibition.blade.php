@@ -20,7 +20,6 @@
             <div class="item__container">
                 @foreach($season_posts as $post)
                     @include('components.exhibition-item', (array) $post)
-                    @include('components.exhibition-item', (array) $post)
                 @endforeach
             </div>
         @endforeach
