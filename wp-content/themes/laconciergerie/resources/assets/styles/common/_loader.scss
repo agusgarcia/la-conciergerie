@@ -1,0 +1,14 @@
+#transition-wrapper.loading {
+  &:before, &:after {
+    background-color: $black;
+  }
+  &.transition {
+    &:before, &:after {
+      background-color: $black;
+    }
+  }
+  + #barba-wrapper #body {
+    //display: none;
+    opacity: 0;
+  }
+}

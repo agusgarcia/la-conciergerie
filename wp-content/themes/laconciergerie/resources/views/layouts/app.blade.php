@@ -2,7 +2,7 @@
 <html lang="{{ get_bloginfo('language') }}">
 @include('partials.head')
 <body>
-<div id="transition-wrapper">
+<div id="transition-wrapper" class="loading transition">
 </div>
 <div id="barba-wrapper">
     <div class="barba-container">
@@ -21,9 +21,9 @@
             </div>
             @php do_action('get_footer') @endphp
             @include('partials.footer')
-            @php wp_footer() @endphp
         </div>
     </div>
 </div>
+@php wp_footer() @endphp
 </body>
 </html>

@@ -5,7 +5,6 @@ export default {
         // JavaScript to be fired on all pages
         this.initEls();
         this.initEvents();
-        console.log('init home init');
     },
 
     initEls() {
@@ -26,13 +25,12 @@ export default {
     },
 
     initSliders() {
-        console.log('init sliders home');
         this.currentlySlider = new Swiper(this.currentlySliderId, {
             watchOverflow: true,
             spaceBetween: 0,
         });
-        console.log('init sliders home 2');
 
+        console.log('init season Slider');
         this.seasonSlider = new Swiper(this.seasonSliderId, {
             watchOverflow: true,
             slidesPerView: 3,
@@ -42,9 +40,6 @@ export default {
                 draggable: true,
             },
             breakpoints: {
-                1366: {
-                    slidesPerView: 3,
-                },
                 768: {
                     slidesPerView: 2,
                 },
@@ -56,6 +51,7 @@ export default {
 
         const currentIndex = $(this.$els.currentExhibition).index();
         this.seasonSlider.slideTo(currentIndex);
+        console.log(this.seasonSlider);
     },
 
     scrollToSeason() {
@@ -63,8 +59,8 @@ export default {
     },
 
     finalize() {
-        console.log("finalize home");
-        console.log("----------");
+        console.log('finalize');
+        this.seasonSlider.update();
         // JavaScript to be fired on the home page, after the init JS
     },
 };

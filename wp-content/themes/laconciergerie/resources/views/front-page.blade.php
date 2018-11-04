@@ -92,7 +92,7 @@
         <div class="title__container title__container--right">
             <h2 class="title title--right">Les news</h2>
         </div>
-        @foreach(NewsArchive::lastPosts() as $news)
+        @foreach(NewsArchive::LastPosts(2) as $news)
             @include('components.news-item', $news)
         @endforeach
         <div class="row button__container">

@@ -5,11 +5,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="title__container">
-        <h1 class="title">Archives</h1>
-    </div>
+    @include('partials.page-header')
+
     <div class="row archive__sort">
-        Trier par <button class="js-sort-button active" data-sort="year">année</button> | <button class="js-sort-button" data-sort="name">nom de l'artiste</button>
+        Trier par
+        <button class="js-sort-button active" data-sort="year">année</button>
+        |
+        <button class="js-sort-button" data-sort="name">nom de l'artiste</button>
     </div>
 
     <div class="row js-items-container sort__container active" data-sort="year">
@@ -31,9 +33,11 @@
 
         @foreach(array_keys($posts_by_artist) as $letter)
             <h2 class="subtitle">{{ $letter }}</h2>
-            @foreach ($posts_by_artist[$letter] as $post)
-                @include('components.exhibition-item',(array) $post)
-            @endforeach
+            <div class="item__container">
+                @foreach ($posts_by_artist[$letter] as $post)
+                    @include('components.exhibition-item',(array) $post)
+                @endforeach
+            </div>
         @endforeach
     </div>
 @endsection

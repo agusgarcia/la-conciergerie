@@ -1,13 +1,17 @@
 .gallery__slider {
   max-width: 1024px;
   margin: 60px auto 0;
+  max-height: calc(100vh - 100px);
+
   .swiper-slide {
     background: $grey-light;
   }
-  .title {
-    font-size: 24px;
-    color: $grey;
+  .slider__title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: $black;
     font-weight: 800;
+    text-transform: uppercase;
   }
   .image__container {
     text-align: center;

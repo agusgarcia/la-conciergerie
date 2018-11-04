@@ -7,14 +7,15 @@ use Sober\Controller\Controller;
 class NewsArchive extends Controller
 {
 
-    public static function lastPosts($number = 2)
+    public static function LastPosts($number = 10)
     {
-        $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
-            'numberposts' => $number,
+            'posts_per_page' => $number,
             // If different posts_per_page needed, change it too in Wordpress Settings > Reading
-            'posts_per_page' => 10,
-            'paged'          => $paged
+            //'posts_per_page' => 10,
+            'paged' => $paged,
+            'no_found_rows' => true,
         );
 
         $posts = get_posts($args);
