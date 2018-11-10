@@ -43,13 +43,12 @@ export default function (routes) {
                 document.body.scrollTop = 0;
 
                 this.done();
-                // TODO : Remove this on PROD
-                $('#body', this.newContainer).html($('#body', this.newContainer).html().replace(/http:\/\/conciergerie.localhost/g, 'http://localhost:3000'));
+                // $('#body', this.newContainer).html($('#body', this.newContainer).html().replace(/http:\/\/conciergerie.localhost/g, 'http://localhost:3000'));
                 document.querySelector('#transition-wrapper').style.setProperty('--page-color', $('#body', this.newContainer).data('color'));
                 $('#transition-wrapper').removeClass('transition');
             }, 1500);
 
-            timeout.clear();
+            clearTimeout(timeout);
         },
     });
 

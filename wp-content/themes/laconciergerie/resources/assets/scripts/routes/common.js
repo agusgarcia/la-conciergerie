@@ -49,7 +49,6 @@ export default {
   },
 
   initSliderThree () {
-    console.log('init three');
     this.sliderThree = new Swiper(this.sliderThreeId, {
       watchOverflow: true,
       slidesPerView: 3,
@@ -69,7 +68,6 @@ export default {
     });
   },
   initSliderFour () {
-    console.log('init four');
     this.sliderFour = new Swiper(this.sliderFourId, {
       watchOverflow: true,
       slidesPerView: 4,

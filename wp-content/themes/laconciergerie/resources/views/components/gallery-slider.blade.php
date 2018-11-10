@@ -1,7 +1,7 @@
 <div class="gallery__slider swiper-container row">
     <p class="slider__title">{{ $slider->slider_title }}</p>
     <div class="swiper-wrapper">
-        @foreach($images as $image)
+        @foreach($slider->slider_images as $image)
             <div class="swiper-slide">
                 <figure>
                     <div class="image__container">

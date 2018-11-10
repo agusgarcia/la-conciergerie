@@ -25,5 +25,9 @@
         @include('partials.content-extra-single-mediation')
 
     @endif
+
+    @if($slider->slider_images)
+        @include('components.gallery-slider', $images)
+    @endif
     @endwhile
 @endsection

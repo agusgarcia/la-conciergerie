@@ -12,8 +12,3 @@
         @endforeach
     </div>
 @endif
-
-
-@if($images)
-    @include('components.gallery-slider', $images)
-@endif

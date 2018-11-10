@@ -89,7 +89,6 @@
     @endif
 
     @if($slider->slider_images)
-        @php($images = $slider->slider_images)
         @include('components.gallery-slider', $images)
     @endif
 </div>
