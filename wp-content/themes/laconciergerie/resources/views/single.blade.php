@@ -26,7 +26,5 @@
         @include('partials.content-extra-single-mediation')
     @endif
 
-    @include('partials.content-single-navigation')
-
     @endwhile
 @endsection

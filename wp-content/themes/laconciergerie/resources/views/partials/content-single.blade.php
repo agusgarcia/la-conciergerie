@@ -17,3 +17,5 @@
 @if($slider->slider_images)
     @include('components.gallery-slider', $slider->slider_images)
 @endif
+
+@include('partials.content-single-navigation')
