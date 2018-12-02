@@ -199,8 +199,12 @@
     }
     .currently {
       &__slider {
-        background-color: lime;
         height: auto !important;
+        .chevron--down {
+          width: 20px;
+          height: 20px;
+          bottom: 25px;
+        }
       }
       .swiper-slide {
         padding: 40px 20px;
@@ -236,10 +240,24 @@
       }
       &__info {
         margin-left: 0;
+        padding-bottom: 20px;
       }
     }
     .news {
       margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xxs) {
+  .home {
+    .currently {
+      &__title {
+        font-size: 32px;
+      }
+      &__subtitle {
+        font-size: 20px
+      }
     }
   }
 }

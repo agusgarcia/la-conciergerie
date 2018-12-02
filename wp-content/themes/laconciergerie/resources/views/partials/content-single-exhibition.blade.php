@@ -45,6 +45,12 @@
                         au {{ App::formattedDate($exhibition_date->exhibition_date_closing) }}</p>
                     <p>{{ $exhibition_closing_dates }}</p>
                 </li>
+                @if($exhibition_date->exhibition_closing_dates)
+                    <li>
+                        <strong>Fermeture</strong>
+                        <p>{{ $exhibition_date->exhibition_closing_dates }}</p>
+                    </li>
+                @endif
                 @if($other_dates)
                     @foreach($other_dates as $date)
                         <li>
@@ -53,10 +59,15 @@
                         </li>
                     @endforeach
                 @endif
-                <li>
-                    <strong>Site web</strong>
-                    <a target="_blank" href="{{ $website }}">{{ $website }}</a>
-                </li>
+                @if($website->website_link)
+                    @if(empty($website->website_title))
+                        @php($website_title = $website_link)
+                    @endif
+                    <li>
+                        <strong>Site web</strong>
+                        <a target="_blank" href="{{ $website->website_link }}">{{ $website->website_title }}</a>
+                    </li>
+                @endif
                 @if($documents)
                     @foreach($documents as $document)
                         <li>

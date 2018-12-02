@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import ScrollMagic from 'scrollmagic';
 import TweenLite from 'gsap/TweenLite';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 export default {
   init () {
@@ -19,7 +19,7 @@ export default {
 
     this.gallerySlider = null;
     this.gallerySliderId = '.gallery__slider';
-    this.smController = new ScrollMagic.Controller({addIndicators: false});
+    this.smController = new ScrollMagic.Controller();
   },
 
   initEvents () {
@@ -31,6 +31,7 @@ export default {
     if (this.$els.slider !== null) {
       this.gallerySlider = new Swiper(this.gallerySliderId, {
         watchOverflow: true,
+        loop: true,
         navigation: {
           nextEl: `.swiper-button-next, ${this.gallerySliderId}`,
           prevEl: `.swiper-button-prev, ${this.gallerySliderId}`,
@@ -40,8 +41,8 @@ export default {
     }
   },
   initAnimations () {
-    if (this.$els.title !== null) {
-      const tween = TweenLite.fromTo(this.$els.title, 0.6, {
+    /*if (this.$els.title !== null) {
+      const tween = TweenLite.fromTo(this.$els.titleAfter, 0.6, {
         opacity: 0,
         y: 100,
       }, {
@@ -49,10 +50,9 @@ export default {
         y: 0,
         delay: 1,
       });
-      console.log('play tween');
       tween.play();
     }
-
+*/
     // Create Animation for 0.5s
     /*  const tween = TweenLite.fromTo('figure', 0.5, {
           opacity: 0,
@@ -61,7 +61,9 @@ export default {
           opacity: 1,
           x: 0,
       });*/
-
+    if (this.$els.title !== null) {
+      this.$els.title.classList.add('show');
+    }
     // const triggerElements = ['.content__first', '.content__second'];
     const triggerElementsToTop = $('.content__first figure, .content__second figure');
     const triggerElementsToLeft = $('.gallery figure:nth-child(even)');
@@ -131,4 +133,5 @@ export default {
     });
 
   },
-};
+}
+;

@@ -54,10 +54,13 @@
                             <p>{{ $other_dates->other_date }}</p>
                         </li>
                     @endif
-                    @if($website)
+                    @if($website->website_link)
+                        @if(empty($website->website_title))
+                            @php($website_title = $website_link)
+                        @endif
                         <li>
                             <strong>Site web</strong>
-                            <a target="_blank" href="{{ $website }}">{{ $website }}</a>
+                            <a target="_blank" href="{{ $website->website_link }}">{{ $website->website_title }}</a>
                         </li>
                     @endif
                     @if($documents)

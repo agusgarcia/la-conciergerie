@@ -73,3 +73,11 @@
   transform: none;
   transition: transform 0.35s ease-out;
 }
+
+@media screen and (max-width: $bp-xxs) {
+  .banner {
+    .logo {
+      width: 170px;
+    }
+  }
+}

@@ -30,7 +30,6 @@ export default {
             spaceBetween: 0,
         });
 
-        console.log('init season Slider');
         this.seasonSlider = new Swiper(this.seasonSliderId, {
             watchOverflow: true,
             slidesPerView: 3,
@@ -51,7 +50,6 @@ export default {
 
         const currentIndex = $(this.$els.currentExhibition).index();
         this.seasonSlider.slideTo(currentIndex);
-        console.log(this.seasonSlider);
     },
 
     scrollToSeason() {

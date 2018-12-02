@@ -39,14 +39,15 @@ class FrontPage extends Controller
                 // ACF Fields
                 $post->opening_date = get_field('opening_date', $post);
                 $post->preview_hour = get_field('preview_hour', $post);
-                $post->start_date = get_sub_field('exhibition_date_opening', $post);
-                $post->closing_date = get_sub_field('exhibition_date_closing', $post);
+//                $post->start_date = get_sub_field('exhibition_date_opening', $post);
+//                $post->closing_date = get_sub_field('exhibition_date_closing', $post);
                 $post->artist_name = get_field('artist_name', $post);
                 $post->exhibition_title = get_field('exhibition_title', $post);
                 $post->thumbnail = get_field('thumbnail', $post);
                 $post->color = get_field('color', $post);
                 $post->start_date = get_field('exhibition_date', get_post($post))["exhibition_date_opening"];
                 $post->closing_date = get_field('exhibition_date', get_post($post))["exhibition_date_closing"];
+                $post->other_dates = get_field('oo', get_post($post));
                 if ($current_found === null) {
                     // Get current date
                     $current_date = date_create(date('Ymd'));

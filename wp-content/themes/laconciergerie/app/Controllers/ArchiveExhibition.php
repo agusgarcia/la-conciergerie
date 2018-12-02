@@ -25,13 +25,16 @@ class ArchiveExhibition extends Controller
             $args = array(
                 'numberposts' => -1,
                 'post_type' => 'exhibition',
+                'orderby' => 'meta_value',
+                'order' => 'ASC',
+                'meta_key' => 'opening_date',
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'season',
                         'field' => 'slug',
                         'terms' => $term->slug,
                     )
-                )
+                ),
             );
 
             $postsList = get_posts($args);
@@ -39,14 +42,10 @@ class ArchiveExhibition extends Controller
             $result = array_map(function ($post) {
                 $post->link = get_permalink($post->ID);
                 // ACF Fields
-//                $post->opening_date = get_field('opening_date', $post);
-//                $post->preview_hour = get_field('preview_hour', $post);
                 $post->artist_name = get_field('artist_name', $post);
                 $post->exhibition_title = get_field('exhibition_title', $post);
                 $post->thumbnail = get_field('thumbnail', $post);
                 $post->color = get_field('color', $post);
-//                $post->start_date = get_field('exhibition_date', get_post($post))["exhibition_date_opening"];
-//                $post->closing_date = get_field('exhibition_date', get_post($post))["exhibition_date_closing"];
 
                 return $post;
 
@@ -75,20 +74,23 @@ class ArchiveExhibition extends Controller
 
         $postsList = get_posts($args);
 
-        $postsList = array_map(function ($post) {
+        $result = array_map(function ($post) {
+            $post->link = get_permalink($post->ID);
             $post->artist_name = get_field('artist_name', $post);
             $post->exhibition_title = get_field('exhibition_title', $post);
             $post->thumbnail = get_field('thumbnail', $post);
             $post->color = get_field('color', $post);
-            return (array) $post;
+
+            return $post;
 
         }, $postsList);
 
         $letter_keyed_posts = array();
 
-        if ($postsList) {
-            foreach ($postsList as $post) {
-                $name = explode(' ', $post['artist_name'])[1];
+        if ($result) {
+            foreach ($result as $post) {
+                $postArray = (array) $post;
+                $name = explode(' ', $postArray['artist_name'])[1];
                 $first_letter = strtoupper(substr($name, 0, 1));
 
                 // If the array $letter_keyed_posts hasn't a key $first_letter

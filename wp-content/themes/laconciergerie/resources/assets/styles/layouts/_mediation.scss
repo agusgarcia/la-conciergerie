@@ -78,18 +78,18 @@
     }
   }
   .quotes {
-    margin-top: 60px;
+    margin-top: 80px;
     max-width: calc(900px + 20%);
   }
   .quote {
     display: block;
-    text-align: right;
-    margin-top: 30px;
+    text-align: left;
+    margin-top: 50px;
     &:first-of-type {
       margin-top: 60px;
     }
     &:nth-child(odd) {
-      text-align: left;
+      text-align: right;
     }
     cite {
       padding-right: 25px;

@@ -72,29 +72,29 @@ class App extends Controller
     {
         setlocale(LC_ALL, "fr_FR");
         $date_s = strtotime($date);
-        return strftime('%e %B %Y', $date_s);
+        return utf8_encode(strftime('%e %B %Y', $date_s));
     }
 
     public static function formattedDateNoYear($date)
     {
         setlocale(LC_ALL, "fr_FR");
         $date_s = strtotime($date);
-        return strftime('%e %B', $date_s);
+        return utf8_encode(strftime('%e %B', $date_s));
     }
 
     public static function formattedDateWithDay($date)
     {
         setlocale(LC_ALL, "fr_FR");
         $date_s = strtotime($date);
-        return strftime('%A %e %B %Y', $date_s);
+        return utf8_encode(strftime('%A %e %B %Y', $date_s));
     }
 
     public static function formattedDayAndMonth($date)
     {
         setlocale(LC_ALL, "fr_FR");
         $date_s = strtotime($date);
-        $day = strftime('%d', $date_s);
-        $month = strftime('%m', $date_s);
+        $day = utf8_encode(strftime('%d', $date_s));
+        $month = utf8_encode(strftime('%m', $date_s));
         return array($day, $month);
     }
 }

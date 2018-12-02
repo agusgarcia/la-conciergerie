@@ -9,7 +9,7 @@ input, button {
   -webkit-appearance: none;
 }
 
-.wpforms-field, .wpcf7-form {
+.wpcf7-form {
   > p {
     &:first-of-type, &:nth-of-type(2) {
       display: inline-block;
@@ -19,9 +19,7 @@ input, button {
       margin-right: 20px;
     }
   }
-  &.wpforms-field-hp {
-    display: none;
-  }
+
   label, span.wpcf7-not-valid-tip, .wpcf7-response-output {
     text-transform: uppercase;
     font-family: $font-avenir;
@@ -40,12 +38,18 @@ input, button {
     &.wpcf7-display-none {
       display: none;
     }
-    &.wpforms-error, &[role="alert"] {
+    &[role="alert"] {
       color: $black;
       &:after {
         background-color: $red;
       }
     }
+    &.wpcf7-mail-sent-ok {
+      &:after {
+        background-color: $green;
+      }
+    }
+
   }
   input, select, textarea {
     display: block;

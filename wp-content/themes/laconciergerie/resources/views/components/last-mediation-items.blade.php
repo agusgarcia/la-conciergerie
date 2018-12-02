@@ -4,7 +4,7 @@
     </div>
     <div class="mediation__container row mediation__slider js-slider--three slider__three swiper-container">
         <div class="swiper-wrapper">
-            @foreach(MediationArchive::lastPosts() as $post)
+            @foreach(MediationArchive::lastPosts(3) as $post)
                 <div class="swiper-slide">
                     @include('components.mediation-item', $post)
                 </div>

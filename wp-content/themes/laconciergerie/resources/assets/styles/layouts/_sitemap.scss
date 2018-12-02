@@ -1,0 +1,20 @@
+.wsp-container {
+  h2 {
+    margin: 15px 0;
+  }
+  .wsp-category-title {
+    display: none;
+  }
+  li {
+    list-style: disc;
+    margin-left: 30px;
+  }
+  .wsp-posts-list li {
+    list-style: none;
+    margin-left: 0;
+    .wsp-posts-list li {
+      list-style: disc;
+      margin-left: 30px;
+    }
+  }
+}

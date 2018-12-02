@@ -33,7 +33,9 @@
         @foreach($images as $image)
             <figure>
                 <img src="{{ $image->sizes->medium_large }}" alt="{{ $image->alt }}">
-                <figcaption>{{ $image->caption }}</figcaption>
+                @if($image->caption)
+                    <figcaption>{{ $image->caption }}</figcaption>
+                @endif
             </figure>
         @endforeach
     </div>

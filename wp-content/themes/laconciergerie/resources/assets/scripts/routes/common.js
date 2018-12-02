@@ -29,7 +29,6 @@ export default {
   },
 
   initColorPage () {
-    console.log("common", document.querySelector('#body').getAttribute('data-color'));
     this.$els.body.style.setProperty('--page-color', this.$els.color);
   },
 
@@ -53,6 +52,7 @@ export default {
       watchOverflow: true,
       slidesPerView: 3,
       spaceBetween: 30,
+      autoHeight: true,
       breakpoints: {
         960: {
           slidesPerView: 2,

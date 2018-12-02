@@ -7,13 +7,14 @@ use Sober\Controller\Controller;
 class MediationArchive extends Controller
 {
 
-    public static function lastPosts($number = 3)
+    public static function lastPosts($number = 10)
     {
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $args = array(
-            'numberposts' => $number,
+            'posts_per_page' => $number,
+//            'numberposts' => $number,
             // If different posts_per_page needed, change it too in Wordpress Settings > Reading
-            'posts_per_page' => 10,
+//            'posts_per_page' => 10,
             'post_type' => 'mediation',
             'paged' => $paged,
         );

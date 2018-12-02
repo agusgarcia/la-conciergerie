@@ -13,6 +13,31 @@
       content: none;
     }
   }
+
+  .title {
+    &:after {
+      width: 0;
+      opacity: 0;
+      transition: opacity 0s 0s;
+    }
+    &.show {
+      &:after {
+        opacity: 1;
+        width: auto;
+        transition: opacity 0s 0.25s;
+        animation: appearAfter 1s 0.5s ease-out;
+      }
+    }
+    @keyframes appearAfter {
+      from {
+        right: 200%;
+      }
+      to {
+        right: 10px;
+      }
+    }
+  }
+
   .subtitle {
     color: $white;
     background-color: var(--page-color);
@@ -27,7 +52,7 @@
   .content {
     &__first {
       padding-left: 10%;
-      margin-bottom: 60px;
+      margin-bottom: 100px;
       margin-top: 80px;
       display: block;
       > div {
@@ -39,6 +64,8 @@
       .media__container {
         img {
           max-height: 500px;
+          width: 100%;
+          height: auto;
         }
       }
     }
@@ -49,39 +76,61 @@
         display: flex;
         max-width: 1600px;
         margin: auto;
+        align-items: center;
       }
+
       .media__container {
-        min-height: 400px;
-        max-height: 450px;
+        //min-height: 400px;
+        //max-height: 450px;
         padding-left: 60px;
+        width: 60%;
+        img {
+          width: 100%;
+          height: auto;
+        }
         figure {
+          position: static;
+          margin-top: -30px;
+          margin-bottom: -30px;
+          pointer-events: none;
+          max-width: 100%;
+        }
+        figcaption {
+          text-align: left;
           position: absolute;
-          top: -30px;
-          bottom: -30px;
+          left: 0;
+          top: 100%;
         }
       }
     }
   }
+
   .media__container {
     position: relative;
-    flex-basis: 60%;
-
+    flex-basis: auto;
+    max-width: 60%;
+    //width: 100%;
     iframe, img {
       width: 100%;
     }
     img {
-      height: 100%;
-      object-fit: cover;
+      //width: 100%;
+      //height: auto;
+      //height: 100%;
+      //width: auto;
+      //object-fit: cover;
     }
     figcaption {
       text-align: right;
     }
   }
+
   .text {
     text-align: justify;
     line-height: 1.8em;
     p {
       margin-bottom: 15px;
+      clear: both;
     }
     figure {
       max-width: 100%;
@@ -90,18 +139,23 @@
       max-width: 100%;
     }
   }
+
   .text--main {
-    padding-right: 40px;
+    padding-right: 100px;
     flex-basis: 40%;
+    min-width: 350px;
   }
+
   .text--secondary {
     margin-top: 120px;
+    max-width: 1600px;
     &:after {
       content: '';
       display: block;
       clear: both;
     }
   }
+
   .information {
     color: $white;
     margin: 30px 0;
@@ -122,6 +176,7 @@
       margin-bottom: 10px;
     }
   }
+
   .gallery {
     display: flex;
     flex-direction: column;
@@ -140,7 +195,7 @@
           }
         }
         figcaption {
-          margin-top: 10px;
+          margin-top: 15px;
           margin-right: 10px;
           text-align: right;
         }
@@ -166,6 +221,7 @@
       margin-left: 10px;
     }
   }
+
 }
 
 @media screen and (max-width: 1600px) {
@@ -192,6 +248,9 @@
   .single-exhibition, .single-event {
     .title {
       font-size: 45px;
+      &:after {
+        bottom: 5px;
+      }
     }
     .subtitle {
       font-size: 24px;
@@ -222,31 +281,42 @@
       }
       &__first {
         margin-top: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-left: 0;
+
+        .media__container {
+          max-width: unset;
+          width: 100%;
+        }
       }
       &__second {
         margin-top: 120px;
         .media__container {
           padding-left: 0;
-          width: 90%;
+          max-width: unset;
+          width: 80%;
           margin: 0 auto;
           top: -30px;
-          max-height: unset;
-          min-height: unset;
-          figure {
-            position: relative;
-            top: auto;
-            bottom: auto;
-          }
           img {
             max-width: 100%;
+          }
+          figcaption {
+            position: static;
           }
         }
       }
     }
+    .information {
+      text-align: center;
+      margin-top: 0;
+      padding: 10px 30px 20px;
+    }
     .text {
       &--main {
-        padding-right: 7%;
+        padding-right: 0;
         margin-bottom: 30px;
+        min-width: 0;
       }
       &--secondary {
         margin-top: 60px;
@@ -257,9 +327,16 @@
 
 @media screen and (max-width: $bp-xs) {
   .single-event, .single-exhibition {
+    .title {
+      font-size: 40px;
+      line-height: 1;
+      &:after {
+        bottom: -3px;
+      }
+    }
     .information {
-      margin-top: 0;
-      padding: 0 30px 10px;
+      //margin-top: 0;
+      //padding: 0 30px 10px;
     }
     .gallery {
       figure {
