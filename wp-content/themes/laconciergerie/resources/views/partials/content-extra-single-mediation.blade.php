@@ -12,5 +12,3 @@
         @endforeach
     </div>
 @endif
-
-@include('partials.content-single-navigation')
