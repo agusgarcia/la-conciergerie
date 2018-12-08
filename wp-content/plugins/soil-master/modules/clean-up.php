@@ -126,7 +126,7 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * @link http://www.readability.com/publishers/guidelines#publisher
  */
 function embed_wrap($cache) {
-  return '<div class="entry-content-asset">' . $cache . '</div>';
+  return '<div class="entry-content-wrapper"> <div class="entry-content-asset">' . $cache . '</div></div>';
 }
 add_filter('embed_oembed_html', __NAMESPACE__ . '\\embed_wrap');
 

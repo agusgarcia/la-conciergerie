@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/wp-content/themes/laconciergerie",
-  "devUrl": "http://conciergerie.localhost",
+  "devUrl": "conciergerie.localhost",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

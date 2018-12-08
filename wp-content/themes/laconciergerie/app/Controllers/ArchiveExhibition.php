@@ -91,8 +91,16 @@ class ArchiveExhibition extends Controller
             foreach ($result as $post) {
                 $postArray = (array)$post;
                 $name = explode(' ', $postArray['artist_name'])[1];
+                if ($name == null) {
+                    $name = $postArray['artist_name'];
+                }
+
+                $secondName = explode(' et ', $postArray['artist_name'])[1];
+                $secondName = explode(' ', $secondName)[1];
+
                 $first_letter = strtoupper(substr($name, 0, 1));
                 $post->name = $name;
+
                 // If the array $letter_keyed_posts hasn't a key $first_letter
                 // Create an array into the key
                 if (!array_key_exists($first_letter, $letter_keyed_posts)) {
@@ -100,13 +108,21 @@ class ArchiveExhibition extends Controller
                 }
 
                 $letter_keyed_posts[$first_letter][] = $post;
+
+                if ($secondName !== null) {
+                    $first_letter_second = strtoupper(substr($secondName, 0, 1));
+                    if (!array_key_exists($first_letter_second, $letter_keyed_posts)) {
+                        $letter_keyed_posts[$first_letter_second] = array();
+                    }
+
+                    $letter_keyed_posts[$first_letter_second][] = $post;
+                }
             }
         }
-        foreach ($letter_keyed_posts as $key => $row) {
-            $letter_keyed_posts[$key] = $row['name'];
-        }
-        array_multisort($letter_keyed_posts, SORT_ASC, $letter_keyed_posts);
-        var_dump($letter_keyed_posts);
+
+        // Sort array by key
+        ksort($letter_keyed_posts);
+
         return $letter_keyed_posts;
     }
 

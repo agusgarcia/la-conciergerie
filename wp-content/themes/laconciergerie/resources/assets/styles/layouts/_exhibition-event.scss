@@ -4,11 +4,13 @@
     max-height: 70vh;
     object-fit: cover;
   }
+
   .single__title {
     color: var(--page-color);
     margin-bottom: 25px;
     line-height: 1em;
     opacity: 0;
+
     &:after {
       content: none;
     }
@@ -20,6 +22,7 @@
       opacity: 0;
       transition: opacity 0s 0s;
     }
+
     &.show {
       &:after {
         opacity: 1;
@@ -28,6 +31,7 @@
         animation: appearAfter 1s 0.5s ease-out;
       }
     }
+
     @keyframes appearAfter {
       from {
         right: 200%;
@@ -44,6 +48,7 @@
     padding: 3px 10px;
     font-weight: normal;
     font-style: italic;
+
     &:after {
       content: none;
     }
@@ -55,12 +60,14 @@
       margin-bottom: 100px;
       margin-top: 80px;
       display: block;
+
       > div {
         max-width: 1600px;
         display: flex;
         align-items: center;
         justify-content: space-around;
       }
+
       .media__container {
         img {
           max-height: 500px;
@@ -69,9 +76,11 @@
         }
       }
     }
+
     &__second {
       background-color: var(--page-color);
       margin-bottom: 60px;
+
       > div {
         display: flex;
         max-width: 1600px;
@@ -84,10 +93,12 @@
         //max-height: 450px;
         padding-left: 60px;
         width: 60%;
+
         img {
           width: 100%;
           height: auto;
         }
+
         figure {
           position: static;
           margin-top: -30px;
@@ -95,6 +106,7 @@
           pointer-events: none;
           max-width: 100%;
         }
+
         figcaption {
           text-align: left;
           position: absolute;
@@ -113,6 +125,7 @@
     iframe, img {
       width: 100%;
     }
+
     img {
       //width: 100%;
       //height: auto;
@@ -120,6 +133,7 @@
       //width: auto;
       //object-fit: cover;
     }
+
     figcaption {
       text-align: right;
     }
@@ -128,15 +142,37 @@
   .text {
     text-align: justify;
     line-height: 1.8em;
+
     p {
       margin-bottom: 15px;
       clear: both;
     }
+
     figure {
       max-width: 100%;
     }
+
     img {
       max-width: 100%;
+    }
+
+    .entry-content-wrapper {
+      width: 1024px;
+      max-width: 100%;
+      margin: auto;
+    }
+    .entry-content-asset {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -149,6 +185,7 @@
   .text--secondary {
     margin-top: 120px;
     max-width: 1600px;
+
     &:after {
       content: '';
       display: block;
@@ -164,14 +201,17 @@
     padding-right: 60px;
     grid-column-end: span 2;
     flex-grow: 1;
+
     a {
       color: inherit;
       text-decoration: underline;
       word-break: break-word;
     }
+
     strong {
       display: block;
     }
+
     li {
       margin-bottom: 10px;
     }
@@ -181,19 +221,23 @@
     display: flex;
     flex-direction: column;
     margin-top: 120px;
+
     figure {
       width: 60%;
       max-width: 1024px;
       min-width: 500px;
       margin-bottom: 30px;
+
       &:nth-child(even) {
         align-self: flex-end;
+
         .image__container {
           &:after {
             left: 30px;
             right: 0;
           }
         }
+
         figcaption {
           margin-top: 15px;
           margin-right: 10px;
@@ -201,21 +245,25 @@
         }
 
       }
+
       .image__container {
         position: relative;
         @include underline(var(--page-color));
+
         &:after {
           right: 30px;
           left: 0;
         }
       }
     }
+
     img {
       z-index: 2;
       height: auto;
       position: relative;
       width: 100%;
     }
+
     figcaption {
       margin-top: 10px;
       margin-left: 10px;
@@ -248,16 +296,20 @@
   .single-exhibition, .single-event {
     .title {
       font-size: 45px;
+
       &:after {
         bottom: 5px;
       }
     }
+
     .subtitle {
       font-size: 24px;
     }
+
     .text {
       line-height: 1.7em;
     }
+
     .gallery {
       margin-top: 80px;
     }
@@ -279,6 +331,7 @@
           display: block;
         }
       }
+
       &__first {
         margin-top: 40px;
         margin-left: 40px;
@@ -290,34 +343,41 @@
           width: 100%;
         }
       }
+
       &__second {
         margin-top: 120px;
+
         .media__container {
           padding-left: 0;
           max-width: unset;
           width: 80%;
           margin: 0 auto;
           top: -30px;
+
           img {
             max-width: 100%;
           }
+
           figcaption {
             position: static;
           }
         }
       }
     }
+
     .information {
       text-align: center;
       margin-top: 0;
       padding: 10px 30px 20px;
     }
+
     .text {
       &--main {
         padding-right: 0;
         margin-bottom: 30px;
         min-width: 0;
       }
+
       &--secondary {
         margin-top: 60px;
       }
@@ -330,14 +390,17 @@
     .title {
       font-size: 40px;
       line-height: 1;
+
       &:after {
         bottom: -3px;
       }
     }
+
     .information {
       //margin-top: 0;
       //padding: 0 30px 10px;
     }
+
     .gallery {
       figure {
         width: 90%;
@@ -345,11 +408,13 @@
         min-width: unset;
       }
     }
+
     .post__navigation {
       font-size: 22px;
       flex-direction: column;
       align-items: flex-start;
     }
+
     .post__next {
       margin-top: 40px;
     }
