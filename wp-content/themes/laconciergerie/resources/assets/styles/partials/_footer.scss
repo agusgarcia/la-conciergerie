@@ -35,6 +35,12 @@ footer {
 
   .logo {
     width: 200px;
+    display: block;
+    &--mairie {
+      width: 150px;
+      margin: 40px auto 0;
+      display: block;
+    }
   }
 
   .container {
@@ -45,6 +51,7 @@ footer {
     &__logo {
       grid-column: 3;
       justify-self: flex-end;
+
     }
     &__information {
       h3 {
