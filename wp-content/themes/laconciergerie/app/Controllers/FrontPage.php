@@ -84,15 +84,16 @@ class FrontPage extends Controller
                     $current_date = date_create(date('Ymd'));
 
                     // Get last day of the exhibition
-                    $closing_date_field = get_field('exhibition_date', $post->ID)["exhibition_date_closing"];
-                    $closing_date = date_create($closing_date_field);
+                    $event_date_field = get_field('opening_date', $post->ID);
+                    $event_date = date_create($event_date_field);
 
                     // Compare both dates
-                    $date_diff = date_diff($current_date, $closing_date)->format('%R%a');
+                    $date_diff = date_diff($current_date, $event_date)->format('%R%a');
 
-                    // If there's more than 0 days until the last day of the exhibiton
-                    // Set as the current exhibition and break
-                    if ($date_diff >= 0 && $date_diff > 10) {
+                    // If there's more than 0 days until the the next event
+                    // But less than 10
+                    // Set as the current event and break
+                    if ($date_diff >= 0 && $date_diff < 10) {
                         $upcoming_found = $post;
                     }
                 }

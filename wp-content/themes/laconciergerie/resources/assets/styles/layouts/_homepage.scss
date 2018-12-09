@@ -2,7 +2,7 @@
   .currently {
     &__slider {
       height: calc(100vh - #{$header-height} - 30px);
-      background-color: blue;
+      background-color: $grey-light;
       position: relative;
       //max-height: 900px;
       @media screen and (orientation: portrait) {

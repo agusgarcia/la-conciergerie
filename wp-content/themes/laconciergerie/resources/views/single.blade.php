@@ -21,10 +21,5 @@
     @while(have_posts()) @php the_post() @endphp
     @include('partials.content-single-'.get_post_type())
 
-
-    @if(get_post_type() == 'mediation')
-        @include('partials.content-extra-single-mediation')
-    @endif
-
     @endwhile
 @endsection

@@ -69,6 +69,9 @@ class ArchiveExhibition extends Controller
         $args = array(
             'numberposts' => -1,
             'post_type' => 'exhibition',
+            'orderby' => 'meta_value',
+            'order' => 'DESC',
+            'meta_key' => 'opening_date',
         );
 
         $postsList = get_posts($args);

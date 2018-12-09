@@ -18,4 +18,8 @@
     @include('components.gallery-slider', $slider->slider_images)
 @endif
 
+@if(get_post_type() == 'mediation')
+    @include('partials.content-extra-single-mediation')
+@endif
+
 @include('partials.content-single-navigation')

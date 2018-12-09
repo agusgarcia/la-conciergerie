@@ -101,3 +101,87 @@ add_filter('sage/template/app/data', function ($data) {
             'sf_submit_text' => esc_attr_x('Search', 'submit button', 'sage'),
         ];
 });
+
+// What next lines do :
+// - Create "season" and "exhibition title" columns
+// - Add terms under each column for each exhibition/event
+// - Make "season" column sortable
+// - Sort exhibitions by opening date
+
+// Creates "season" and "exhibition title" columns in Exhibition page / Exhibition
+add_filter('manage_exhibition_posts_columns', function ($columns) {
+    $columns['exhibition_title'] = ('Titre de l\'exposition');
+    $columns['season'] = ('Saison');
+    return $columns;
+});
+
+// Creates "season" column in Event page / Event
+add_filter('manage_edit-event_columns', function ($columns) {
+    $columns['season'] = __('Saison');
+    return $columns;
+});
+
+// Insert taxonomy next to each event under the season column / Event
+add_action('manage_event_posts_custom_column', function ($column, $post_id) {
+    switch ($column) {
+        case 'season' :
+            $terms = get_the_term_list($post_id, 'season', '', ',', '');
+            if (is_string($terms))
+                echo $terms;
+            else
+                _e('Unable to get season');
+            break;
+    }
+}, 10, 2);
+
+// Insert value next to each exhibition under the season and title columns / Exhibitions
+add_action('manage_exhibition_posts_custom_column', function ($column, $post_id) {
+    switch ($column) {
+        case 'exhibition_title' :
+            $terms = get_field('exhibition_title', $post_id);
+            if (is_string($terms))
+                echo $terms;
+            else
+                _e('Unable to get the title');
+            break;
+        case 'season' :
+            $terms = get_the_term_list($post_id, 'season', '', ',', '');
+            if (is_string($terms))
+                echo $terms;
+            else
+                _e('Unable to get season');
+            break;
+    }
+}, 10, 2);
+
+// Add "season" as sortable column / Exhibitions
+add_filter('manage_edit-exhibition_sortable_columns', function () {
+    $columns['title'] = 'title';
+    $columns['season'] = 'season';
+    return $columns;
+});
+
+// Add "season" as sortable column / Events
+add_filter('manage_edit-event_sortable_columns', function () {
+    $columns['season'] = 'season';
+    return $columns;
+});
+
+// Sort exhibtion listing by "opening date" by default
+add_action('pre_get_posts', function ($query) {
+    // Get current page
+    global $pagenow;
+    // If current page is "edit.php" and order is not set
+    // Order by opening date
+    if (is_admin() && 'edit.php' == $pagenow && !isset($_GET['orderby']) && in_array ( $query->get('post_type'), array('event','exhibition'))) {
+        $query->set('meta_key', 'opening_date');
+        $query->set('orderby', 'meta_value');
+    }
+    // If order is set and is order by season,
+    // Order by season in the correct order (ASC or DESC)
+    $orderby = $query->get('orderby');
+    if ('season' == $orderby) {
+        $query->set('meta_key', 'opening_date');
+        $query->set('orderby', 'meta_value');
+    }
+}, 1);

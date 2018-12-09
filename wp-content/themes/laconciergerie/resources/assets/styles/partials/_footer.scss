@@ -10,10 +10,12 @@ footer {
   padding: 50px 50px;
   line-height: 1.3em;
   font-size: 15px;
+
   a {
     color: inherit;
     position: relative;
     @include link-hover;
+
     &::after {
       position: absolute;
       //content: '';
@@ -25,6 +27,7 @@ footer {
       height: 0;
       transition: height 0.2s ease-out;
     }
+
     &:hover {
       //text-decoration: underline;
       &::after {
@@ -36,10 +39,17 @@ footer {
   .logo {
     width: 200px;
     display: block;
+
     &--mairie {
-      width: 150px;
-      margin: 40px auto 0;
-      display: block;
+      background-image: none;
+      &:hover {
+        background-image: none;
+      }
+      img {
+        width: 150px;
+        margin: 40px auto 0;
+        display: block;
+      }
     }
   }
 
@@ -53,6 +63,7 @@ footer {
       justify-self: flex-end;
 
     }
+
     &__information {
       h3 {
         font-family: $font-open-sans;
@@ -61,11 +72,13 @@ footer {
         font-size: 18px;
         margin: 10px 0;
       }
+
       .link--facebook {
         margin: 30px 0;
         display: block;
         color: inherit;
         background: none;
+
         img {
           width: 50px;
           height: auto;
@@ -75,19 +88,23 @@ footer {
         }
       }
     }
+
     &__newsletter {
       grid-row: 2;
       justify-self: flex-start;
       grid-column: 1;
       margin-top: 30px;
+
       label {
         display: block;
       }
+
       .input {
         padding: 8px 13px;
         margin-top: 10px;
         display: inline-block;
       }
+
       .button {
         display: inline-block;
         padding: 8px;
@@ -97,25 +114,31 @@ footer {
         font-weight: bold;
       }
     }
+
     &__menu {
       &--main {
         grid-column: 2;
         line-height: 1.6em;
         margin-top: 7px;
+
         li {
           &:nth-child(3n) {
             margin-bottom: 10px;
           }
         }
+
         a {
           text-transform: uppercase;
           font-weight: bold;
         }
       }
+
       &--secondary {
         align-self: flex-end;
+
         li {
           display: inline-block;
+
           &:not(:last-child) {
             &::after {
               content: '|';
@@ -125,20 +148,30 @@ footer {
         }
       }
     }
+
     &__credits {
       justify-self: flex-end;
-      font-style: italic;
-      font-size: 14px;
+      font-style: normal;
+      font-size: 11px;
       align-self: flex-end;
       grid-row: 2;
-      a:hover {
-        text-decoration: none;
-        color: #ffaac2;
+
+      a {
+        background-image: linear-gradient(90deg, rgba(255, 235, 172, 0.8) 0%, rgba(255, 220, 153, 0.8) 100%);
+        background-size: 100px 0;
+        background-position: right 8px bottom;
       }
+      a:hover {
+        background-image: linear-gradient(90deg, rgba(255, 194, 207, 0.8) 0%, rgba(255, 170, 194, 0.8) 100%);
+        background-size: 100px 2px;
+        color: $white;
+      }
+
       img {
         height: 35px;
         width: auto;
         margin-right: 5px;
+        margin-left: 3px;
         margin-top: -6px;
         vertical-align: middle;
       }
@@ -157,12 +190,14 @@ footer {
         //grid-column: 1;
         //grid-row: 3;
       }
+
       &__menu--secondary {
         //grid-row: 4;
         //grid-column: 1 / span 2;
         //text-align: center;
         //padding-top: 20px;
       }
+
       &__credits {
         //align-self: flex-end;
         //justify-self: flex-start;
@@ -174,21 +209,25 @@ footer {
 @media screen and (max-width: $bp-s) {
   footer {
     grid-template-columns: 1fr 1fr;
+
     .footer {
       &__logo {
         grid-column: 1;
         justify-self: flex-start;
         grid-row: 2;
       }
+
       &__newsletter {
         grid-column: 2;
         margin-top: 0;
       }
+
       &__menu--secondary {
         grid-column: 1 / span 2;
         justify-self: center;
         margin-top: 20px;
       }
+
       &__credits {
         justify-self: center;
         grid-column: 1 / span 2;
@@ -204,23 +243,29 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 20px 30px;
+
     .footer {
       &__logo {
         order: -1;
         margin-bottom: 20px;
       }
+
       &__newsletter, &__menu--secondary, &__credits {
         align-self: center;
       }
+
       &__newsletter {
         margin-bottom: 30px;
       }
+
       &__menu--main {
         margin-top: 20px;
       }
+
       &__menu--secondary {
         margin-top: 0;
       }
+
       &__credits {
         margin-top: 20px;
       }

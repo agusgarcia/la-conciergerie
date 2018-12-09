@@ -7,7 +7,7 @@
         @php the_content() @endphp
     </div>
 
-    @if($educational_resources)
+    @if($educational_resources->resources_list)
         <div class="row resources_list">
             {!! $educational_resources->intro !!}
 

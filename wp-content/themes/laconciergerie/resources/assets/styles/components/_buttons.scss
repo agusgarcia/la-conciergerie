@@ -23,8 +23,12 @@
     padding: 10px;
     box-shadow: 6px 6px 0 var(--main-color);
     transform: rotate(-2deg);
+    transition: all 0.25s ease-out;
     &:hover {
+      margin-top: 12px;
+      margin-bottom: -2px;
       background-color: darken($grey, 5);
+      box-shadow: 4px 4px 0 var(--main-color);
     }
 
   }

@@ -62,7 +62,10 @@
 	h7.875l1.425,2.85h3.186l-8.549-17.098L35.129,132.627z M15.625,132.627h13.077v-2.85H18.482v-14.248h-2.85v17.098H15.625z
 	 M309.492,102.522l-0.031,84.041H0l0.031-84.041H309.492z M306.611,145.361H2.85v38.353h303.761V145.361z"></path>
 </svg>
-        <img class="logo--mairie" src="@asset('images/logo_la_motte_servolex.png')" alt="Logo Mairie la Motte-Servolex"/>
+        <a class="logo--mairie" href="http://www.mairie-lamotteservolex.fr" target="_blank">
+            <img src="@asset('images/logo_la_motte_servolex.png')"
+                 alt="Logo Mairie la Motte-Servolex"/>
+        </a>
     </div>
     {{-- Newsletter form --}}
     <div class="footer__newsletter">
@@ -100,6 +103,7 @@
     {{-- Agustina --}}
     <div class="footer__credits">
         <a target="_blank" href="https://agusgarcia.com">
+            made by &nbsp;
             <abbr title="Agustina fuit hic / Design + development">
                 <img src="@asset('images/signature_agus_white.png')" alt="Agustina Garcia"> </abbr>
         </a>
