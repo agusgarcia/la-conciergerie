@@ -13,7 +13,7 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
-    public function pageColor()
+    public static function pageColor()
     {
         if (is_archive()) {
             return "";

@@ -69,69 +69,75 @@ export default {
     const triggerElementsToLeft = $('.gallery figure:nth-child(even)');
     const triggerElementsToRight = $('.gallery figure:nth-child(odd)');
 
-    Array.forEach(triggerElementsToLeft, (trigger) => {
-      // Create the Scene and trigger when visible with ScrollMagic
-      const tween = TweenLite.fromTo(trigger, 0.5, {
-        opacity: 0,
-        x: 100,
-      }, {
-        opacity: 1,
-        x: 0,
-      });
+    for (let i = 0; i < triggerElementsToLeft.length; i++) {
+      const trigger = triggerElementsToLeft[i];
+      if (trigger !== null) {
+        // Create the Scene and trigger when visible with ScrollMagic
+        const tween = TweenLite.fromTo(trigger, 0.5, {
+          opacity: 0,
+          x: 100,
+        }, {
+          opacity: 1,
+          x: 0,
+        });
 
-      const scene = new ScrollMagic.Scene({
-        triggerElement: trigger,
-        offset: -100,
-        reverse: false,
-        /* offset the trigger 100px below #scene's top */
-      });
-      scene
-          .setTween(tween)
-          .addTo(this.smController);
-    });
+        const scene = new ScrollMagic.Scene({
+          triggerElement: trigger,
+          offset: -100,
+          reverse: false,
+          /* offset the trigger 100px below #scene's top */
+        });
+        scene
+            .setTween(tween)
+            .addTo(this.smController);
+      }
+    }
 
-    Array.forEach(triggerElementsToRight, (trigger) => {
-      // Create the Scene and trigger when visible with ScrollMagic
-      const tween = TweenLite.fromTo(trigger, 0.5, {
-        opacity: 0,
-        x: -100,
-      }, {
-        opacity: 1,
-        x: 0,
-      });
+    for (let i = 0; i < triggerElementsToRight.length; i++) {
+      const trigger = triggerElementsToRight[i];
+      if (trigger !== null) {
+        // Create the Scene and trigger when visible with ScrollMagic
+        const tween = TweenLite.fromTo(trigger, 0.5, {
+          opacity: 0,
+          x: -100,
+        }, {
+          opacity: 1,
+          x: 0,
+        });
 
-      const scene = new ScrollMagic.Scene({
-        triggerElement: trigger,
-        offset: -100,
-        reverse: false,
-        /* offset the trigger 100px below #scene's top */
-      });
-      scene
-          .setTween(tween)
-          .addTo(this.smController);
-    });
+        const scene = new ScrollMagic.Scene({
+          triggerElement: trigger,
+          offset: -100,
+          reverse: false,
+          /* offset the trigger 100px below #scene's top */
+        });
+        scene
+            .setTween(tween)
+            .addTo(this.smController);
+      }
+    }
 
-    Array.forEach(triggerElementsToTop, (trigger) => {
-      // Create the Scene and trigger when visible with ScrollMagic
-      const tween = TweenLite.fromTo(trigger, 0.5, {
-        opacity: 0,
-        y: 100,
-      }, {
-        opacity: 1,
-        y: 0,
-      });
+    for (let i = 0; i < triggerElementsToTop.length; i++) {
+      const trigger = triggerElementsToTop[i];      // Create the Scene and trigger when visible with ScrollMagic
+      if (trigger !== null) {
+        const tween = TweenLite.fromTo(trigger, 0.5, {
+          opacity: 0,
+          y: 100,
+        }, {
+          opacity: 1,
+          y: 0,
+        });
 
-      const scene = new ScrollMagic.Scene({
-        triggerElement: trigger,
-        offset: -200,
-        reverse: false,
-        /* offset the trigger 200px below #scene's top */
-      });
-      scene
-          .setTween(tween)
-          .addTo(this.smController);
-    });
-
+        const scene = new ScrollMagic.Scene({
+          triggerElement: trigger,
+          offset: -200,
+          reverse: false,
+          /* offset the trigger 200px below #scene's top */
+        });
+        scene
+            .setTween(tween)
+            .addTo(this.smController);
+      }
+    }
   },
-}
-;
+};

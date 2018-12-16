@@ -66,7 +66,6 @@ export default {
   },
 
   finalize () {
-    console.log('finalize');
     this.seasonSlider.update();
     // JavaScript to be fired on the home page, after the init JS
   },

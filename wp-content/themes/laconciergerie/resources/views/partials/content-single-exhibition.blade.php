@@ -43,7 +43,6 @@
                     <strong>Exposition</strong>
                     <p>Du {{ App::formattedDateNoYear($exhibition_date->exhibition_date_opening) }}
                         au {{ App::formattedDate($exhibition_date->exhibition_date_closing) }}</p>
-                    <p>{{ $exhibition_closing_dates }}</p>
                 </li>
                 @if($exhibition_date->exhibition_closing_dates)
                     <li>
