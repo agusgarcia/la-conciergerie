@@ -22,22 +22,24 @@
       opacity: 0;
       transition: opacity 0s 0s;
     }
-
     &.show {
       &:after {
         opacity: 1;
         width: auto;
-        transition: opacity 0s 0.25s;
-        animation: appearAfter 1s 0.5s ease-out;
+        animation: appearAfter 1s 0.4s ease-out;
       }
-    }
-
+   }
     @keyframes appearAfter {
-      from {
+      0% {
         right: 200%;
+        opacity: 0;
       }
-      to {
+      0% {
+        opacity: 1;
+      }
+      100% {
         right: 10px;
+        opacity: 1;
       }
     }
   }

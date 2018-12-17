@@ -27,10 +27,6 @@
         @endforeach
     </div>
     <div class="row js-items-container sort__container" data-sort="name">
-        @foreach ($posts_by_artist as $post)
-            {{ $post->post_title }}
-        @endforeach
-
         @foreach(array_keys($posts_by_artist) as $letter)
             <h2 class="subtitle">{{ $letter }}</h2>
             <div class="item__container">

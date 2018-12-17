@@ -1,4 +1,4 @@
-<article class="mediation-single {{ $row }}">
+<article class="mediation-single @if(isset($row)){!! $row !!}@endif">
     <div class="mediation__thumb">{!! $thumbnail !!}</div>
     <div class="mediation__text">
         <time class="mediation__date"

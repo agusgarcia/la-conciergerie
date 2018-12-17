@@ -46,7 +46,10 @@ class ArchiveExhibition extends Controller
                 $post->exhibition_title = get_field('exhibition_title', $post);
                 $post->thumbnail = get_field('thumbnail', $post);
                 $post->color = get_field('color', $post);
-                $post->name = explode(' ', $post->artist_name)[1];
+                $name = explode(' ', $post->artist_name);
+                if (array_key_exists(1, $name)) {
+                    $post->name = $name[1];
+                }
 
                 return $post;
 
@@ -92,14 +95,21 @@ class ArchiveExhibition extends Controller
 
         if ($result) {
             foreach ($result as $post) {
+                $name = null;
                 $postArray = (array)$post;
-                $name = explode(' ', $postArray['artist_name'])[1];
-                if ($name == null) {
-                    $name = $postArray['artist_name'];
+                $name = explode(' ', $postArray['artist_name']);
+                if (!array_key_exists(1, $name)) {
+                    $name = (string) $name[0];
+                } else {
+                    $name = (string) $name[1];
                 }
 
-                $secondName = explode(' et ', $postArray['artist_name'])[1];
-                $secondName = explode(' ', $secondName)[1];
+                $secondName = explode(' et ', $postArray['artist_name']);
+                if (array_key_exists(1, $secondName)) {
+                    $secondName = explode(' ', $secondName[1])[1];
+                } else {
+                    $secondName = null;
+                }
 
                 $first_letter = strtoupper(substr($name, 0, 1));
                 $post->name = $name;

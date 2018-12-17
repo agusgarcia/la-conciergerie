@@ -147,6 +147,10 @@
           background-color: $black;
           height: 10px;
           border-radius: 0;
+          cursor: grab;
+          &:active {
+            cursor: grabbing;
+          }
         }
       }
     }

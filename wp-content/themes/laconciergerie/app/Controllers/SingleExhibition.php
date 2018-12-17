@@ -9,7 +9,7 @@ class SingleExhibition extends Controller
 // Pass on all fields from Advanced Custom Fields to the view
     protected $acf = true;
 
-    public function adjacentPosts()
+    public static function adjacentPosts()
     {
         $currentPost = get_post()->ID;
         $currentTerm = get_the_terms($currentPost, 'season')[0];

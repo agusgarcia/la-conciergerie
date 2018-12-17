@@ -55,6 +55,10 @@
   padding: 80px 30px 30px;
   transform: translateX(100%);
   transition: transform 0.35s ease-in;
+  .menu-item {
+    line-height: 26px;
+    margin: 16px 0;
+  }
   a {
     color: $white;
     &:hover {
