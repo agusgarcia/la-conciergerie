@@ -95,7 +95,7 @@
         @include('components.gallery-slider', $images)
     @endif
 </div>
-@php($posts = SingleExhibition::AdjacentPosts())
+@php($posts = $adjacent_posts)
 @php($prevPost = $posts[0])
 @php($nextPost = $posts[1])
 <div class="post__navigation">

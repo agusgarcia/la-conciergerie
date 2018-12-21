@@ -9,7 +9,7 @@ class SingleExhibition extends Controller
 // Pass on all fields from Advanced Custom Fields to the view
     protected $acf = true;
 
-    public static function adjacentPosts()
+    public function adjacentPosts()
     {
         $currentPost = get_post()->ID;
         $currentTerm = get_the_terms($currentPost, 'season')[0];
@@ -37,9 +37,15 @@ class SingleExhibition extends Controller
 
 
         $current = array_search(get_the_ID(), $posts);
-        $nextID = $posts[$current + 1];
-        $prevID = $posts[$current - 1];
+        $nextID = null;
+        $prevID = null;
 
+        if (array_key_exists($current + 1, $posts)) {
+            $nextID = $posts[$current + 1];
+        }
+        if (array_key_exists($current - 1, $posts)) {
+            $prevID = $posts[$current - 1];
+        }
         return $adjacentPosts = [$prevID, $nextID];
     }
 

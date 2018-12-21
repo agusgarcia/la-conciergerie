@@ -33,6 +33,7 @@ h2 {
   text-transform: uppercase;
   font-size: 60px;
   max-width: 90%;
+
   &:after {
     content: '';
     position: absolute;
@@ -53,11 +54,14 @@ h2 {
     align-items: flex-start;
     padding-left: 14%;
     margin-top: 30px;
+
     &--right {
       padding: 0;
       align-items: flex-end;
+
       .title {
         padding-right: 20%;
+
         &:after {
           left: -10px;
           right: 0;
@@ -71,6 +75,7 @@ h2 {
   position: relative;
   z-index: 2;
   display: table;
+
   &:after {
     content: '';
     position: absolute;
@@ -98,6 +103,12 @@ a {
   z-index: 2;
 }
 
+a, button {
+  &:focus {
+    outline: 0;
+  }
+}
+
 strong {
   font-weight: 700;
 }
@@ -120,6 +131,7 @@ q, blockquote {
   display: inline-block;
   position: relative;
   font-style: italic;
+
   &:before, &:after {
     position: absolute;
     top: 10px;
@@ -128,6 +140,7 @@ q, blockquote {
     font-size: 6em;
     z-index: -1;
   }
+
   &:after {
     content: close-quote;
     top: auto;
@@ -135,6 +148,7 @@ q, blockquote {
     bottom: -30px;
     right: -15px;
   }
+
   &:before {
     content: open-quote;
   }
@@ -167,5 +181,26 @@ cite {
   }
   .subtitle {
     font-size: 28px;
+  }
+}
+
+
+@media screen and (max-width: $bp-xxs) {
+  .title {
+    font-size: 34px;
+    hyphens: none;
+    &__container {
+      padding-left: 9%;
+    }
+    &:after {
+      height: 16px;
+      bottom: 5px;
+    }
+  }
+  .subtitle {
+    font-size: 24px;
+    &:after {
+      bottom: 14px;
+    }
   }
 }

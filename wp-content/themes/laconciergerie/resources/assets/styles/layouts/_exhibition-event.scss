@@ -22,13 +22,15 @@
       opacity: 0;
       transition: opacity 0s 0s;
     }
+
     &.show {
       &:after {
         opacity: 1;
         width: auto;
         animation: appearAfter 1s 0.4s ease-out;
       }
-   }
+    }
+
     @keyframes appearAfter {
       0% {
         right: 200%;
@@ -163,11 +165,13 @@
       max-width: 100%;
       margin: auto;
     }
+
     .entry-content-asset {
       position: relative;
       width: 100%;
       height: 0;
       padding-top: 56.25%;
+
       iframe {
         position: absolute;
         top: 0;
@@ -394,7 +398,7 @@
       line-height: 1;
 
       &:after {
-        bottom: -3px;
+        bottom: 0;
       }
     }
 
@@ -418,7 +422,7 @@
     }
 
     .post__next {
-      margin-top: 40px;
+      margin-top: 60px;
     }
   }
 }

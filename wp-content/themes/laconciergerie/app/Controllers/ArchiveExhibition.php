@@ -61,11 +61,6 @@ class ArchiveExhibition extends Controller
         return $posts;
     }
 
-    public static function ExhibitionDateClosing()
-    {
-        return get_field('artist_name');
-    }
-
     public function postsByArtist()
     {
 

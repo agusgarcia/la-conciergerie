@@ -14,13 +14,16 @@
   padding-left: 30px;
   padding-right: 15px;
   max-width: 90%;
+
   a {
     color: $grey;
   }
+
   &:after {
     bottom: -10px;
     height: 16px;
   }
+
   span {
     display: block;
     position: absolute;
@@ -39,6 +42,7 @@
   padding-left: 15px;
   padding-right: 30px;
   margin-left: auto;
+
   span {
     left: auto;
     right: 0;
@@ -51,10 +55,24 @@
   .post__navigation {
     font-size: 23px;
   }
+
   .post__previous, .post__next {
     &:after {
       bottom: -2px;
       height: 12px;
+    }
+  }
+}
+
+
+@media screen and (max-width: $bp-xs) {
+  .post__previous, .post__next {
+    &:after {
+      bottom: -5px;
+      height: 14px;
+    }
+    span {
+      bottom: -37px;
     }
   }
 }

@@ -2,7 +2,7 @@
 Contributors: matveb, joen, karmatosed
 Requires at least: 4.9.8
 Tested up to: 4.9
-Stable tag: 4.1.0
+Stable tag: 4.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,4 +81,12 @@ See also <a href="https://github.com/WordPress/gutenberg/blob/master/CONTRIBUTIN
 
 = Latest =
 
-* Fix dynamic blocks not rendering in the frontend when meta-boxes present.
+* Raw Handling: fix consecutive lists with one item
+* Avoid showing draft revert message on autosaves
+* Honor the Disable Visual Editor setting in the Gutenberg editor page
+* Docs: Fix dead links in CONTRIBUTING.md
+* Fix undefined index warnings in Latest Comments & Latest Posts
+* Add `react-native` module property to html-entities package.json
+* RichText: List: Sync DOM after editor command
+* Fix RichText infinte rerendering
+* Fix keycodes package missing i18n dependencies
