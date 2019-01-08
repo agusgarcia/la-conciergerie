@@ -75,5 +75,14 @@ export default function (routes) {
     routes.loadEvents();
   });
 
+  Barba.Dispatcher.on('initStateChange', function () {
+    // modify to your needs
+    const path = (window.location.href).replace(window.location.origin, '').toLowerCase();
+    window.gtag('js', new Date());
+    window.gtag('config', 'UA-131045553-1', {
+      'page_title': document.title,
+      'page_path': path,
+    });
+  });
 
 }

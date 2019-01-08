@@ -4,6 +4,7 @@ import 'jquery';
 // Import everything from autoload
 import "./autoload/**/*"
 
+// Import Barba.js
 import barbaInit from './barba/init';
 
 // import local dependencies
