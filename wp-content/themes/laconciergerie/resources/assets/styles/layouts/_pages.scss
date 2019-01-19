@@ -40,6 +40,10 @@
   margin-top: $header-height;
 }
 
+.grecaptcha-badge {
+  display: none;
+}
+
 @media screen and (max-width: $bp-l) {
   .row {
     padding: 0 7%;

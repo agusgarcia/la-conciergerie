@@ -37,7 +37,7 @@
             <ul class="information">
                 <li>
                     <strong>Vernissage</strong>
-                    <p>{{ App::formattedDate($opening_date) }}</p>
+                    <p>{{ App::formattedDate($opening_date) }} à {{ $preview_hour }}</p>
                 </li>
                 <li>
                     <strong>Exposition</strong>
