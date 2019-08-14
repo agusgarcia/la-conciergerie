@@ -90,3 +90,11 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+function mmx_remove_xmlrpc_methods( $methods ) {
+    unset( $methods['system.multicall'] );
+    unset( $methods['system.listMethods'] );
+    unset( $methods['system.getCapabilities'] );
+    return $methods;
+}
+add_filter( 'xmlrpc_methods', 'mmx_remove_xmlrpc_methods');

@@ -8,8 +8,7 @@
             @if($post->start_date)
                 <p>Vernissage le {{ App::formattedDateWithDay($opening_date) }}
                     à {{ $preview_hour }}</p>
-                <p>Du {{ App::formattedDateNoYear($post->start_date) }}
-                    au {{ App::formattedDate($post->closing_date) }}</p>
+            <p>{{ App::fromToDate($post->start_date, $post->closing_date) }}</p>
             @endif
         </div>
     </a>

@@ -82,7 +82,7 @@
     <section class="season" id="currentSeason">
         <div class="title__container">
             <h1 class="title">La saison</h1>
-            <h2 class="subtitle">2018-2019</h2>
+            <h2 class="subtitle">{!! App::currentSeason()  !!}</h2>
         </div>
 
         @php($posts = $current_season)
@@ -99,8 +99,20 @@
                     @endforeach
 
                 </div>
+                    <svg class="arrow arrow--reverse swiper-button-prev" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
+                        <g transform="translate(0,-952.36218)">
+                            <path d="m 49.99997,1018.5184 2.59376,-2.2188 28,-23.99996 -5.1875,-6.0937 -25.40626,21.78116 -25.4062,-21.78116 -5.1875,6.0937 28,23.99996 2.5937,2.2188 z"></path>
+                        </g>
+                    </svg>
 
                 <div class="swiper-scrollbar"></div>
+                <svg class="arrow swiper-button-next" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
+                    <g transform="translate(0,-952.36218)">
+                        <path d="m 49.99997,1018.5184 2.59376,-2.2188 28,-23.99996 -5.1875,-6.0937 -25.40626,21.78116 -25.4062,-21.78116 -5.1875,6.0937 28,23.99996 2.5937,2.2188 z"></path>
+                    </g>
+                </svg>
             </div>
         </div>
     </section>

@@ -30,9 +30,11 @@ class FrontPage extends Controller
 
         $season_results = get_posts($args);
 
-        $results = array_map(function ($post) {
+        $results = array_map(function ($post) use ($season_results) {
             global $current_found;
             global $upcoming_found;
+            $lastElement = end($season_results);
+
             if ($post->post_type == 'exhibition') {
                 // Link
                 $post->link = get_permalink($post->ID);
@@ -62,6 +64,10 @@ class FrontPage extends Controller
                     // If there's more than 0 days until the last day of the exhibiton
                     // Set as the current exhibition and break
                     if ($date_diff >= 0) {
+                        $post->current = true;
+                        $current_found = $post;
+                    }
+                    if ($lastElement === $post) {
                         $post->current = true;
                         $current_found = $post;
                     }
@@ -100,6 +106,7 @@ class FrontPage extends Controller
 
                 return $post;
             }
+
         }, $season_results);
 
         global $current_season;

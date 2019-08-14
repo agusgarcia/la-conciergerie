@@ -64,7 +64,6 @@ class App extends Controller
         } else {
             $current_season = $last_year . '-' . $year;
         }
-
         return $current_season;
     }
 
@@ -96,5 +95,23 @@ class App extends Controller
         $day = utf8_encode(strftime('%d', $date_s));
         $month = utf8_encode(strftime('%m', $date_s));
         return array($day, $month);
+    }
+
+    // Given two dates, it returns a string "From XX/XX to XX/XX",
+    // with or without the year for the first date
+    // if it's the same than the year from the second date
+    public static function fromToDate($dateFrom, $dateTo)
+    {
+        setlocale(LC_ALL, "fr_FR");
+        $date_from = strtotime($dateFrom);
+        $date_to = strtotime($dateTo);
+        $date_from_year = date("Y", $date_from);
+        $date_to_year = date("Y", $date_to);
+
+        if ($date_from_year === $date_to_year) {
+            return "Du " . App::formattedDateNoYear($dateFrom) . " au " . App::formattedDate($dateTo);
+        } else {
+            return "Du " . App::formattedDate($dateFrom) . " au " . App::formattedDate($dateTo);
+        }
     }
 }

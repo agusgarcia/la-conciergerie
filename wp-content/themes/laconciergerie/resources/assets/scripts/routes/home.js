@@ -47,6 +47,10 @@ export default {
         el: `.swiper-scrollbar, ${this.seasonSliderId}`,
         draggable: true,
       },
+      navigation: {
+        nextEl: `.swiper-button-next, ${this.seasonSliderId}`,
+        prevEl: `.swiper-button-prev, ${this.seasonSliderId}`,
+      },
       breakpoints: {
         768: {
           slidesPerView: 2,
