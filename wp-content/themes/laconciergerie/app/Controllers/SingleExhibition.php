@@ -49,4 +49,13 @@ class SingleExhibition extends Controller
         return $adjacentPosts = [$prevID, $nextID];
     }
 
+    public static function getTitle($post_id)
+    {
+        if (get_post($post_id)->post_type === 'exhibition') {
+            return get_field('artist_name', $post_id);
+        } else {
+            return get_field('event_title', $post_id);
+        }
+    }
+
 }

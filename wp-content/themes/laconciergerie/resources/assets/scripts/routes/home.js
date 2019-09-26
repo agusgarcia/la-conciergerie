@@ -28,6 +28,11 @@ export default {
     this.currentlySlider = new Swiper(this.currentlySliderId, {
       watchOverflow: true,
       spaceBetween: 0,
+      autoplay: {
+        delay: 5000,
+      },
+      speed: 500,
+      loop: true,
       pagination: {
         el: `.swiper-pagination, ${this.currentlySliderId}`,
         type: 'bullets',

@@ -98,3 +98,4 @@ function mmx_remove_xmlrpc_methods( $methods ) {
     return $methods;
 }
 add_filter( 'xmlrpc_methods', 'mmx_remove_xmlrpc_methods');
+add_filter( 'run_wptexturize', '__return_false');

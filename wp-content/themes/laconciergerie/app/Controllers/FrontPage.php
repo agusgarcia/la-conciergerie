@@ -99,7 +99,7 @@ class FrontPage extends Controller
                     // If there's more than 0 days until the the next event
                     // But less than 10
                     // Set as the current event and break
-                    if ($date_diff >= 0 && $date_diff < 10) {
+                    if ($date_diff >= 0 && $date_diff < 15) {
                         $upcoming_found = $post;
                     }
                 }

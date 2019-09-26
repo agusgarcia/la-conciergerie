@@ -96,19 +96,4 @@
     @endif
 </div>
 @php($posts = $adjacent_posts)
-@php($prevPost = $posts[0])
-@php($nextPost = $posts[1])
-<div class="post__navigation">
-    @if($prevPost)
-        <a class="post__previous" style="--page-color:{{ get_post($prevPost)->color }}"
-           href="{{ get_post_permalink($prevPost) }}"> {{ get_post($prevPost)->post_title }}
-            <span>Avant</span></a>
-    @endif
-
-    @if($nextPost)
-        <a class="post__next" style="--page-color:{{  get_post($nextPost)->color }}"
-           href="{{ get_post_permalink($nextPost) }}">{{ get_post($nextPost)->post_title }}
-            <span>Après</span>
-        </a>
-    @endif
-</div>
+@include('partials.single-navigation')
