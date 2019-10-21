@@ -32,7 +32,7 @@ export default {
         delay: 5000,
       },
       speed: 500,
-      loop: true,
+      loop: document.querySelectorAll(`${this.currentlySliderId} .swiper-slide`).length > 1,
       pagination: {
         el: `.swiper-pagination, ${this.currentlySliderId}`,
         type: 'bullets',
