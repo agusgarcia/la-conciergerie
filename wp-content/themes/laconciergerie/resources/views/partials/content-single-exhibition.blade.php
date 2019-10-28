@@ -92,7 +92,7 @@
         </div>
     @endif
     @if($slider->slider_images)
-        @include('components.gallery-slider', $images)
+        @include('components.gallery-slider')
     @endif
 </div>
 

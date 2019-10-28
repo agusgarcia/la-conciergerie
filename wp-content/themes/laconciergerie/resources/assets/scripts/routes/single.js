@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import ScrollMagic from 'scrollmagic';
 import TweenLite from 'gsap/TweenLite';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 export default {
   init () {
@@ -19,7 +19,7 @@ export default {
 
     this.gallerySlider = null;
     this.gallerySliderId = '.gallery__slider';
-    this.smController = new ScrollMagic.Controller();
+    this.smController = new ScrollMagic.Controller({addIndicators: false});
   },
 
   initEvents () {
@@ -41,26 +41,6 @@ export default {
     }
   },
   initAnimations () {
-    /*if (this.$els.title !== null) {
-      const tween = TweenLite.fromTo(this.$els.titleAfter, 0.6, {
-        opacity: 0,
-        y: 100,
-      }, {
-        opacity: 1,
-        y: 0,
-        delay: 1,
-      });
-      tween.play();
-    }
-*/
-    // Create Animation for 0.5s
-    /*  const tween = TweenLite.fromTo('figure', 0.5, {
-          opacity: 0,
-          x: 100,
-      }, {
-          opacity: 1,
-          x: 0,
-      });*/
     if (this.$els.title !== null) {
       this.$els.title.classList.add('show');
     }
@@ -83,7 +63,7 @@ export default {
 
         const scene = new ScrollMagic.Scene({
           triggerElement: trigger,
-          offset: -100,
+          offset: -200,
           reverse: false,
           /* offset the trigger 100px below #scene's top */
         });
@@ -107,7 +87,7 @@ export default {
 
         const scene = new ScrollMagic.Scene({
           triggerElement: trigger,
-          offset: -100,
+          offset: -200,
           reverse: false,
           /* offset the trigger 100px below #scene's top */
         });
