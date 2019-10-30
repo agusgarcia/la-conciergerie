@@ -8,32 +8,36 @@
     <div class="content__first">
         <div>
             <div class="text text--main">{!! $main_text !!}</div>
-            <div class="media__container">
-                @if($main_media[0]->acf_fc_layout == 'image')
+            @if($main_media[0]->acf_fc_layout == 'image')
+                <div class="media__container">
                     <figure>
                         <img src="{{ $main_media[0]->main_image->url }}" alt="{{ $main_media[0]->main_image->alt }}"
                              width="250"/>
                         <figcaption>{{ $main_media[0]->main_image->caption }}</figcaption>
                     </figure>
-                @else
+                </div>
+            @else
+                <div class="media__container media__container--iframe">
                     {!! $main_media[0]->main_video !!}
-                @endif
-            </div>
+                </div>
+            @endif
         </div>
     </div>
     <div class="content__second">
         <div>
-            <div class="media__container">
-                @if($main_media[1]->acf_fc_layout == 'image')
+            @if($main_media[1]->acf_fc_layout == 'image')
+                <div class="media__container">
                     <figure>
                         <img src="{{ $main_media[1]->main_image->url }}"
                              alt="{{ $main_media[1]->main_image->alt }}"/>
                         <figcaption>{{ $main_media[1]->main_image->caption }}</figcaption>
                     </figure>
-                @else
+                </div>
+            @else
+                <div class="media__container media__container--iframe">
                     {!! $main_media[1]->main_video !!}
-                @endif
-            </div>
+                </div>
+            @endif
             <ul class="information">
                 <li>
                     <strong>Vernissage</strong>
