@@ -117,7 +117,7 @@
     "jquery": "^3.5.0",
     "popper.js": "^1.14.4",
     "scrollmagic": "^2.0.6",
-    "swiper": "^4.4.1",
+    "swiper": "^6.5.1",
     "viewport-units-buggyfill": "^0.6.2"
   }
 }
